@@ -1,0 +1,589 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cloud Security · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../securing_git/" />
+    
+    
+    <link rel="prev" href="../../secure_development/security_sdlc/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../security_activities/appsec/">
+            
+                <a href="../../security_activities/appsec/">
+            
+                    
+                    AppSec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../security_activities/compliance/">
+            
+                <a href="../../security_activities/compliance/">
+            
+                    
+                    Compliance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../secure_development/secure_coding/">
+            
+                <a href="../../secure_development/secure_coding/">
+            
+                    
+                    Secure Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../secure_development/security_sdlc/">
+            
+                <a href="../../secure_development/security_sdlc/">
+            
+                    
+                    Secure SDLC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Cloud Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../securing_git/">
+            
+                <a href="../securing_git/">
+            
+                    
+                    Securing Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../security_resources/DSP_Appsec_Onboarding_Doc/">
+            
+                <a href="../../security_resources/DSP_Appsec_Onboarding_Doc/">
+            
+                    
+                    Onboarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Cloud Security</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li><a href="#basic-security-tasks">Basic security tasks:</a><ul>
+<li><a href="#embrace-googles-pre-built-environments">Embrace Google&#x2019;s pre-built
+environments</a></li>
+<li><a href="#code-protection">Code Protection</a></li>
+<li><a href="#secure-the-network">Secure the network</a></li>
+<li><a href="#secure-your-databases-cloudsql">Secure your Databases
+(cloudsql)</a></li>
+<li><a href="#iam">IAM</a></li>
+<li><a href="#secure-gce">Secure GCE</a></li>
+<li><a href="#gke-todo">GKE (TODO)</a></li>
+<li><a href="#docker-security">Docker Security</a></li>
+</ul>
+</li>
+</ul>
+<p>These are some best practices and recommendations for managing your GCP
+projects.</p>
+<p><a href="#basic-security-tasks">Basic security tasks:</a><br><a href="#embrace-googles-pre-built-environments">Embrace Google&#x2019;s pre-built
+environments</a></p>
+<p><a href="#code-protection">Code Protection</a></p>
+<p><a href="#secure-the-network">Secure the network</a></p>
+<p><a href="#secure-your-databases-cloudsql">Secure your Databases (cloudsql)</a></p>
+<p><a href="#iam">IAM</a></p>
+<p><a href="#secure-gce">Secure GCE</a></p>
+<p><a href="#gke-todo">GKE (TODO)</a></p>
+<p><a href="#docker-security">Docker Security</a></p>
+<h1 id="basic-security-tasks">Basic security tasks:</h1>
+<p>Make sure your gcloud command line tool is up to date and latest. It
+changes often.</p>
+<h2 id="embrace-googles-pre-built-environments">Embrace Google&#x2019;s pre-built environments</h2>
+<ul>
+<li>Google App Engine (GAE) - If you&#x2019;re running a web-based application,
+this is a good place to start</li>
+<li>Google Kubernetes Engine (GKE) - If you&#x2019;re running a bunch of
+different applications that have been or will be dockerized, this is
+a good place to start</li>
+<li>Google Cloud Functions (GCF) - Serverless applications based on
+events from Google like &#x201C;web request&#x201D; or &#x201C;new file in bucket&#x201D;</li>
+<li>Try not to use GCE unless absolutely necessary -- there&#x2019;s more to
+manage with security.</li>
+</ul>
+<h2 id="code-protection">Code Protection</h2>
+<ol>
+<li>Google is API and code-driven. Most of this code goes to github or
+something similar. People commit keys to github by accident and if
+the keys are public, that&#x2019;s a problem.</li>
+<li><a href="https://github.com/awslabs/git-secrets" target="_blank">https://github.com/awslabs/git-secrets</a> - install this to keep keys
+out of code</li>
+<li>Use Protected Branches to make sure someone reviews code to
+double-check.</li>
+<li>If you MUST put secrets in code, encrypt them first with Google KMS
+and make that key accessible only to certain Google Service
+Accounts.<ol>
+<li><a href="https://github.com/GoogleCloudPlatform/berglas" target="_blank">https://github.com/GoogleCloudPlatform/berglas</a> is a good way
+to handle it.</li>
+</ol>
+</li>
+</ol>
+<h2 id="secure-the-network">Secure the network</h2>
+<p>Disable the default <strong>tcp:22</strong> and default <strong>tcp:3389</strong> firewall rules
+which allows SSH and RDP access to all VMs on the default network. Also,
+deploy all your machines on a non-default network that does not include
+those rules.</p>
+<ol>
+<li><p><a href="https://cloud.google.com/vpc/docs/using-firewalls" target="_blank">https://cloud.google.com/vpc/docs/using-firewalls</a></p>
+</li>
+<li><p>Example: <strong>gcloud compute firewall-rules delete default-allow-ssh
+default-allow-rdp --project my-project-name</strong></p>
+</li>
+<li><p>You might want to delete the &#x201C;default&#x201D; network (optional).</p>
+<p>i.  </p>
+<pre><code>gcloud compute networks delete default
+</code></pre></li>
+<li><p>Create a managed network and subnet -- allow only Broad Networks to
+access.</p>
+<p>i.  </p>
+<pre><code>gcloud compute networks create managed
+</code></pre><ol>
+<li>&#x201C;managed&#x201D; here is the name of the network you&#x2019;re making. Use
+anything you want.</li>
+</ol>
+<p>ii.</p>
+<blockquote>
+<pre><code>gcloud compute networks subnets create managed-subnet --network=managed --enable-flow-logs --range=10.100.1.0/24
+</code></pre><ol>
+<li>Note, your range might vary depending on what you want.</li>
+<li>&#x201C;Managed-subnet&#x201D; can be any word you want. We named it this
+because it&#x2019;s a &#x201C;subnet&#x201D; of the network called &#x201C;managed&#x201D;. We
+encourage something similar.</li>
+<li>You might want to talk to bits if you want to create an
+absolutely unique --range.</li>
+</ol>
+</blockquote>
+<p>iii.  </p>
+<pre><code>gcloud --project &lt;project&gt; --account &lt;user&gt; compute firewall-rules create managed-allow-&lt;name&gt; --allow=tcp:&lt;port&gt;  --target-tags broad-allow --network=managed --source-ranges=69.173.112.0/21,69.173.127.232/29,69.173.127.128/26,69.173.127.0/25,69.173.127.240/28,69.173.127.224/30,69.173.127.230/31,69.173.120.0/22,69.173.127.228/32,69.173.126.0/24,69.173.96.0/20,69.173.64.0/19,69.173.127.192/27,69.173.124.0/23 --enable-logging
+</code></pre><blockquote>
+<ol>
+<li>There is a chance this command is slightly different depending
+on the exact version of gcloud you have.</li>
+<li>&#x201C;managed-allow-&#x201D; can be anything you want. I encourage having
+the first part (managed) as the name of your network.</li>
+<li>The &#x201C;tcp:port&#x201D; can be a comma separated list of tcp ports or a
+range that you&#x2019;re opening to specific targets.<ol>
+<li>You can put 0-60000 if you want all ports</li>
+</ol>
+</li>
+<li><strong>Anytime you want to open a port, alter this rule, don&#x2019;t
+create a new one.</strong><ol>
+<li>You can totally create a new rule, but be REALLY mindful
+of it.</li>
+</ol>
+</li>
+<li><strong>&#x201C;--target-tag broad-allow&#x201D; means that any machine with
+&#x201C;broad-allow&#x201D; tag on it will be accessible on all ports on
+Broad Networks only.</strong><ol>
+<li>Use other tags when you create firewall rules of your own.</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<p>iv.</p>
+<blockquote>
+<ol>
+<li><p>That above command will enable all Broad users on VPN or at<br>a Broad office to contact all machines in the &#x201C;managed&#x201D;
+network but be blocked to the rest of the world.</p>
+</li>
+<li><p>Look at the docs for Firewall rules to see more on how to<br>open your machines to the outside world or how to <strong>narrow</strong>
+to a set of machines (&#x201C;targets&#x201D;).</p>
+</li>
+</ol>
+<p>Secure your Databases (cloudsql)</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<ul>
+<li>Make sure all databases are blocked to the outside world (default)</li>
+<li><a href="https://cloud.google.com/sql/docs/mysql/sql-proxy" target="_blank">Use SQL Proxy</a>
+to ensure protected connections</li>
+<li>ONLY ALLOW SSL CONNECTIONS!</li>
+</ul>
+<h2 id="iam">IAM</h2>
+<ul>
+<li>IAM (Identity and Access Management)<ul>
+<li>Use an approach of &#x201C;least privilege&#x201D; where users are granted
+only the permissions necessary to perform the tasks they need to
+perform.<ul>
+<li>Avoid giving Owner-level permissions if possible OR
+project-level permissions (like editor).</li>
+</ul>
+</li>
+<li>If using Service Accounts, the keys generated should be kept in
+a VERY safe place, preferably Broad&#x2019;s &#x201C;Vault&#x201D; and rotated at
+least yearly.<ul>
+<li><a href="https://opensource.google.com/projects/keyrotator" target="_blank">https://opensource.google.com/projects/keyrotator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="secure-gce">Secure GCE</h2>
+<ol>
+<li>Use a <a href="#secure-the-network">managed network</a> with a subnet!<ol>
+<li><strong>Use a tag to manage which FW rule has access to the machine!</strong></li>
+<li><img src="media/image.png" style="width:5.44792in;height:7.20833in" alt="image"></li>
+</ol>
+</li>
+<li><p>Use either</p>
+<ol>
+<li><p>CIS Hardened Images:<br><a href="https://www.cisecurity.org/cis-hardened-images/google/" target="_blank">https://www.cisecurity.org/cis-hardened-images/google/</a></p>
+</li>
+<li><p>Use Shielded VMs: <a href="https://cloud.google.com/shielded-vm/" target="_blank">https://cloud.google.com/shielded-vm/</a></p>
+</li>
+</ol>
+</li>
+<li><p>Only use Google&#x2019;s IAM for SSH access.</p>
+<ol>
+<li><p>Give users &#x201C;compute&#x201D; access to specific Subnets as opposed to the whole project via Google IAM:<br><a href="https://cloud.google.com/compute/docs/instances/managing-instance-access" target="_blank">https://cloud.google.com/compute/docs/instances/managing-instance-access</a></p>
+</li>
+<li><p><a href="https://cloud.google.com/compute/docs/access/granting-access-to-resources" target="_blank">https://cloud.google.com/compute/docs/access/granting-access-to-resources</a></p>
+</li>
+<li><p>Example of granting access for a user to SSH to machines in a<br>specific subnet:</p>
+<blockquote>
+<pre><code>gcloud compute subnetwork add-iam-policy
+           &lt;subnetwork name&gt; \\
+         | --member=&apos;user:user@gmail.com&apos; \\
+         | --role=&apos;roles/compute.instanceAdmin.v1
+</code></pre></blockquote>
+</li>
+</ol>
+</li>
+<li><p>Your VM should have some things on (required only if your VM has
+access to Production data):</p>
+<ol>
+<li>Make sure auto-update of security patches is on:<ol>
+<li>Centos -
+<a href="https://serversforhackers.com/c/automatic-security-updates-centos" target="_blank">https://serversforhackers.com/c/automatic-security-updates-centos</a></li>
+<li>Ubuntu -
+<a href="https://help.ubuntu.com/lts/serverguide/automatic-updates.html.en" target="_blank">https://help.ubuntu.com/lts/serverguide/automatic-updates.html.en</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>(advanced) Logs should go somewhere (required only if your VM has
+access to Production data)<ol>
+<li>VM logs should use StackDriver and go out to there.<ol>
+<li><a href="https://cloud.google.com/logging/docs/agent/installation" target="_blank">https://cloud.google.com/logging/docs/agent/installation</a></li>
+<li>By default, it picks up system logs</li>
+<li>For applications: application can write to a file that gets
+picked up by Stackdriver (like /var/log/applicationname) via
+the fluentd agent<ol>
+<li><a href="https://cloud.google.com/logging/docs/agent/configuration" target="_blank">https://cloud.google.com/logging/docs/agent/configuration</a></li>
+</ol>
+</li>
+<li>See BITS about having traffic of logs go to SIEM.<ol>
+<li>By default all &#x201C;Google&#x201D; logs already go to SIEM - -this
+is just for the application/OS.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="gke-todo">GKE (TODO)</h2>
+<h2 id="docker-security">Docker Security</h2>
+<ol>
+<li><p>Use the &#x201C;secure&#x201D; Docker base images:<br><a href="https://cloud.google.com/container-registry/docs/managed-base-images" target="_blank">https://cloud.google.com/container-registry/docs/managed-base-images</a></p>
+</li>
+<li><p><a href="https://cloud.google.com/container-registry/docs/get-image-vulnerabilities" target="_blank">https://cloud.google.com/container-registry/docs/get-image-vulnerabilities</a>
+scan your images and respond to that regularly.</p>
+<ol>
+<li>Feel free to put your images in any supported repository but
+ALSO put it in GCR to take advantage of this.</li>
+</ol>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../secure_development/security_sdlc/" class="navigation navigation-prev " aria-label="Previous page: Secure SDLC">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../securing_git/" class="navigation navigation-next " aria-label="Next page: Securing Git">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cloud Security","level":"3.1","depth":1,"next":{"title":"Securing Git","level":"4.1","depth":1,"path":"security_platform_categories/securing_git/index.md","ref":"security_platform_categories/securing_git/index.md","articles":[]},"previous":{"title":"Secure SDLC","level":"2.2","depth":1,"path":"secure_development/security_sdlc/index.md","ref":"secure_development/security_sdlc/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"security_platform_categories/cloud_security/index.md","mtime":"2019-10-30T19:33:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-31T16:06:45.913Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
