@@ -5,8 +5,6 @@
     Engineers](#resources-for-new-security-engineers)
 -   [New Hire Security Checklist](#new-hire-security-checklist)
 
-DSP Appsec Onboarding Document ========
-
 Onboarding Items
 ================
 

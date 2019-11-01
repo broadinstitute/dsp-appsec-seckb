@@ -3,7 +3,7 @@
     * [AppSec](security_activities/appsec/README.md)
     * [Compliance](security_activities/compliance/README.md)
 * [Security Resources](security_resources/README.md)
-	* [Onboarding](security_resources/DSP_Appsec_Onboarding/README.md)
+	* [Onboarding](security_resources/DSP_Appsec_Onboarding_Doc/README.md)
 * [Secure Development](secure_development/README.md)
 	* [Secure Coding](secure_development/secure_coding/README.md)
 		* [Security 101](secure_development/secure_coding/security101.md)

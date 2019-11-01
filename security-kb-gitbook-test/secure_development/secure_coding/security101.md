@@ -1,3 +1,5 @@
+# Security 101
+
 -   [Authentication](#authentication)
 -   [OAuth](#oauth)
 -   [JWT (JSON Web Token)](#jwt-json-web-token)
