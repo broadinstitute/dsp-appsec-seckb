@@ -1,4 +1,4 @@
-root: ./security-kb-gitbook-test/
+root: ./security-kb-gitbook/
 
 structure:
   readme: README.md
