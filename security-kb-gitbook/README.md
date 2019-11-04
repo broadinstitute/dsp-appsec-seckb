@@ -1,5 +1,7 @@
 # Introduction
 
+## Introduction
+
 {% hint style="info" %}
 For any questions or assistance reach out via the [DevSecOps Slack Channel](https://broadinstitute.slack.com/messages/CABML2U9G)
 {% endhint %}
@@ -12,11 +14,12 @@ Building a new service? Check out [New Service Security Requirements](https://sd
 Did you recently join DSP? Check out [Security Onboarding Resources](https://security-kb.dsp-techops.broadinstitute.org/security_resources/DSP_Appsec_Onboarding_Doc/overview.html#new-hire-security-checklist)
 {% endhint %}
 
-# Security Activities
+## Security Activities
 
-* [AppSec](security_activities/appsec/README.md)
-* [Compliance](security_activities/compliance/README.md)
+* [AppSec](security_activities/appsec.md)
+* [Compliance](security_activities/compliance.md)
 
-{% page-ref page="security_activities/appsec/README.md" %}
+{% page-ref page="security\_activities/appsec.md" %}
 
-{% page-ref page="security_activities/compliance/README.md" %}
+{% page-ref page="security\_activities/compliance.md" %}
+
