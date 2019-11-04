@@ -144,7 +144,7 @@ collaborators. Example shown below.
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 
-![Pull request from outside collaborator](../../.gitbook/assets/outside-pr.png)
+![Spoofed commit from outside collaborator](../../.gitbook/assets/outside-pr.png)
 
 **Steps to follow to setup commit signing are located below.**
 Alternatively you can just run the following
