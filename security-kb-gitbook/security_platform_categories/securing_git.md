@@ -123,6 +123,8 @@ Scenario 1 - legit commit
 
 ![image](https://github.com/broadinstitute/security-kb-gitbook/tree/bdbe6dab2fb03380fdc5efde06e5aafde8ff108e/attachments/legit-commit.png)
 
+![](../.gitbook/assets/fake-commit.png)
+
 Note
 
 **Scenario 2 - spoofed commit from user who has access to repo**
