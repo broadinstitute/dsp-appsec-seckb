@@ -135,17 +135,16 @@ collaborators. Example shown below.
 
 **Scenario 1 - legit commit**
 
-https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/security-kb-gitbook/security_platform_categories/securing_git/attachments/legit-commit.png
+![Legitimate pull request](../../.gitbook/assets/legit-commit.png)
 
 
 **Scenario 2 - spoofed commit from user who has access to repo**
-
-https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/security-kb-gitbook/security_platform_categories/securing_git/attachments/fake-commit.png
+![Fake commit](../../.gitbook/assets/fake-commit.png)
 
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 
-![image](/attachments/outside-pr.png)
+![Pull request from outside collaborator](../../.gitbook/assets/outside-pr.png)
 
 **Steps to follow to setup commit signing are located below.**
 Alternatively you can just run the following
@@ -160,13 +159,15 @@ running the script.
 -   Start signing commits:
     <https://help.github.com/en/articles/signing-commits>
 
-Note
+{% hint style="info" %}
 
 **(Recommended)** Set up Automatic Signing To remove the hassle of
 always remembering to sign your commits, you can configure Git to sign
 all your commits automatically as you create them.
 
     git config –-global commit.gpgsign true
+
+{% endhint %}
 
 References
 ==========
