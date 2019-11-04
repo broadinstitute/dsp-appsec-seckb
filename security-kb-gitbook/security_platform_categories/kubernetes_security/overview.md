@@ -1,1 +1,0 @@
-Kubernetes Security Guide

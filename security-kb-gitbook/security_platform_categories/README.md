@@ -1,0 +1,1 @@
+# Security Platform Categories
