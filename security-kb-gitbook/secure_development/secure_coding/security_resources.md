@@ -1,3 +1,5 @@
+# Security Resources
+
 Stay up to date!
 
 -   [Portswigger Daily Swig](https://portswigger.net/daily-swig)
