@@ -1,15 +1,11 @@
 # Securing Git
 
--   [What to do when a secret is accidentally committed in source
-    code?](#what-to-do-when-a-secret-is-accidentally-committed-in-source-code)
--   [How do I verify git-secrets works on my
-    machine?](#how-do-i-verify-git-secrets-works-on-my-machine)
--   [Manually installing git-secrets](#manually-installing-git-secrets)
--   [Detecting commited secrets into git repositories -
-    Server-Side](#detecting-commited-secrets-into-git-repositories---server-side)
--   [Repository Integrity With Signed
-    Commits](#repository-integrity-with-signed-commits)
--   [References](#references)
+- [What to do when a secret is accidentally committed in source code?](#What-to-do-when-a-secret-is-accidentally-committed-in-source-code?)
+- [How do I verify git-secrets works on my machine?](#how-do-i-verify-git-secrets-works-on-my-machine)
+- [Manually installing git-secrets](#manually-installing-git-secrets)
+- [Detecting commited secrets into git repositories - Server-Side](#detecting-commited-secrets-into-git-repositories---server-side)
+- [Repository Integrity With Signed Commits](#repository-integrity-with-signed-commits)
+- [References](#references)
 
 Below are some items to consider in order to protect git repositories.
 
@@ -19,7 +15,7 @@ What to do when a secret is accidentally committed in source code?
 Secrets, such as private keys or API tokens, are regularly leaked by
 developers in source code repositories. More often than not this happens
 by accident. Accidents happen, however it's important that the necessary
-steps are taken as part of mitigation
+steps are taken as part of mitigation.
 
 Examples of sensitive information:
 
@@ -29,24 +25,33 @@ Examples of sensitive information:
 -   Passwords, DB Credentials
 -   Confidential logs, etc.
 
-Post-incident step to take:
 
-Note
+
+
+### Post-incident step to take:
+
+{% hint style="warning" %}
 
 **Step 1**: First things first, rotate your credentials. Once you have
 pushed a commit to Github, you should consider any data it contains to
 be compromised.
 
-Note
+{% endhint %}
+
+{% hint style="warning" %}
 
 **Step 2:**: Remove sensitive info from git history as well:
 <https://help.github.com/en/articles/removing-sensitive-data-from-a-repository>
 
-Note
+{% endhint %}
+
+{% hint style="warning" %}
 
 **Step 3:** Review access logs to see if there was some suspicious
 activity. If you do find suspicious activity please reach out to <span
 class="title-ref">appsec@broadinstitute.org</span>.
+
+{% endhint %}
 
 Some secrets can lead to other secrets. E.g. Slack tokens can give
 access to messages and shared files generally containing other secrets.
@@ -58,14 +63,18 @@ mitigation actions.
 How do I verify git-secrets works on my machine?
 ================================================
 
-Note
+{% hint style="success" %}
 
-Step 1: Verify package is installed <span
+**Step 1:** Verify package is installed <span
 class="title-ref">git-secrets</span>
 
-Note
+{% endhint %}
 
-Step 1: Verify rules are enabled
+{% hint style="success" %}
+
+**Step 2:** Verify rules are enabled
+
+{% endhint %}
 
 Manually installing git-secrets
 ===============================
@@ -124,19 +133,15 @@ commits pretending to be someone else. However there is also an external
 attack vector for those projects that accept PRs from outside
 collaborators. Example shown below.
 
-Note
+**Scenario 1 - legit commit**
 
-Scenario 1 - legit commit
+https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/security-kb-gitbook/security_platform_categories/securing_git/attachments/legit-commit.png
 
-![image](/attachments/legit-commit.png)
-
-Note
 
 **Scenario 2 - spoofed commit from user who has access to repo**
 
-![image](/attachments/fake-commit.png)
+https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/security-kb-gitbook/security_platform_categories/securing_git/attachments/fake-commit.png
 
-Note
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 
