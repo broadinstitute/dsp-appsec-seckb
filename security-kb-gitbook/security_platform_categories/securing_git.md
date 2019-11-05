@@ -79,7 +79,7 @@ class="title-ref">git-secrets</span>
 Manually installing git-secrets
 ===============================
 
-To prevent any secrets that we might accidentally commit to the GitHub
+To prevent any secrets that we might accidentally commit to the GitHub 
 repository, we may want to use the git-secrets developed by the awslabs
 for our repository to keep safe during development.
 
@@ -139,7 +139,7 @@ collaborators. Example shown below.
 
 
 **Scenario 2 - spoofed commit from user who has access to repo**
-![Fake commit](../.gitbook/assets/fake-commit.png)
+![Spoofed commit from user with access](../.gitbook/assets/fake-commit.png)
 
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
@@ -161,8 +161,7 @@ running the script.
 
 {% hint style="info" %}
 
-**(Recommended)** Set up Automatic Signing To remove the hassle of
-always remembering to sign your commits, you can configure Git to sign
+**(Recommended)** Set up Automatic Signing To remove the hassle of always remembering to sign your commits, you can configure Git to sign
 all your commits automatically as you create them.
 
     git config –-global commit.gpgsign true

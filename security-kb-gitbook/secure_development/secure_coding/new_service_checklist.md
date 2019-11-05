@@ -61,9 +61,7 @@ Please make sure you have the following things in your code:
 
           can be properly set
     * **Independent of FC:**
-      * \[Independent Deployment
-
-        Services\]\([https://broadinstitute.atlassian.net/wiki/plugins/servlet/mobile?contentId=229212218\#content/view/114755655](https://broadinstitute.atlassian.net/wiki/plugins/servlet/mobile?contentId=229212218#content/view/114755655)\)
+      * [Independent Deployment Services (link is broken)](https://broadinstitute.atlassian.net/wiki/plugins/servlet/mobile?contentId=229212218\#content/view/114755655](https://broadinstitute.atlassian.net/wiki/plugins/servlet/mobile?contentId=229212218#content/view/114755655)
 
         this is in progress so please consult a devops to see
 
@@ -103,9 +101,7 @@ Please make sure you have the following things in your code:
 * Does your code log out?
   * Configurable to log to File and/or STDOUT.
 * Does it have multiple, configurable log-levels \(debug, info, warn, error\)?
-* Does your logging engine support
-
-  [Sentry?](https://docs.sentry.io/quickstart/)
+* Does your logging engine support [Sentry?](https://docs.sentry.io/quickstart/)
 
 * Are there any Alerts that need to be set up on your logs?
 * Make sure your devops person knows if you're logging to STDOUT or
