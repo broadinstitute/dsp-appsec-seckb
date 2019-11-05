@@ -2,25 +2,6 @@
 
 ## Securing Git
 
-* \[What to do when a secret is accidentally committed in source
-
-  code?\]\(\#what-to-do-when-a-secret-is-accidentally-committed-in-source-code\)
-
-* \[How do I verify git-secrets works on my
-
-  machine?\]\(\#how-do-i-verify-git-secrets-works-on-my-machine\)
-
-* [Manually installing git-secrets](securing_git.md#manually-installing-git-secrets)
-* \[Detecting commited secrets into git repositories -
-
-  Server-Side\]\(\#detecting-commited-secrets-into-git-repositories---server-side\)
-
-* \[Repository Integrity With Signed
-
-  Commits\]\(\#repository-integrity-with-signed-commits\)
-
-* [References](securing_git.md#references)
-
 Below are some items to consider in order to protect git repositories.
 
 ## What to do when a secret is accidentally committed in source code?
@@ -37,17 +18,7 @@ Examples of sensitive information:
 
 Post-incident step to take:
 
-Note
 
-**Step 1**: First things first, rotate your credentials. Once you have pushed a commit to Github, you should consider any data it contains to be compromised.
-
-Note
-
-**Step 2:**: Remove sensitive info from git history as well: [https://help.github.com/en/articles/removing-sensitive-data-from-a-repository](https://help.github.com/en/articles/removing-sensitive-data-from-a-repository)
-
-Note
-
-**Step 3:** Review access logs to see if there was some suspicious activity. If you do find suspicious activity please reach out to appsec@broadinstitute.org.
 
 Some secrets can lead to other secrets. E.g. Slack tokens can give access to messages and shared files generally containing other secrets. GitHub tokens can give access to private repositories also containing secrets. Depending on your findings, if part of your infrastructure or data has been further exposed, you may need to take additional mitigation actions.
 
@@ -123,19 +94,7 @@ Scenario 1 - legit commit
 
 ![image](https://github.com/broadinstitute/security-kb-gitbook/tree/bdbe6dab2fb03380fdc5efde06e5aafde8ff108e/attachments/legit-commit.png)
 
-![](../.gitbook/assets/fake-commit.png)
 
-Note
-
-**Scenario 2 - spoofed commit from user who has access to repo**
-
-![image](https://github.com/broadinstitute/security-kb-gitbook/tree/bdbe6dab2fb03380fdc5efde06e5aafde8ff108e/attachments/fake-commit.png)
-
-Note
-
-**Scenario 3 - spoofed commit via PR as an outside collaborator**
-
-![image](https://github.com/broadinstitute/security-kb-gitbook/tree/bdbe6dab2fb03380fdc5efde06e5aafde8ff108e/attachments/outside-pr.png)
 
 **Steps to follow to setup commit signing are located below.** Alternatively you can just run the following [script](https://github.com/broadinstitute/dsp-security-knowledgebase/blob/master/source/scripts/gitsign.sh). Please ensure you have [installed gpg](https://gpgtools.org/). prior to running the script.
 
