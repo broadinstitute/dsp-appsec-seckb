@@ -1,12 +1,7 @@
 # Onboarding
 
-## Onboarding
-
 * [Onboarding Items](dsp_appsec_onboarding_doc.md#onboarding-items)
-* \[Resources for New Security
-
-  Engineers\]\(\#resources-for-new-security-engineers\)
-
+* [Resources for New Security Engineers](#resources-for-new-security-engineers)
 * [New Hire Security Checklist](dsp_appsec_onboarding_doc.md#new-hire-security-checklist)
 
 ## Onboarding Items
@@ -39,19 +34,13 @@
 
 * Books Web application hackers handbook
 * Readings
-  * Understand \[OWASP Top
+  * Understand [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
 
-    10\]\([https://www.owasp.org/index.php/Category:OWASP\_Top\_Ten\_Project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)\)
-
-  * Understand
-
-    [OAuth2](http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/)
+  * Understand [OAuth2](http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/)
 
 ## New Hire Security Checklist
 
-* Make sure you have installed git-secrets. \[Instructions
-
-  here\]\([https://security-kb.dsp-techops.broadinstitute.org/security\_platform\_categories/securing\_git/index.html\#prevent-committing-secrets-into-git-repositories-client-side](https://security-kb.dsp-techops.broadinstitute.org/security_platform_categories/securing_git/index.html#prevent-committing-secrets-into-git-repositories-client-side)\)
+* Make sure you have installed git-secrets. [Instructions Here](../security_platform_categories/security_git.md#how-do-i-verify-git-secrets-works-on-my-machine)
 
 * Make sure you have completed OWASP Top 10 module in Codebashing
 
