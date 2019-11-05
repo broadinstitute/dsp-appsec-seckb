@@ -135,16 +135,16 @@ collaborators. Example shown below.
 
 **Scenario 1 - legit commit**
 
-![Legitimate pull request](../../.gitbook/assets/legit-commit.png)
+![Legitimate pull request](../.gitbook/assets/legit-commit.png)
 
 
 **Scenario 2 - spoofed commit from user who has access to repo**
-![Fake commit](../../.gitbook/assets/fake-commit.png)
+![Fake commit](../.gitbook/assets/fake-commit.png)
 
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 
-![Spoofed commit from outside collaborator](../../.gitbook/assets/outside-pr.png)
+![Spoofed commit from outside collaborator](../.gitbook/assets/outside-pr.png)
 
 **Steps to follow to setup commit signing are located below.**
 Alternatively you can just run the following
