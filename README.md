@@ -1,7 +1,7 @@
 # security-kb-gitbook
 Gitbook version of sec-kb. See the gitbook [here](https://app.gitbook.com/@dsp-security/s/dsp-appsec/).
 
-### Editing
+## Editing
 
 The Gitbook can be edited directly in the Gitbook web app or via Markdown using Github. 
 
@@ -17,7 +17,8 @@ The Gitbook can be edited directly in the Gitbook web app or via Markdown using 
 2. Push updates to Github and make a PR with the master branch.
 3. After merging to master, Github will automatically sync with Gitbook. This may take a while.
 
-### Adding Images
+#### Adding Images
 
 1. First add the image to the `security-kb-gitbook/.gitbook/assets` folder.
-2. Then add the image link to the markdown code using ![A caption for the image][../.gitbook/assets/YOUR-IMAGE-NAME.png]
+2. Then add the image link to the markdown code using `![A caption for the image][../.gitbook/assets/YOUR-IMAGE-NAME.png]`.
+3. Images can also be added via the web app.
