@@ -29,15 +29,15 @@ Examples of sensitive information:
 
 ### Post-incident step to take:
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 **Step 1**: First things first, rotate your credentials. Once you have pushed a commit to Github, you should consider any data it contains to be compromised.
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 **Step 2:**: Remove sensitive info from git history as well: [https://help.github.com/en/articles/removing-sensitive-data-from-a-repository](https://help.github.com/en/articles/removing-sensitive-data-from-a-repository)
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 **Step 3:** Review access logs to see if there was some suspicious activity. If you do find suspicious activity please reach out to appsec@broadinstitute.org.
 {% endhint %}
 
