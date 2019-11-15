@@ -1,24 +1,10 @@
 ---
-description: GCP Security
+description: >-
+  These are some best practices and recommendations for managing your GCP
+  projects.
 ---
 
 # Google Cloud Platform
-
-
-
-## Cloud Security
-
-* [Basic security tasks:]()
-  * [Embrace Google’s pre-built environments]()
-  * [Code Protection]()
-  * [Secure the network]()
-  * [Secure your Databases \(cloudsql\)]()
-  * [IAM]()
-  * [Secure GCE]()
-  * [GKE \(TODO\)]()
-  * [Docker Security]()
-
-These are some best practices and recommendations for managing your GCP projects.
 
 ## Basic security tasks:
 
