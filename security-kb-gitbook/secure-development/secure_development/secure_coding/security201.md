@@ -1,14 +1,11 @@
 # Security 201
 
-## Security 201
-
-* [General Secure Coding Practices](security201.md#general-secure-coding-practices)
-* [Input Validation](security201.md#input-validation)
-* [Output Encoding](security201.md#output-encoding)
-
 This set of security guidelines is language/technology agnostic and it serves as a general secure coding practice. Implementation of these practices aims to help prevent most of the common software vulnerabilities and can be integrated into the software development lifecycle.
 
-## General Secure Coding Practices
+{% tabs %}
+{% tab title="General Secure Coding Practices" %}
+
+**General Secure Coding Practices**
 
 1. **Verify Code**
    * Use tested and approved managed code rather than creating new unmanaged code for common tasks
@@ -24,7 +21,10 @@ This set of security guidelines is language/technology agnostic and it serves as
    * Utilize locking to prevent multiple simultaneous requests or use a synchronization mechanism to prevent race conditions
    * Protect shared variables and resources from inappropriate concurrent access
 
-## Input Validation
+{% endtab %}
+{% tab title="Input Validation" %}
+
+**Input Validation**
 
 1. **Processing Data**
    * Specify proper character sets, such as UTF-8, for all sources of input
@@ -49,7 +49,10 @@ This set of security guidelines is language/technology agnostic and it serves as
 All validation failures should result in input rejection.
 {% endhint %}
 
-## Output Encoding
+{% endtab %}
+{% tab title="Output Encoding" %}
+
+**Output Encoding**
 
 1. **Output Encoding Process**
    * Conduct all encoding on a trusted system \(e.g., The server\)
@@ -61,3 +64,5 @@ All validation failures should result in input rejection.
    * Contextually sanitize all output of un-trusted data to queries for SQL, XML, and LDAP
    * Sanitize all output of un-trusted data to operating system commands
 
+{% endtab %}
+{% endtabs %}
