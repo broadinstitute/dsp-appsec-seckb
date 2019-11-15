@@ -15,6 +15,12 @@
   * [Kubernetes Security](security_platform_categories/kubernetes_security.md)
   * [Securing Git](security_platform_categories/securing_git.md)
 
+## Platform Security Categories
+
+* [Google Cloud Platform](platform-security-categories/google-cloud-platform.md)
+* [Git & Github](platform-security-categories/git-and-github.md)
+* [Managing Secrets](platform-security-categories/managing-secrets.md)
+
 ## Appsec Team Internal
 
 * [Appsec Team Internal](appsec-team-internal/appsec-team-internal/README.md)
