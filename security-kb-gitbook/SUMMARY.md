@@ -11,9 +11,6 @@
   * [Secure SDLC](secure_development/security_sdlc.md)
 * [Security Platform Categories](security_platform_categories/README.md)
   * [Cloud Security](security_platform_categories/cloud_security.md)
-  * [Docker Security](security_platform_categories/docker_security.md)
-  * [Kubernetes Security](security_platform_categories/kubernetes_security.md)
-  * [Securing Git](security_platform_categories/securing_git.md)
 
 ## Platform Security Categories
 

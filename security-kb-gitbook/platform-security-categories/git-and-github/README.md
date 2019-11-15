@@ -6,12 +6,12 @@ description: Securing git and github
 
 ## Securing Git
 
-* [What to do when a secret is accidentally committed in source code?](../../security_platform_categories/securing_git.md#What-to-do-when-a-secret-is-accidentally-committed-in-source-code?)
-* [How do I verify git-secrets works on my machine?](../../security_platform_categories/securing_git.md#how-do-i-verify-git-secrets-works-on-my-machine)
-* [Manually installing git-secrets](../../security_platform_categories/securing_git.md#manually-installing-git-secrets)
-* [Detecting commited secrets into git repositories - Server-Side](../../security_platform_categories/securing_git.md#detecting-commited-secrets-into-git-repositories---server-side)
-* [Repository Integrity With Signed Commits](../../security_platform_categories/securing_git.md#repository-integrity-with-signed-commits)
-* [References](../../security_platform_categories/securing_git.md#references)
+* [What to do when a secret is accidentally committed in source code?]()
+* [How do I verify git-secrets works on my machine?]()
+* [Manually installing git-secrets]()
+* [Detecting commited secrets into git repositories - Server-Side]()
+* [Repository Integrity With Signed Commits]()
+* [References]()
 
 Below are some items to consider in order to protect git repositories.
 
