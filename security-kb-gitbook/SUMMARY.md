@@ -1,9 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Security Activities](security_activities/README.md)
-  * [AppSec](security_activities/appsec.md)
-  * [Compliance](security_activities/compliance.md)
 * [Security Resources](security_resources/README.md)
   * [Onboarding](security_resources/dsp_appsec_onboarding_doc.md)
 * [Secure Development](secure_development/README.md)
