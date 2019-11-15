@@ -2,21 +2,21 @@
 description: GCP Security
 ---
 
-# GCP
+# Google Cloud Platform
 
 
 
 ## Cloud Security
 
-* [Basic security tasks:](../security_platform_categories/cloud_security.md#basic-security-tasks)
-  * [Embrace Google’s pre-built environments](../security_platform_categories/cloud_security.md#embrace-googles-pre-built-environments)
-  * [Code Protection](../security_platform_categories/cloud_security.md#code-protection)
-  * [Secure the network](../security_platform_categories/cloud_security.md#secure-the-network)
-  * [Secure your Databases \(cloudsql\)](../security_platform_categories/cloud_security.md#secure-your-databases-cloudsql)
-  * [IAM](../security_platform_categories/cloud_security.md#iam)
-  * [Secure GCE](../security_platform_categories/cloud_security.md#secure-gce)
-  * [GKE \(TODO\)](../security_platform_categories/cloud_security.md#gke-todo)
-  * [Docker Security](../security_platform_categories/cloud_security.md#docker-security)
+* [Basic security tasks:]()
+  * [Embrace Google’s pre-built environments]()
+  * [Code Protection]()
+  * [Secure the network]()
+  * [Secure your Databases \(cloudsql\)]()
+  * [IAM]()
+  * [Secure GCE]()
+  * [GKE \(TODO\)]()
+  * [Docker Security]()
 
 These are some best practices and recommendations for managing your GCP projects.
 
@@ -97,7 +97,7 @@ Look at the docs for Firewall rules to see more on how to open your machines to 
 
 ### Secure GCE
 
-1. Use a [managed network](../security_platform_categories/cloud_security.md#secure-the-network) with a subnet!
+1. Use a [managed network]() with a subnet!
    1. **Use a tag to manage which FW rule has access to the machine!**
 
       ![image](../.gitbook/assets/gce-network.png)

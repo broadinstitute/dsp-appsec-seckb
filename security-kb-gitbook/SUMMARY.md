@@ -1,21 +1,23 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Getting Started](getting-started.md)
 * [General](security_resources/README.md)
-  * [DSP Onboarding](security_resources/dsp_appsec_onboarding_doc.md)
-* [Secure Development](secure_development/README.md)
-  * [Secure Coding](secure_development/secure_coding/README.md)
-    * [Security 101](secure_development/secure_coding/security101.md)
-    * [Security 201](secure_development/secure_coding/security201.md)
-    * [Security Resources](secure_development/secure_coding/security_resources.md)
-  * [Secure SDLC](secure_development/security_sdlc.md)
-* [Security Platform Categories](security_platform_categories/README.md)
-  * [Cloud Security](security_platform_categories/cloud_security.md)
+  * [Onboarding](security_resources/dsp_appsec_onboarding_doc.md)
+
+## Secure Development
+
+* [Secure Development](secure-development/secure_development/README.md)
+  * [Secure Coding](secure-development/secure_development/secure_coding/README.md)
+    * [Security 101](secure-development/secure_development/secure_coding/security101.md)
+    * [Security 201](secure-development/secure_development/secure_coding/security201.md)
+    * [Security Resources](secure-development/secure_development/secure_coding/security_resources.md)
+  * [Secure SDLC](secure-development/secure_development/security_sdlc.md)
 
 ## Platform Security Categories
 
-* [GCP](platform-security-categories/google-cloud-platform.md)
-* [Git/Github](platform-security-categories/git-and-github/README.md)
+* [Google Cloud Platform](platform-security-categories/google-cloud-platform.md)
+* [Git & Github](platform-security-categories/git-and-github/README.md)
   * [Did you accidentally commit a secret?](platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md)
   * [Setup Git-Secrets](platform-security-categories/git-and-github/setup-git-secrets.md)
   * [Git Commit Signing](platform-security-categories/git-and-github/git-commit-signing.md)

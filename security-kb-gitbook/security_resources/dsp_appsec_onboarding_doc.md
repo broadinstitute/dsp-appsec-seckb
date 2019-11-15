@@ -2,9 +2,7 @@
 description: Security-related onboarding items for new DSP members
 ---
 
-# DSP Onboarding
-
-
+# Onboarding
 
 {% tabs %}
 {% tab title="General Security Onboarding Items" %}
@@ -18,7 +16,7 @@ description: Security-related onboarding items for new DSP members
   -
 {% endtab %}
 
-{% tab title="Security Eng Onboarding" %}
+{% tab title="Security Engineer Onboarding" %}
 **Onboarding Items**
 
 * Burp License - reach out to \#dsp-security in Slack. Install burp in
@@ -53,6 +51,7 @@ Resources for New Security Engineers
 * Readings
   * Understand [OWASP Top 10\]\(https://www.owasp.org/index.php/Category:OWASP\_Top\_Ten\_Project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
   * Understand [OAuth2](http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/)
+* 
 {% endtab %}
 {% endtabs %}
 
