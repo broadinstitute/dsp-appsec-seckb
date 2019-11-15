@@ -2,13 +2,9 @@
 
 ## Security 101
 
-* [Authentication](security101.md#authentication)
-* [OAuth](security101.md#oauth)
-* [JWT \(JSON Web Token\)](security101.md#jwt-json-web-token)
-* [Access](security101.md#access)
-* [Input](security101.md#input)
-* [Processing](security101.md#processing)
-* [Output](security101.md#output)
+{% tabs %}
+{% tab title="Authentication" %}
+
 
 ## Authentication
 
@@ -16,6 +12,10 @@
 * Don't reinvent the wheel in Authentication, token generation, password storage. Use the standards.
 * Use Max Retry and jail features in Login.
 * Use encryption on all sensitive data.
+{% endtab %}
+
+{% tab title="OAuth/JWT" %}
+
 
 ## OAuth
 
@@ -29,15 +29,80 @@
 * Use a cryptographically secure random complicated key \(JWT Secret\) to make brute forcing the token very hard.
 * Don't extract the algorithm from the payload. Force the algorithm in the backend \(HS256 or RS256\).
 * Make token expiration \(TTL, RTTL\) as short as possible.
-* Don't store sensitive data in the JWT payload, it can be decoded easily.
+* Don't store sensitive data in the JWT payload, it can be decoded easily
+{% endtab %}
+
+{% tab title="Access Control" %}
+
 
 ## Access
 
 * Limit requests \(Throttling\) to avoid DDoS / brute-force attacks.
 * Use HTTPS on server side to avoid MITM \(Man In The Middle Attack\).
 * Use HSTS header with SSL to avoid SSL Strip attack.
+{% endtab %}
 
-## Input
+{% tab title="Input & Validation" %}
+
+
+## Processing
+
+* Check if all the endpoints are protected behind authentication to
+
+  avoid broken authentication process.
+
+* User own resource ID should be avoided. Use /me/orders instead of
+
+  /user/654321/orders.
+
+* Don't auto-increment IDs. Use UUID instead.
+* If you are parsing XML files, make sure entity parsing is not
+
+  enabled to avoid XXE \(XML external entity attack\).
+
+* If you are parsing XML files, make sure entity expansion is not
+
+  enabled to avoid Billion Laughs/XML bomb via exponential entity
+
+  expansion attack.
+
+* Use a CDN for file uploads.
+* If you are dealing with huge amount of data, use Workers and Queues
+
+  to process as much as possible in background and return response
+
+  fast to avoid HTTP Blocking.
+
+* Do not forget to turn the DEBUG mode OFF.
+{% endtab %}
+
+{% tab title="Output & Encoding" %}
+
+
+* Send X-Content-Type-Options: nosniff header.
+* Send X-Frame-Options: deny header.
+* Send Content-Security-Policy: default-src 'none' header.
+* Remove fingerprinting headers - X-Powered-By, Server,
+
+  X-AspNet-Version etc.
+
+* Force content-type for your response, if you return application/json
+
+  then your response content-type is application/json.
+
+* Don't return sensitive data like credentials, Passwords, security
+
+  tokens.
+
+* Return the proper status code according to the operation completed.
+
+  \(e.g. 200 OK, 400 Bad Request, 401 Unauthorized, 405 Method Not
+
+  Allowed, etc\).
+{% endtab %}
+
+{% tab title="Input & Validation" %}
+
 
 * Use the proper HTTP method according to the operation: GET \(read\),
 
@@ -76,57 +141,6 @@
   \(e.g. Quota, Spike Arrest, Concurrent Rate Limit\) and deploy APIs
 
   resources dynamically.
-
-## Processing
-
-* Check if all the endpoints are protected behind authentication to
-
-  avoid broken authentication process.
-
-* User own resource ID should be avoided. Use /me/orders instead of
-
-  /user/654321/orders.
-
-* Don't auto-increment IDs. Use UUID instead.
-* If you are parsing XML files, make sure entity parsing is not
-
-  enabled to avoid XXE \(XML external entity attack\).
-
-* If you are parsing XML files, make sure entity expansion is not
-
-  enabled to avoid Billion Laughs/XML bomb via exponential entity
-
-  expansion attack.
-
-* Use a CDN for file uploads.
-* If you are dealing with huge amount of data, use Workers and Queues
-
-  to process as much as possible in background and return response
-
-  fast to avoid HTTP Blocking.
-
-* Do not forget to turn the DEBUG mode OFF.
-
-## Output
-
-* Send X-Content-Type-Options: nosniff header.
-* Send X-Frame-Options: deny header.
-* Send Content-Security-Policy: default-src 'none' header.
-* Remove fingerprinting headers - X-Powered-By, Server,
-
-  X-AspNet-Version etc.
-
-* Force content-type for your response, if you return application/json
-
-  then your response content-type is application/json.
-
-* Don't return sensitive data like credentials, Passwords, security
-
-  tokens.
-
-* Return the proper status code according to the operation completed.
-
-  \(e.g. 200 OK, 400 Bad Request, 401 Unauthorized, 405 Method Not
-
-  Allowed, etc\).
+{% endtab %}
+{% endtabs %}
 
