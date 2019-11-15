@@ -18,7 +18,8 @@
 ## Platform Security Categories
 
 * [GCP](platform-security-categories/google-cloud-platform.md)
-* [Git/Github](platform-security-categories/git-and-github.md)
+* [Git/Github](platform-security-categories/git-and-github/README.md)
+  * [What to do in case of an incident?](platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md)
 * [Secrets Management](platform-security-categories/managing-secrets.md)
 * [Docker](platform-security-categories/docker.md)
 
