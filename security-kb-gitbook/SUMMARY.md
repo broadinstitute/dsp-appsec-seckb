@@ -18,3 +18,7 @@
   * [Kubernetes Security](security_platform_categories/kubernetes_security.md)
   * [Securing Git](security_platform_categories/securing_git.md)
 
+## Appsec Team Internal
+
+* [Appsec Team Internal](appsec-team-internal/appsec-team-internal.md)
+
