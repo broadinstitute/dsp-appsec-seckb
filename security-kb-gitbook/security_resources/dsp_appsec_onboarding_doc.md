@@ -1,10 +1,25 @@
-# Onboarding
+---
+description: Security-related onboarding items for new DSP members
+---
 
-* [Onboarding Items](dsp_appsec_onboarding_doc.md#onboarding-items)
-* [Resources for New Security Engineers](dsp_appsec_onboarding_doc.md#resources-for-new-security-engineers)
-* [New Hire Security Checklist](dsp_appsec_onboarding_doc.md#new-hire-security-checklist)
+# DSP Onboarding
 
-## Onboarding Items
+
+
+{% tabs %}
+{% tab title="General Security Onboarding Items" %}
+
+
+## New Hire Security Checklist
+
+* Make sure you have installed git-secrets. [Instructions Here](https://github.com/broadinstitute/security-kb-gitbook/tree/a5348cc55c991761e37fc28083529f37b733ac4a/security-kb-gitbook/security_platform_categories/security_git.md#how-do-i-verify-git-secrets-works-on-my-machine)
+* Make sure you have completed OWASP Top 10 module in Codebashing
+
+  -
+{% endtab %}
+
+{% tab title="Security Eng Onboarding" %}
+**Onboarding Items**
 
 * Burp License - reach out to \#dsp-security in Slack. Install burp in
 
@@ -29,18 +44,21 @@
 
     [https://broadinstitute.atlassian.net/wiki/spaces/DSDE/pages/126255105/Security+Tools](https://broadinstitute.atlassian.net/wiki/spaces/DSDE/pages/126255105/Security+Tools)
 * Authenticating to Vault for secret read/write: [https://github.com/broadinstitute/dsde-toolbox\#authenticating-to-vault](https://github.com/broadinstitute/dsde-toolbox#authenticating-to-vault)
+{% endtab %}
 
-## Resources for New Security Engineers
+{% tab title="Resources" %}
+Resources for New Security Engineers
 
 * Books Web application hackers handbook
 * Readings
   * Understand [OWASP Top 10\]\(https://www.owasp.org/index.php/Category:OWASP\_Top\_Ten\_Project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
   * Understand [OAuth2](http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/)
+{% endtab %}
+{% endtabs %}
 
-## New Hire Security Checklist
+## 
 
-* Make sure you have installed git-secrets. [Instructions Here](https://github.com/broadinstitute/security-kb-gitbook/tree/a5348cc55c991761e37fc28083529f37b733ac4a/security-kb-gitbook/security_platform_categories/security_git.md#how-do-i-verify-git-secrets-works-on-my-machine)
-* Make sure you have completed OWASP Top 10 module in Codebashing
+## 
 
-  -
+## 
 

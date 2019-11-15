@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Security Resources](security_resources/README.md)
-  * [Onboarding](security_resources/dsp_appsec_onboarding_doc.md)
+* [General](security_resources/README.md)
+  * [DSP Onboarding](security_resources/dsp_appsec_onboarding_doc.md)
 * [Secure Development](secure_development/README.md)
   * [Secure Coding](secure_development/secure_coding/README.md)
     * [Security 101](secure_development/secure_coding/security101.md)
