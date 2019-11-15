@@ -17,5 +17,9 @@
 
 ## Appsec Team Internal
 
-* [Appsec Team Internal](appsec-team-internal/appsec-team-internal.md)
+* [Appsec Team Internal](appsec-team-internal/appsec-team-internal/README.md)
+  * [Security Tools](appsec-team-internal/appsec-team-internal/security-tools.md)
+  * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities.md)
+  * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
+  * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
 
