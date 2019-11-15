@@ -4,7 +4,7 @@ description: General Items
 
 # General
 
-Pages this block
+Pages in this block
 
 {% page-ref page="dsp\_appsec\_onboarding\_doc.md" %}
 

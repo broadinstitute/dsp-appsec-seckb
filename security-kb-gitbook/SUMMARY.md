@@ -12,7 +12,6 @@
     * [Security 101](secure-development/secure_development/secure_coding/security101.md)
     * [Security 201](secure-development/secure_development/secure_coding/security201.md)
     * [Security Resources](secure-development/secure_development/secure_coding/security_resources.md)
-  * [Secure SDLC](secure-development/secure_development/security_sdlc.md)
 
 ## Platform Security Categories
 

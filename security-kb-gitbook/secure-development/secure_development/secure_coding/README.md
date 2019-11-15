@@ -1,3 +1,7 @@
+---
+description: Secure Coding
+---
+
 # Secure Coding
 
 * [Security 101](security101.md) 
