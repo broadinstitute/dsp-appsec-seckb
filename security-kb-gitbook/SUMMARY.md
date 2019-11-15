@@ -16,10 +16,11 @@
 ## Platform Security Categories
 
 * [Google Cloud Platform](platform-security-categories/google-cloud-platform.md)
-* [Git & Github](platform-security-categories/git-and-github/README.md)
+* [Git](platform-security-categories/git/README.md)
   * [Did you accidentally commit a secret?](platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md)
   * [Setup Git-Secrets](platform-security-categories/git-and-github/setup-git-secrets.md)
   * [Git Commit Signing](platform-security-categories/git-and-github/git-commit-signing.md)
+* [Github](platform-security-categories/github/README.md)
 * [Secrets Management](platform-security-categories/managing-secrets.md)
 * [Docker](platform-security-categories/docker.md)
 
