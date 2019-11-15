@@ -1,7 +1,3 @@
----
-description: Questions/Comments/Ideas?
----
-
 # Contact
 
 {% hint style="info" %}
