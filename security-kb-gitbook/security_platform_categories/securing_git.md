@@ -93,6 +93,17 @@ Now enable git-secrets for each _current_ repository with
 x ="AKIAABCDEFGHIJKLMNOP","H/A604MMvmQjLuZw/xxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
+## Uninstalling git-secrets
+
+```text
+#!/usr/bin/env bash
+# Recursively remove references to "git-secrets" from webhooks in all repositories
+
+find . -regex '.*/\.git/hooks/commit-msg' -exec sed -i '' -e 's/git secrets --commit_msg_hook -- "$@"//' {} \;
+find . -regex '.*/\.git/hooks/pre-commit' -exec sed -i '' -e 's/git secrets --pre_commit_hook -- "$@"//' {} \;
+find . -regex '.*/\.git/hooks/prepare-commit-msg' -exec sed -i '' -e 's/git secrets --prepare_commit_msg_hook -- "$@"//' {} \;
+```
+
 ## Detecting commited secrets into git repositories - Server-Side
 
 For server-side detection of secrets we have implemented controls and as a developer the only thing you need to do is watch out for any alerts communicated by the DSP AppSec team as we closely monitor these alerts in case there's any accidental commit of secrets.
