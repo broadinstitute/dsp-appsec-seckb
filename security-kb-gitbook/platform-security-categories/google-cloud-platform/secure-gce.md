@@ -2,7 +2,7 @@
 
 1. Use a managed network with a subnet!
     i. **Use a tag to manage which FW rule has access to the machine!**
-    ![image](../.gitbook/assets/gce-network.png)
+    ![image](../../.gitbook/assets/gce-network.png)
 2. Use either 
   i. CIS Hardened Images: [https://www.cisecurity.org/cis-hardened-images/google/](https://www.cisecurity.org/cis-hardened-images/google/)
   ii. Use Shielded VMs: [https://cloud.google.com/shielded-vm/](https://cloud.google.com/shielded-vm/)

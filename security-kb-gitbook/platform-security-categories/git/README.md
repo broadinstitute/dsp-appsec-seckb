@@ -2,7 +2,7 @@
 description: Securing git and github
 ---
 
-# Git & Github
+# Git
 
 **Pages in this block**
 

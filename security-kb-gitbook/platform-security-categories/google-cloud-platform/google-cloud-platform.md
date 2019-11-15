@@ -6,11 +6,11 @@ description: >-
 
 # Google Cloud Platform
 
-### Basic security tasks**
+### Basic security tasks
 
 Make sure your gcloud command line tool is up to date and latest. It changes often.
 
-### Embrace Google’s Pre-Built Environments**
+### Embrace Google’s Pre-Built Environments
 
   * Google App Engine \(GAE\) - If you’re running a web-based application, this is a good place to start
   * Google Kubernetes Engine \(GKE\) - If you’re running a bunch of different applications that have been or will be dockerized, this is a good place to start

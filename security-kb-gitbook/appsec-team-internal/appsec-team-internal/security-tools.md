@@ -55,7 +55,7 @@ CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx
 
 **New Service Security Requirements**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](). Once the form is submitted, a notification is sent to #dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo.
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-techops.broadinstitute.org). Once the form is submitted, a notification is sent to #dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo.
 
 {% endtab %}
 {% tab title="Sensitive Data" %}
