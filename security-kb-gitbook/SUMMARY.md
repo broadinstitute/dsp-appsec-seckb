@@ -17,9 +17,10 @@
 
 ## Platform Security Categories
 
-* [Google Cloud Platform](platform-security-categories/google-cloud-platform.md)
-* [Git & Github](platform-security-categories/git-and-github.md)
-* [Managing Secrets](platform-security-categories/managing-secrets.md)
+* [GCP](platform-security-categories/google-cloud-platform.md)
+* [Git/Github](platform-security-categories/git-and-github.md)
+* [Secrets Management](platform-security-categories/managing-secrets.md)
+* [Docker](platform-security-categories/docker.md)
 
 ## Appsec Team Internal
 

@@ -2,5 +2,5 @@
 description: GCP Security
 ---
 
-# Google Cloud Platform
+# GCP
 

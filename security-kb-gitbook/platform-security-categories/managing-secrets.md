@@ -2,5 +2,5 @@
 description: How to manage secrets
 ---
 
-# Managing Secrets
+# Secrets Management
 
