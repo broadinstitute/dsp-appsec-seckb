@@ -22,4 +22,5 @@
   * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities.md)
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
   * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
+* [Contact](contact.md)
 
