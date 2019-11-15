@@ -4,6 +4,8 @@ description: What to do when a secret is accidentally committed in source code?
 
 # Did you accidentally commit a secret?
 
+## Background
+
 Secrets, such as private keys or API tokens, are regularly leaked by developers in source code repositories. More often than not this happens by accident. Accidents happen, however it's important that the necessary steps are taken as part of mitigation.
 
 Examples of sensitive information:
@@ -14,7 +16,15 @@ Examples of sensitive information:
 * Passwords, DB Credentials
 * Confidential logs, etc.
 
-### Post-incident step to take:
+## How would I know if I accidentally committed a secret?
+
+Someone from the appsec team will reach out to you a few seconds after an incident has happened. Server-side secret detection monitors this for **all repos** in the following Github orgs: 
+
+* [BroadInstitute](https://github.com/broadinstitute)
+* [Databiosphere](https://github.com/broadinstitute)
+* [Humancellatlas](https://github.com/broadinstitute)
+
+## Post-incident step to take:
 
 {% hint style="danger" %}
 **Step 1**: First things first, rotate your credentials. Once you have pushed a commit to Github, you should consider any data it contains to be compromised.
