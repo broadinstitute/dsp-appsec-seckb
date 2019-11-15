@@ -4,7 +4,7 @@ description: >-
   browse around.
 ---
 
-# Appsec Team Internal
+# Appsec Team Practices
 
 {% page-ref page="security-tools.md" %}
 

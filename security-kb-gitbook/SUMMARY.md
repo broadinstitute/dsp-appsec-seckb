@@ -25,7 +25,7 @@
 
 ## Appsec Team Internal
 
-* [Appsec Team Internal](appsec-team-internal/appsec-team-internal/README.md)
+* [Appsec Team Practices](appsec-team-internal/appsec-team-internal/README.md)
   * [Security Tools](appsec-team-internal/appsec-team-internal/security-tools.md)
   * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities.md)
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
