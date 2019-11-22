@@ -12,4 +12,3 @@ description: Securing git and github
 
 **Protected Branches**
 
-

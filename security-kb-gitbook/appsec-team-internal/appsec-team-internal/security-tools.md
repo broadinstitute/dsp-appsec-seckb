@@ -2,10 +2,9 @@
 
 {% tabs %}
 {% tab title="Component Analysis" %}
+**Component Analysis**
 
- **Component Analysis**
-
- There are several tools used to anlyze third party components in our software projects. Most the these tools are used in Jenkins jobs under the *Security Scans* tab in the Broad [Jenkins instance](https://fc-jenkins.dsp-techops.broadinstitute.org).
+There are several tools used to anlyze third party components in our software projects. Most the these tools are used in Jenkins jobs under the _Security Scans_ tab in the Broad [Jenkins instance](https://fc-jenkins.dsp-techops.broadinstitute.org).
 
 **Sourceclear**
 
@@ -21,9 +20,9 @@ Some repos have Github security alerts setup to scan for vulnerable dependencies
 
 **Trivy**
 
-Scans docker images for vulnerabilities in base images. 
-
+Scans docker images for vulnerabilities in base images.
 {% endtab %}
+
 {% tab title="Code Analysis" %}
 **Codacy**
 
@@ -32,18 +31,18 @@ Scans code for errors before allowing developers to merge with master branch.
 **Brakeman**
 
 Can be used to automatically scan Ruby projects for vulnerabilities.
-
 {% endtab %}
+
 {% tab title="Pentesting" %}
 **Burp**
 
-Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities. Results of the scans are then uploaded to CodeDx and Defect Dojo (see *Project Management* tab. 
+Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities. Results of the scans are then uploaded to CodeDx and Defect Dojo \(see _Project Management_ tab.
 
 **OWASP Zap**
 
 OWASP Zap is an open source pentesting tool with similar applications to Burp. Because Zap is open source, you can find a wider variety of tools available, such as a Zap CLI and docker image.
-
 {% endtab %}
+
 {% tab title="Project Management" %}
 **Defect Dojo**
 
@@ -51,34 +50,34 @@ Defect Dojo currently contains documentation on various DSP projects and teams, 
 
 **CodeDx**
 
-CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc. and generate reports that include data on the vulnerability and how to fix it. 
+CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc. and generate reports that include data on the vulnerability and how to fix it.
 
 **New Service Security Requirements**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-techops.broadinstitute.org). Once the form is submitted, a notification is sent to #dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo.
-
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-techops.broadinstitute.org). Once the form is submitted, a notification is sent to \#dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo.
 {% endtab %}
+
 {% tab title="Sensitive Data" %}
-Developers should avoid putting secret information in Github repos or Jenkins logs. To prevent this, we use Vault to securely store keys and other sensitive data used in the development and production environments, as well as protected branches and pullapprove on Github. See [Github & Git](../git-and-github/README.md) for more information.
+Developers should avoid putting secret information in Github repos or Jenkins logs. To prevent this, we use Vault to securely store keys and other sensitive data used in the development and production environments, as well as protected branches and pullapprove on Github. See [Github & Git](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/git-and-github/README.md) for more information.
 
 **Git Secrets**
 
-Prevents developers from accidently commiting secrets to Github. See installation instructions [here](../platform-security-categories/git-and-github/setup-git-secrets.md)
+Prevents developers from accidently commiting secrets to Github. See installation instructions [here](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/setup-git-secrets.md)
 
 **Trufflehog/Github Broad Secret Scanner**
 
- Scans commits for service account keys, access keys, and other secrets, and reports them to #github-security-alerts on Slack. See [Git and Github](../platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is commited. 
+Scans commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See [Git and Github](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is commited.
 
 **Vault**
 
 Vault is used to securely store secrets and other sensitive data. See the [DSDE Toolbox](https://github.com/broadinstitute/dsde-toolbox#authenticating-to-vault) for more information.
-
 {% endtab %}
 {% endtabs %}
 
-| Tool        | Description                                                       | Link                                                    |
-|-------------|-------------------------------------------------------------------|---------------------------------------------------------|
-| Jenkins     | Automation (see the Security Scans tab)                           | https://fc-jenkins.dsp-techops.broadinstitute.org       |
-| Sourceclear | Third Party Component Analysis                                    | https://broadinstitute-dsp.sourceclear.io/login         |
-| Defect Dojo | Documentation on DSP projects                                     | https://defect-dojo.dsp-techops.broadinstitute.org/     |
-| CodeDx      | Database of DSP project vulnerabilities discovered during testing | https://codedx101.dsp-techops.broadinstitute.org/codedx |
+| Tool | Description | Link |
+| :--- | :--- | :--- |
+| Jenkins | Automation \(see the Security Scans tab\) | [https://fc-jenkins.dsp-techops.broadinstitute.org](https://fc-jenkins.dsp-techops.broadinstitute.org) |
+| Sourceclear | Third Party Component Analysis | [https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login) |
+| Defect Dojo | Documentation on DSP projects | [https://defect-dojo.dsp-techops.broadinstitute.org/](https://defect-dojo.dsp-techops.broadinstitute.org/) |
+| CodeDx | Database of DSP project vulnerabilities discovered during testing | [https://codedx101.dsp-techops.broadinstitute.org/codedx](https://codedx101.dsp-techops.broadinstitute.org/codedx) |
+
