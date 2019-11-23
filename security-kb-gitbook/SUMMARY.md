@@ -31,6 +31,12 @@
 
 * [Appsec Team Practices](appsec-team-internal/appsec-team-internal/README.md)
   * [Security Tools](appsec-team-internal/appsec-team-internal/security-tools.md)
+    * [Secure Development](appsec-team-internal/appsec-team-internal/security-tools/secure-development.md)
+    * [SAST](appsec-team-internal/appsec-team-internal/security-tools/sast.md)
+    * [DAST](appsec-team-internal/appsec-team-internal/security-tools/dast.md)
+    * [Monitoring and Logging](appsec-team-internal/appsec-team-internal/security-tools/monitoring-and-logging.md)
+    * [Asset Management](appsec-team-internal/appsec-team-internal/security-tools/asset-management.md)
+    * [Training and Documentation](appsec-team-internal/appsec-team-internal/security-tools/training-and-documentation.md)
   * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities.md)
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
   * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
