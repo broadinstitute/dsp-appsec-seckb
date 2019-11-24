@@ -6,66 +6,67 @@ description: Docker related security tools
 
 {% tabs %}
 {% tab title="IDE/Linter" %}
-## Why?
-
-The first opportunity to detect bad practices when working with Dockers is on Developer's IDE \(Vscode, JetBrains\) through Hadolin. Check the Integrations section below to setup Hadolint both in your IDE/Code Editor as well as in your CI pipeline \(CircleCI, Jenkins, Travis\). 
-
-
-
-## Integrating Hadolint
+{% hint style="info" %}
+The first opportunity to detect bad practices when working with Dockers is on Developer's IDE \(`Vscode`, `JetBrains`\) through `Hadolint`. Check the Integrations section below to setup Hadolint both in your IDE/Code Editor as well as in your CI pipeline \(CircleCI, Jenkins, Travis\).
+{% endhint %}
 
 ### Editors
 
-Using hadolint in your terminal is not always the most convenient way, but it can be integrated into your editor to give you a feedback as you write your Dockerfile.
+Using hadolint in your terminal is not always the most convenient way, but it can be integrated into your editor to give you a feedback as you write your `Dockerfile`.
 
-#### Atom
-
-> Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file.
-
-Thanks to [lucasdf](https://github.com/lucasdf), there is an integration [linter-hadolint](https://atom.io/packages/linter-hadolint) with [Atom](https://atom.io/).
-
-[![linter-hadolint-img](https://user-images.githubusercontent.com/18702153/33764234-7abc1f24-dc0b-11e7-96b6-4f08207b6950.png)](https://user-images.githubusercontent.com/18702153/33764234-7abc1f24-dc0b-11e7-96b6-4f08207b6950.png)
-
-#### Sublime Text 3
-
-> A sophisticated text editor for code, markup and prose.
-
-Thanks to [niksite](https://github.com/niksite), there is an integration [SublimeLinter-contrib-hadolint](https://github.com/niksite/SublimeLinter-contrib-hadolint) with [Sublime Text](http://www.sublimetext.com/).
-
-#### Vim and NeoVim
-
-Hadolint is used in two plugins:
-
-* [Syntastic](https://github.com/vim-syntastic/syntastic) - syntax checking plugin for Vim created by Martin Grenfell.
-* [ALE](https://github.com/w0rp/ale) \(Asynchronous Lint Engine\) - plugin for providing linting in NeoVim and Vim 8 while you edit your text files.
-
-#### VS Code
-
-> Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
-
-There is an integration [vscode-hadolint](https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint) with [VS Code](https://code.visualstudio.com/), built by [ExiaSR](https://github.com/ExiaSR).
-
-[![vscode-hadolint-gif](https://camo.githubusercontent.com/5fabe529eaa737a19e9145bf22afbe117331d7c7/68747470733a2f2f692e6779617a6f2e636f6d2f61373031343630636364646131336131613434396232633365386461343062632e676966)](https://camo.githubusercontent.com/5fabe529eaa737a19e9145bf22afbe117331d7c7/68747470733a2f2f692e6779617a6f2e636f6d2f61373031343630636364646131336131613434396232633365386461343062632e676966)
-
-#### Geany
-
-> Geany is a powerful, stable and lightweight programmer's text editor that provides tons of useful features without bogging down your workflow. It runs on Linux, Windows and MacOS is translated into over 40 languages, and has built-in support for more than 50 programming languages.
-
-The following can be used as a [build action](https://www.geany.org/manual/current/index.html#build-menu-commands-dialog) to [lint](https://www.geany.org/manual/current/index.html#lint) Dockerfiles.
-
-```text
-if docker run --rm -i hadolint/hadolint < "%d/%f"
-| sed -re 's|^/dev/stdin:([0-9]*)|%d/%f:\1:WARNING:|'
-| grep -EC100 ':WARNING:' ; then exit 1 ; else exit 0 ; fi
-```
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Editor</th>
+      <th style="text-align:left">Plugin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>VSCode</b>
+      </td>
+      <td style="text-align:left">Integration of <a href="https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint">vscode-hadolint</a> with
+        <a
+        href="https://code.visualstudio.com/">VS Code</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Atom</b>
+      </td>
+      <td style="text-align:left">Integration of <a href="https://atom.io/packages/linter-hadolint">linter-hadolint</a> with
+        <a
+        href="https://atom.io/">Atom</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Sublime</b>
+      </td>
+      <td style="text-align:left">Integration of <a href="https://github.com/niksite/SublimeLinter-contrib-hadolint">SublimeLinter-contrib-hadolint</a> with
+        <a
+        href="http://www.sublimetext.com/">Sublime Text</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Vim/NeoVim</b>
+      </td>
+      <td style="text-align:left">
+        <p><em>Hadolint is used in two plugins:</em>
+        </p>
+        <ul>
+          <li>&lt;em&gt;&lt;/em&gt;<a href="https://github.com/vim-syntastic/syntastic">Syntastic</a> -
+            syntax checking plugin for Vim created by Martin Grenfell.</li>
+          <li><a href="https://github.com/w0rp/ale">ALE</a> (Asynchronous Lint Engine)
+            - plugin for providing linting in NeoVim and Vim 8 while you edit your
+            text files.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="CI/CD" %}
-## Why
-
 Scanning an image build in Jenkins, Travis or CircleCI allows you to fail the build if a vulnerability or misconfiguration is detected. 
 
-## Integrating Hadolint
+## Integrating Tools
 
 ### Codacy
 
