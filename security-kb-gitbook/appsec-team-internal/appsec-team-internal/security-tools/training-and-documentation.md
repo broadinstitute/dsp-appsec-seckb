@@ -8,7 +8,7 @@
 Engineers should go through some sort of application security training once a year and when they join the organization. This training should cover everything engineers need to know about working with security including how to prevent against OWASP top 10. 
 
 **Tools:**
-Codebashing:[https://www.learn.codebashing.com](https://www.learn.codebashing.com)
+* Codebashing:[https://www.learn.codebashing.com](https://www.learn.codebashing.com)
 
 **How Can We Do Better?**
 
@@ -26,7 +26,7 @@ Codebashing:[https://www.learn.codebashing.com](https://www.learn.codebashing.co
 It should include secure engineering guidelines advice from infrastructure security, and recommendations on what needs to be logged and how. Any common security libraries or anti-patterns should be documented for engineers to refer to without having to ask product security.
 
 **Tools:**
-Security KB:[https://dsp-security.broadinstitute.org/](https://dsp-security.broadinstitute.org/)
+* Security KB:[https://dsp-security.broadinstitute.org/](https://dsp-security.broadinstitute.org/)
 
 **How Can We Do Better?**
 Updates/Edits in progress

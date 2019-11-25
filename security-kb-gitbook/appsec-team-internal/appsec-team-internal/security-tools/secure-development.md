@@ -11,7 +11,7 @@ How do we enable developer to understand what security requirements are applicab
 
 **Tools:**
 
-SDARQ (Security & DeVops Applicable Requirements):[https://sdarq.dsp-techops.broadinstitute.org](https://sdarq.dsp-techops.broadinstitute.org)
+* SDARQ (Security & DeVops Applicable Requirements):[https://sdarq.dsp-techops.broadinstitute.org](https://sdarq.dsp-techops.broadinstitute.org)
 
 **How Can We Do Better?**
 
@@ -41,7 +41,7 @@ Make sure secrets are properly stored and encrypted. Access to secrets is grante
 
 **Tools:**
 
-Vault:[https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault](https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault)
+* Vault:[https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault](https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault)
 
 **How Can We Do Better?**
 
