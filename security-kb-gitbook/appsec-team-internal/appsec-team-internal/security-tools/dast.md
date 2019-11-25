@@ -8,8 +8,8 @@
 Automated pentests that leverage Selenium test traffic taken through burp by using the Burp Automator tool written internally as a Java extender for Burp.
 
 **Tools:**
-Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
-Burp Pro Automator:[https://github.com/broadinstitute/burp-automator](https://github.com/broadinstitute/burp-automator)
+* Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
+* Burp Pro Automator:[https://github.com/broadinstitute/burp-automator](https://github.com/broadinstitute/burp-automator)
 
 **How Can We Do Better?**
 
@@ -21,8 +21,8 @@ Burp Pro Automator:[https://github.com/broadinstitute/burp-automator](https://gi
 No matter how good our automatic DAST testing is, it’s always good to take a step back and run a Pentest against an application, service, or system. 
 
 **Tools:**
-Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
-ZAP:[https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
+* Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
+* ZAP:[https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
 
 **How Can We Do Better?**
 
@@ -51,7 +51,7 @@ BugCrowd:[https://www.bugcrowd.com/](https://www.bugcrowd.com/)
 Our cluster is as secure as the system running it. 
 
 **Tools:**
-KubeHunter:[https://github.com/aquasecurity/kube-hunter](https://github.com/aquasecurity/kube-hunter)
+* KubeHunter:[https://github.com/aquasecurity/kube-hunter](https://github.com/aquasecurity/kube-hunter)
 
 **How Can We Do Better?**
 
@@ -72,7 +72,7 @@ Currently we only use Google's GKE and all settings are aligned to CIS Images. N
 Alerts for when VMs have vulnerabilities 
 
 **Tools:**
-Qualys scans all IPs owned by Broad (onprem and cloud) and reports back to Qualys
+* Qualys scans all IPs owned by Broad (onprem and cloud) and reports back to Qualys
 
 **How Can We Do Better?**
 
