@@ -2,7 +2,6 @@
 
 {% tabs %}
 {% tab title="Authentication" %}
-
 **Authentication**
 
 * Don't use Basic Auth. Use standard authentication \(e.g. JWT, OAuth - use state param\).
@@ -12,7 +11,6 @@
 {% endtab %}
 
 {% tab title="OAuth/JWT" %}
-
 **OAuth**
 
 * Always validate redirect\_uri server-side to allow only whitelisted URLs.
@@ -29,7 +27,6 @@
 {% endtab %}
 
 {% tab title="Access Control" %}
-
 **Access**
 
 * Limit requests \(Throttling\) to avoid DDoS / brute-force attacks.
@@ -38,13 +35,12 @@
 {% endtab %}
 
 {% tab title="Processing Data" %}
-
 **Processing Data**
 
 * Check if all the endpoints are protected behind authentication to avoid broken authentication process.
 * User own resource ID should be avoided. Use /me/orders instead of /user/654321/orders.
 * Don't auto-increment IDs. Use UUID instead.
-* If you are parsing XML files, make sure entity parsing is not enabled to avoid XXE (XML external entity attack).
+* If you are parsing XML files, make sure entity parsing is not enabled to avoid XXE \(XML external entity attack\).
 * If you are parsing XML files, make sure entity expansion is not enabled to avoid Billion Laughs/XML bomb via exponential entity expansion attack.
 * Use a CDN for file uploads.
 * If you are dealing with huge amount of data, use Workers and Queues to process as much as possible in background and return response fast to avoid HTTP Blocking.
@@ -52,7 +48,6 @@
 {% endtab %}
 
 {% tab title="Output & Encoding" %}
-
 **Output & Encoding**
 
 * Send X-Content-Type-Options: nosniff header.
@@ -61,11 +56,10 @@
 * Remove fingerprinting headers - X-Powered-By, Server, X-AspNet-Version etc.
 * Force content-type for your response, if you return application/json then your response content-type is application/json. 
 * Don't return sensitive data like credentials, Passwords, security tokens.
-* Return the proper status code according to the operation completed (e.g. 200 OK, 400 Bad Request, 401 Unauthorized, 405 Method Not Allowed, etc.).
+* Return the proper status code according to the operation completed \(e.g. 200 OK, 400 Bad Request, 401 Unauthorized, 405 Method Not Allowed, etc.\).
 {% endtab %}
 
 {% tab title="Input & Validation" %}
-
 **Input & Validation**
 
 * Use the proper HTTP method according to the operation: GET \(read\), POST \(create\), PUT/PATCH \(replace/update\), and DELETE \(to delete a record\), and respond with 405 Method Not Allowed if the requested method isn't appropriate for the requested resource.

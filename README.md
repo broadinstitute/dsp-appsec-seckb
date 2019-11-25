@@ -1,5 +1,5 @@
 # security-kb-gitbook
-Gitbook version of sec-kb. See the gitbook [here](https://app.gitbook.com/@dsp-security/s/dsp-appsec/).
+DSP Security KB/Portal.  See the gitbook [here](https://app.gitbook.com/@dsp-security/s/dsp-appsec/).
 
 ## Editing
 

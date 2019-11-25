@@ -15,7 +15,7 @@
 
 ## Platform Security Categories
 
-* [Google Cloud Platform](platform-security-categories/google-cloud-platform/google-cloud-platform.md)
+* [Google Cloud Platform](platform-security-categories/google-cloud-platform/README.md)
   * [Securing the Network](platform-security-categories/google-cloud-platform/securing-the-network.md)
   * [Secure GCE](platform-security-categories/google-cloud-platform/secure-gce.md)
   * [GKE](platform-security-categories/google-cloud-platform/gke.md)
@@ -23,16 +23,33 @@
   * [Did you accidentally commit a secret?](platform-security-categories/git/what-to-do-in-case-of-an-incident.md)
   * [Setup Git-Secrets](platform-security-categories/git/setup-git-secrets.md)
   * [Git Commit Signing](platform-security-categories/git/git-commit-signing.md)
-* [Github](platform-security-categories/github/README.md)
+* [Github](platform-security-categories/github.md)
 * [Secrets Management](platform-security-categories/managing-secrets.md)
-* [Docker](platform-security-categories/docker.md)
+* [Docker Security](platform-security-categories/docker/README.md)
+  * [Attacking Dockers](platform-security-categories/docker/attacking-dockers/README.md)
+    * [Capabilities](platform-security-categories/docker/attacking-dockers/capabilities.md)
+    * [Volume Mounts](platform-security-categories/docker/attacking-dockers/volume-mounts.md)
+    * [Misconfigurations](platform-security-categories/docker/attacking-dockers/misconfigurations.md)
+    * [Namespaces](platform-security-categories/docker/attacking-dockers/namespaces.md)
+  * [Introduction](platform-security-categories/docker/introduction.md)
+  * [Threat Model](platform-security-categories/docker/threat-model.md)
+  * [Security Guidelines](platform-security-categories/docker/security-guidelines.md)
+  * [Securing CI/CD](platform-security-categories/docker/securing-ci-cd.md)
+  * [Tools](platform-security-categories/docker/tools.md)
+  * [GKE \(GCP\)](platform-security-categories/docker/gke-gcp.md)
 
 ## Appsec Team Internal
 
 * [Appsec Team Practices](appsec-team-internal/appsec-team-internal/README.md)
   * [Security Tools](appsec-team-internal/appsec-team-internal/security-tools.md)
   * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities.md)
+    * [Secure Development](appsec-team-internal/appsec-team-internal/security-activities/secure-development.md)
+    * [SAST](appsec-team-internal/appsec-team-internal/security-activities/sast.md)
+    * [DAST](appsec-team-internal/appsec-team-internal/security-activities/dast.md)
+    * [Monitoring and Logging](appsec-team-internal/appsec-team-internal/security-activities/monitoring-and-logging.md)
+    * [Asset Management](appsec-team-internal/appsec-team-internal/security-activities/asset-management.md)
+    * [Training and Documentation](appsec-team-internal/appsec-team-internal/security-activities/training-and-documentation.md)
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
   * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
-* [Contact](contact.md)
+* [Contact](appsec-team-internal/contact.md)
 

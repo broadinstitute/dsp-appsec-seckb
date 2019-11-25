@@ -4,7 +4,6 @@ This set of security guidelines is language/technology agnostic and it serves as
 
 {% tabs %}
 {% tab title="General Secure Coding Practices" %}
-
 **General Secure Coding Practices**
 
 1. **Verify Code**
@@ -20,10 +19,9 @@ This set of security guidelines is language/technology agnostic and it serves as
    * Avoid calculation errors by understanding your programming language's underlying representation and how it interacts with numeric calculation. Pay close attention to byte size discrepancies, precision, signed/unsigned distinctions, truncation, conversion and casting between types, "not-a-number" calculations, and how your language handles numbers that are too large or too small for its underlying representation
    * Utilize locking to prevent multiple simultaneous requests or use a synchronization mechanism to prevent race conditions
    * Protect shared variables and resources from inappropriate concurrent access
-
 {% endtab %}
-{% tab title="Input Validation" %}
 
+{% tab title="Input Validation" %}
 **Input Validation**
 
 1. **Processing Data**
@@ -48,10 +46,9 @@ This set of security guidelines is language/technology agnostic and it serves as
 {% hint style="danger" %}
 All validation failures should result in input rejection.
 {% endhint %}
-
 {% endtab %}
-{% tab title="Output Encoding" %}
 
+{% tab title="Output Encoding" %}
 **Output Encoding**
 
 1. **Output Encoding Process**
@@ -63,6 +60,6 @@ All validation failures should result in input rejection.
 3. **Sanitize Output**
    * Contextually sanitize all output of un-trusted data to queries for SQL, XML, and LDAP
    * Sanitize all output of un-trusted data to operating system commands
-
 {% endtab %}
 {% endtabs %}
+

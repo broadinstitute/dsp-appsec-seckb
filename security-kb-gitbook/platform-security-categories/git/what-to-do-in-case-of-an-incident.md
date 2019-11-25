@@ -18,7 +18,7 @@ Examples of sensitive information:
 
 ## How would I know if I accidentally committed a secret?
 
-Someone from the appsec team will reach out to you a few seconds after an incident has happened. Server-side secret detection monitors this for **all repos** in the following Github orgs: 
+Someone from the appsec team will reach out to you a few seconds after an incident has happened. Server-side secret detection monitors this for **all repos** in the following Github orgs:
 
 * [BroadInstitute](https://github.com/broadinstitute)
 * [Databiosphere](https://github.com/broadinstitute)

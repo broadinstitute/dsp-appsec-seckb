@@ -59,5 +59,3 @@ find . -regex '.*/\.git/hooks/pre-commit' -exec sed -i '' -e 's/git secrets --pr
 find . -regex '.*/\.git/hooks/prepare-commit-msg' -exec sed -i '' -e 's/git secrets --prepare_commit_msg_hook -- "$@"//' {} \;
 ```
 
-## 
-
