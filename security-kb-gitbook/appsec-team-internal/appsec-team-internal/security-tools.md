@@ -73,11 +73,3 @@ Scans commits for service account keys, access keys, and other secrets, and repo
 Vault is used to securely store secrets and other sensitive data. See the [DSDE Toolbox](https://github.com/broadinstitute/dsde-toolbox#authenticating-to-vault) for more information.
 {% endtab %}
 {% endtabs %}
-
-| Tool | Description | Link |
-| :--- | :--- | :--- |
-| Jenkins | Automation \(see the Security Scans tab\) | [https://fc-jenkins.dsp-techops.broadinstitute.org](https://fc-jenkins.dsp-techops.broadinstitute.org) |
-| Sourceclear | Third Party Component Analysis | [https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login) |
-| Defect Dojo | Documentation on DSP projects | [https://defect-dojo.dsp-techops.broadinstitute.org/](https://defect-dojo.dsp-techops.broadinstitute.org/) |
-| CodeDx | Database of DSP project vulnerabilities discovered during testing | [https://codedx101.dsp-techops.broadinstitute.org/codedx](https://codedx101.dsp-techops.broadinstitute.org/codedx) |
-
