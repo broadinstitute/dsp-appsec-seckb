@@ -48,6 +48,22 @@ Static Code Analysis is an activity that is performed continuously and aims to i
 
 Third-party libraries have several interesting risks. Obviously, vulnerabilities can be introduced into libraries and we need to ensure that our developers are aware when such things happen. 
 
+**Third Party Component Remediation Procedure:**
+
+Currently, Sourceclear is our source of truth for open source and thrid party vulnerability scanning. 
+
+1. SourceClear identifies a vulnerable library in your project by cloning its Github repository, building the project, and scanning the third party code. Sourceclear then sends a report to Broad's vulnerability database. See "Sourceclear Scanning" below.
+
+2. Security engineers work with developers to evaluate the vulnerability and how the library is used within the project in order to assess risk. Vulnerabilities are classified as "High", "Medium", or "Low" severity.
+
+3. Developers create a remediation plan based on the vulnerability. Usually, this simply means updating the library to a version that is curerntly identified as "safe". 
+
+**Sourceclear Scanning**'
+
+Sourceclear scans projects by identifying the package management system and looking at the dependencies listed for the the project. It also looks at indirect dependencies - for example, if your project uses "Library A", and "Library A" uses the vulnerable "Library B", Sourceclear will alert you to the vulnerablity in "Library B", in which case you have to override "Library B" with a safe version in your package management system. [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect vulnerabilities in 2018. 
+
+You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` can set the scanner to use Python3, if your project requires it. You can also specify build commands, ignore dev libraries, and set up automatic pull requests. Please message the security team before customizing any scans.
+
 **Tools:**
 * SourceClear:[https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login)
 * Dependabot: Enabled via Github
@@ -55,7 +71,9 @@ Third-party libraries have several interesting risks. Obviously, vulnerabilities
 
 **How Can We Do Better?**
 
-More automated triage; currently a robust process	
+More automated triage; currently a robust process
+
+Github Alerts - we are currently researching/testing Github's third party security tool
 
 {% endtab %}
 {% tab title="Docker" %}
