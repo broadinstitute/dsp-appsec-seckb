@@ -56,7 +56,11 @@ Currently, Sourceclear is our source of truth for open source and thrid party vu
 
 2. Security engineers work with developers to evaluate the vulnerability and how the library is used within the project in order to assess risk. Vulnerabilities are classified as "High", "Medium", or "Low" severity.
 
-3. Developers create a remediation plan based on the vulnerability. Usually, this simply means updating the library to a version that is curerntly identified as "safe". 
+3. Developers create a remediation plan based on the vulnerability. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be fixed within a certain timeline:
+
+	* "High" - Fixed within 30 days
+	* "Medium" - Fixed with 90 days
+	* "Low" - Fixed with 180 days
 
 **Sourceclear Scanning**'
 
