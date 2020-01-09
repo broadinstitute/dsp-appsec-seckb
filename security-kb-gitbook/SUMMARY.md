@@ -37,6 +37,7 @@
   * [Securing CI/CD](platform-security-categories/docker/securing-ci-cd.md)
   * [Tools](platform-security-categories/docker/tools.md)
   * [GKE \(GCP\)](platform-security-categories/docker/gke-gcp.md)
+  * [Additional Resources](platform-security-categories/docker/additional-resources.md)
 
 ## Appsec Team Internal
 
