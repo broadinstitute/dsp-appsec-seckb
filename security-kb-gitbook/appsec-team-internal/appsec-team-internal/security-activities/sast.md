@@ -54,7 +54,7 @@ Currently, Sourceclear is our source of truth for open source and thrid party vu
 
 1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below.
 
-2. Security engineers see the vulnerability report and work with developers to assess the risk. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself.
+2. Security engineers see the vulnerability report and work with developers to assess the risk by reaching out to the project's security champion on Slack. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself.
 
 3. Developers create a remediation plan. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be mitigated within a certain timeline:
 
@@ -64,9 +64,9 @@ Currently, Sourceclear is our source of truth for open source and thrid party vu
 
 **Sourceclear Scanning**
 
-Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies - for example, if your project uses "Library A", and "Library A" uses the vulnerable "Library B", Sourceclear will alert you to the vulnerablity in "Library B". [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect vulnerabilities in 2018. 
+Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies. [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect dependencies in 2018. 
 
-You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` can set the scanner to use Python3, if your project requires it. You can also specify build commands, ignore dev libraries, and set up automatic pull requests. Please message the security team before customizing any scans.
+You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. The `srcclr.yml` file contains scan directives that determine the scan settings for your repo. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` file can set the scanner to use Python3, if your project requires it.
 
 **Tools:**
 * SourceClear: [https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login)
