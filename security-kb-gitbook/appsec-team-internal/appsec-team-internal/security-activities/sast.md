@@ -52,19 +52,19 @@ Third-party libraries have several interesting risks. Obviously, vulnerabilities
 
 Currently, Sourceclear is our source of truth for open source and thrid party vulnerability scanning. 
 
-1. SourceClear identifies a vulnerable library in your project by cloning its Github repository, building the project, and scanning the third party code. Sourceclear then sends a report to Broad's vulnerability database. See "Sourceclear Scanning" below.
+1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below.
 
-2. Security engineers work with developers to evaluate the vulnerability and how the library is used within the project in order to assess risk. Vulnerabilities are classified as "High", "Medium", or "Low" severity.
+2. Security engineers see the vulnerability report and work with developers to assess the risk. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself.
 
-3. Developers create a remediation plan based on the vulnerability. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be fixed within a certain timeline:
+3. Developers create a remediation plan. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be mitigated within a certain timeline:
 
 	* "High" - Fixed within 30 days
 	* "Medium" - Fixed with 90 days
 	* "Low" - Fixed with 180 days
 
-**Sourceclear Scanning**'
+**Sourceclear Scanning**
 
-Sourceclear scans projects by identifying the package management system and looking at the dependencies listed for the the project. It also looks at indirect dependencies - for example, if your project uses "Library A", and "Library A" uses the vulnerable "Library B", Sourceclear will alert you to the vulnerablity in "Library B", in which case you have to override "Library B" with a safe version in your package management system. [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect vulnerabilities in 2018. 
+Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies - for example, if your project uses "Library A", and "Library A" uses the vulnerable "Library B", Sourceclear will alert you to the vulnerablity in "Library B". [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect vulnerabilities in 2018. 
 
 You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` can set the scanner to use Python3, if your project requires it. You can also specify build commands, ignore dev libraries, and set up automatic pull requests. Please message the security team before customizing any scans.
 
@@ -91,15 +91,16 @@ Need to analyze containers for security issues. Must Integrate into our CI/CD pi
 **Tools:**
 * Trivy:[https://github.com/knqyf263/trivy](https://github.com/knqyf263/trivy) (For docker image scanning via ci/cd. In progress by Albano Drazhi.)
 
-Docker Other, FYI David Bernick Zybjana Bedo. Add if I missed something about the following areas. This does not involve Kubernetes stuff which of course has gotten a bit complex in general and security is a big contributor to this complexity. 
-	* User Namespaces
-	* Syscalls: SecComp, Sysdig, Falco 
-	* Runtimes: gvisor (experiment in Leo ATM), Kata, Firecracker
-	* image scanning → trivy (see above, main item)
-	* Image signing: Notary, ContentTrust
-	* Docker API: Twistlock probably the only one worth it
-	* Service Mesh: Istio, Envoy
-	* CIS: CIS benchmark docker, DevSec image framework
+Docker Other, FYI David Bernick Zybjana Bedo. Add if I missed something about the following areas. This does not involve Kubernetes stuff which of course has gotten a bit complex in general and security is a big contributor to this complexity.
+
+* User Namespaces
+* Syscalls: SecComp, Sysdig, Falco 
+* Runtimes: gvisor (experiment in Leo ATM), Kata, Firecracker
+* image scanning → trivy (see above, main item)
+* Image signing: Notary, ContentTrust
+* Docker API: Twistlock probably the only one worth it
+* Service Mesh: Istio, Envoy
+* CIS: CIS benchmark docker, DevSec image framework
 
 **How Can We Do Better?**
 
