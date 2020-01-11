@@ -53,9 +53,9 @@ Currently, Sourceclear is our source of truth for open source and thrid party vu
 1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below.
 2. Security engineers see the vulnerability report and work with developers to assess the risk by reaching out to the project's security champion on Slack. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself.
 3. Developers create a remediation plan. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be mitigated within a certain timeline:
-   * "High" - Fixed within 30 days
-   * "Medium" - Fixed within 90 days
-   * "Low" - Fixed within 180 days
+   * `High` - Fixed within 30 days
+   * `Medium` - Fixed within 90 days
+   * `Low` - Fixed within 180 days
 
 **Sourceclear Scanning**
 
