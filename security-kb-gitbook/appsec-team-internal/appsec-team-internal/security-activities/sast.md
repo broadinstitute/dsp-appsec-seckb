@@ -46,6 +46,23 @@ Static Code Analysis is an activity that is performed continuously and aims to i
 
 Third-party libraries have several interesting risks. Obviously, vulnerabilities can be introduced into libraries and we need to ensure that our developers are aware when such things happen.
 
+**Third Party Component Remediation Procedure:**
+
+Currently, Sourceclear is our source of truth for open source and thrid party vulnerability scanning.
+
+1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below.
+2. Security engineers see the vulnerability report and work with developers to assess the risk by reaching out to the project's security champion on Slack. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself.
+3. Developers create a remediation plan. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be mitigated within a certain timeline:
+   * "High" - Fixed within 30 days
+   * "Medium" - Fixed within 90 days
+   * "Low" - Fixed within 180 days
+
+**Sourceclear Scanning**
+
+Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies. [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect dependencies in 2018.
+
+You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. The `srcclr.yml` file contains scan directives that determine the scan settings for your repo. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` file can set the scanner to use Python3, if your project requires it.
+
 **Tools:**
 
 * SourceClear:[https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login)
