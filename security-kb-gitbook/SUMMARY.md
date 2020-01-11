@@ -37,13 +37,12 @@
   * [Securing CI/CD](platform-security-categories/docker/securing-ci-cd.md)
   * [Tools](platform-security-categories/docker/tools.md)
   * [GKE \(GCP\)](platform-security-categories/docker/gke-gcp.md)
-  * [Additional Resources](platform-security-categories/docker/additional-resources.md)
 
 ## Appsec Team Internal
 
 * [Appsec Team Practices](appsec-team-internal/appsec-team-internal/README.md)
   * [Security Tools](appsec-team-internal/appsec-team-internal/security-tools.md)
-  * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities.md)
+  * [Security Activities](appsec-team-internal/appsec-team-internal/security-activities/README.md)
     * [Secure Development](appsec-team-internal/appsec-team-internal/security-activities/secure-development.md)
     * [SAST](appsec-team-internal/appsec-team-internal/security-activities/sast.md)
     * [DAST](appsec-team-internal/appsec-team-internal/security-activities/dast.md)
@@ -53,4 +52,6 @@
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
   * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
 * [Contact](appsec-team-internal/contact.md)
+* [Appsec Team Projects](appsec-team-projects/README.md)
+  * [Internally Built Projects](appsec-team-projects/projects.md)
 

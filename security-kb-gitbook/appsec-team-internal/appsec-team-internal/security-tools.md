@@ -73,3 +73,4 @@ Scans commits for service account keys, access keys, and other secrets, and repo
 Vault is used to securely store secrets and other sensitive data. See the [DSDE Toolbox](https://github.com/broadinstitute/dsde-toolbox#authenticating-to-vault) for more information.
 {% endtab %}
 {% endtabs %}
+

@@ -1,56 +1,51 @@
-# DAST 
+# DAST
 
 {% tabs %}
-{% tab title="Dynamic Application Security Testing (Auto)" %}
-
+{% tab title="Dynamic Application Security Testing \(Auto\)" %}
 **Description:**
 
 Automated pentests that leverage Selenium test traffic taken through burp by using the Burp Automator tool written internally as a Java extender for Burp.
 
 **Tools:**
+
 * Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
 * Burp Pro Automator:[https://github.com/broadinstitute/burp-automator](https://github.com/broadinstitute/burp-automator)
 
 **How Can We Do Better?**
-
 {% endtab %}
-{% tab title="Dynamic Application Security Testing (Manual)" %}
 
+{% tab title="Dynamic Application Security Testing \(Manual\)" %}
 **Description:**
 
-No matter how good our automatic DAST testing is, it’s always good to take a step back and run a Pentest against an application, service, or system. 
+No matter how good our automatic DAST testing is, it’s always good to take a step back and run a Pentest against an application, service, or system.
 
 **Tools:**
+
 * Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
-* ZAP:[https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
+* ZAP:[https://www.owasp.org/index.php/OWASP\_Zed\_Attack\_Proxy\_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
 
 **How Can We Do Better?**
-
 {% endtab %}
+
 {% tab title="Bug Bounty Program" %}
-
 **Description:**
 
-The main aspects here are working with external researchers, connecting them with a fix internally, and paying them or recognizing them. 
+The main aspects here are working with external researchers, connecting them with a fix internally, and paying them or recognizing them.
 
-**Tools:**
-No tools currently in use.
+**Tools:** No tools currently in use.
 
-**How Can We Do Better?**
-Need to build a solid program on either HackerOne or BugCrowd. Albano tends to be on the HackerOne side.
+**How Can We Do Better?** Need to build a solid program on either HackerOne or BugCrowd. Albano tends to be on the HackerOne side.
 
-HackerOne:[https://www.hackerone.com/](https://www.hackerone.com/)
-BugCrowd:[https://www.bugcrowd.com/](https://www.bugcrowd.com/)
-[https://www.hackerone.com/sites/default/files/2017-05/visualized-guide-to-bug-bounty-success-bbbfm.pdf](https://www.hackerone.com/sites/default/files/2017-05/visualized-guide-to-bug-bounty-success-bbbfm.pdf)
-
+HackerOne:[https://www.hackerone.com/](https://www.hackerone.com/) BugCrowd:[https://www.bugcrowd.com/](https://www.bugcrowd.com/) [https://www.hackerone.com/sites/default/files/2017-05/visualized-guide-to-bug-bounty-success-bbbfm.pdf](https://www.hackerone.com/sites/default/files/2017-05/visualized-guide-to-bug-bounty-success-bbbfm.pdf)
 {% endtab %}
-{% tab title="Kubernetes" %}
 
+{% tab title="Kubernetes" %}
 **Description:**
 
-Our cluster is as secure as the system running it. 
+Our cluster is as secure as the system running it.
 
 **Tools:**
+
 * KubeHunter:[https://github.com/aquasecurity/kube-hunter](https://github.com/aquasecurity/kube-hunter)
 
 **How Can We Do Better?**
@@ -63,20 +58,20 @@ Currently we only use Google's GKE and all settings are aligned to CIS Images. N
 * KubeHunter:[https://github.com/aquasecurity/kube-hunter](https://github.com/aquasecurity/kube-hunter)
 * Aqua Security:[https://www.aquasec.com/](https://www.aquasec.com/)
 * Anchore:[https://anchore.com/kubernetes/](https://anchore.com/kubernetes/)
-
 {% endtab %}
-{% tab title="VM Security" %}
 
+{% tab title="VM Security" %}
 **Description:**
 
-Alerts for when VMs have vulnerabilities 
+Alerts for when VMs have vulnerabilities
 
 **Tools:**
-* Qualys scans all IPs owned by Broad (onprem and cloud) and reports back to Qualys
+
+* Qualys scans all IPs owned by Broad \(onprem and cloud\) and reports back to Qualys
 
 **How Can We Do Better?**
 
 Needs to also more comprehensively scan VirtualHosts for single-IP infrastructures/Load Balancers.
-
 {% endtab %}
 {% endtabs %}
+
