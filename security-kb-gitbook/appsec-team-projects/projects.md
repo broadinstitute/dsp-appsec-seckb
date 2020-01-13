@@ -17,6 +17,8 @@ description: Projects developed by Appsec team at Broad Institute
 | 9 | [https://github.com/broadinstitute/copezo](https://github.com/broadinstitute/copezo) | Terra UI security testing tool |
 | 10 | [https://github.com/broadinstitute/burp-automator](https://github.com/broadinstitute/burp-automator) | Burp Suite automation  |
 | 11 | [https://github.com/broadinstitute/burp-zap-automation-pipeline](https://github.com/broadinstitute/burp-zap-automation-pipeline) | Burp Zap Automation Pipeline |
-
-
+| 12 | [https://github.com/broadinstitute/dsp-security-zap-scans](https://github.com/broadinstitute/dsp-security-zap-scans) | CI fotr Zap Scans and CodeDx |
+| 13 | [https://github.com/broadinstitute/codedx-api-client-python](https://github.com/broadinstitute/codedx-api-client-python) | CodeDx API Client in Python |
+| 14 | [https://github.com/broadinstitute/sourceclear-scanner-docker](https://github.com/broadinstitute/sourceclear-scanner-docker) | Automated SourceClear Scans Docker Image |
+| 15 | [https://github.com/broadinstitute/open-control-compliance](https://github.com/broadinstitute/open-control-compliance) | Open Control Compliance Tool |
 
