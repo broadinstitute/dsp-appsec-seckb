@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Usage examples:
-#   ./gitsecrets.sh
-#   ./gitsecrets.sh ~/Sites ~/Projects 
+# Usage:
+#   ./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir 
 
 HIGHLIGHT="\e[01;34m"
 NORMAL='\e[00m'
