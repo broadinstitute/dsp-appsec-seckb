@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Usage:
+# IMPORTANT NOTE:  you must have git-secrets installed on your system already
 #   ./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir 
 
 HIGHLIGHT="\e[01;34m"
