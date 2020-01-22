@@ -19,10 +19,16 @@ git secrets --add --global 'BEGINPRIVATEKEY.*ENDPRIVATEKEY' # google private key
 git config --global init.templateDir ~/.git-templates/git-secrets
 ```
 
-Now enable git-secrets for each _current_ repository with
+Now enable git-secrets for each _current_ repository: 
 
 ```text
 (cd path/to/my/repo && git secrets --install)
+```
+
+Alternatively you may use [this script](https://github.com/broadinstitute/security-kb-gitbook/blob/master/security-kb-gitbook/scripts/configure-gitsecrets.sh) to recursively enable git-secrets for all repos under a certain directory
+
+```text
+./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir 
 ```
 
 **GCP Example**
