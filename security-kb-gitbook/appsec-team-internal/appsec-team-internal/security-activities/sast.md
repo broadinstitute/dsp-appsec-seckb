@@ -112,6 +112,12 @@ All DataBiosphere repos currently have Vulnerability Alerts and Automated Securi
 * SourceClear:[https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login)
 * Dependabot: Enabled via Github
 * Snyk
+* Github Vulnerability Alerts - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/viewing-and-updating-vulnerable-dependencies-in-your-repository)
+* Github Automated Security Fixes - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/configuring-automated-security-updates)
+* Jenkins SourceClear Trigger job - [seceng-source-code-scan-setup](https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/seceng-source-code-scan-setup/)
+* Jenkins SourceClear Scanner job - [seceng-srcclr-scan](https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/seceng-srcclr-scan/)
+* SourceClear Scanner Docker image - [repo](https://github.com/broadinstitute/sourceclear-scanner-docker)
+* SourceClear Scanner Docker image - [GCR](https://console.cloud.google.com/gcr/images/dsp-appsec-dev/US/srcclr_scanner?project=dsp-appsec-dev&organizationId=548622027621&gcrImageListsize=30)
 
 **How Can We Do Better?**
 
