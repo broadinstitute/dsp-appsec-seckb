@@ -57,11 +57,55 @@ Currently, Sourceclear is our source of truth for open source and third party vu
    * `Medium` - Fixed within 90 days
    * `Low` - Fixed within 180 days
 
+**Projects Scanned by SourceClear**
+
+| **Project** | **Branch** | **Repo** | **Sub\_directory** | **SourceClear Org** |
+| :--- | :--- | :--- | :--- | :--- |
+| **firecloud-ui** | **develop** | **broadinstitute/firecloud-ui** |  | **DSDE** |
+| **firecloud-orch** | **develop** | **broadinstitute/firecloud-orchestration** |  | **DSDE** |
+| **cromwell** | **develop** | **broadinstitute/cromwell** |  | **DSDE** |
+| **rawls** | **develop** | **broadinstitute/rawls** |  | **DSDE** |
+| **leonardo** | **develop** | **broadinstitute/leonardo** |  | **DSDE** |
+| **sam** | **develop** | **broadinstitute/sam** |  | **DSDE** |
+| **secondary-analysis** | **master** | **humancellatlas/secondary-analysis** |  | **DSDE** |
+| **agora** | **develop** | **broadinstitute/agora** |  | **DSDE** |
+| **consent-ontology** | **develop** | **broadinstitute/consent-ontology** |  | **DSDE** |
+| **consent** | **develop** | **broadinstitute/consent** |  | **DSDE** |
+| **thurloe** | **develop** | **broadinstitute/thurloe** |  | **DSDE** |
+| **clio** | **develop** | **broadinstitute/clio** |  | **DSDE** |
+| **single\_cell\_portal\_core** | **development** | **broadinstitute/single\_cell\_portal\_core** |  | **DSDE** |
+| **saturn-ui** | **dev** | **DataBiosphere/Saturn-UI** |  | **DSDE** |
+| **bond** | **develop** | **DataBiosphere/bond** |  | **DSDE** |
+| **workbench-tos** | **develop** | **broadinstitute/workbench-tos** | **/function** | **DSDE** |
+| **ddp** | **v1** | **broadinstitute/ddp** | **/pepper-apis** | **KDUX** |
+| **ddp**  | **v1** | **broadinstitute/ddp** | **/pepper-angular/ddp-workspace** | **KDUX** |
+| **calhoun** | **master** | **DataBiosphere/calhoun** |  | **DSDE** |
+| **orsp-pub** | **master** | **broadinstitute/orsp-pub** |  | **DSDE** |
+| **duos-ui** | **develop** | **DataBiosphere/duos-ui** |  | **DSDE** |
+| **jade-data-repo-ui** | **develop** | **databiosphere/jade-data-repo-ui** |  | **DSDE** |
+| **jade-data-repo** | **develop** | **databiosphere/jade-data-repo** |  | **DSDE** |
+| **depmap** | **master** | **broadinstitute/depmap** |  | **DSDE** |
+| **ddp-mmrf** | **qa** | **broadinstitute/ddp-mmrf** |  | **KDUX** |
+| **transporter** | **master** | **DataBiosphere/transporter** |  | **DSDE** |
+| **ddp-mmrf** | **qa** | **broadinstitute/ddp-mmrf** | **/frontend** | **KDUX** |
+| **martha** | **dev** | **broadinstitute/martha** |  | **DSDE** |
+| **job-manager** | **master** | **DataBiosphere/job-manager** | **/ui** | **DSDE** |
+
 **Sourceclear Scanning**
 
 Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies. [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect dependencies in 2018.
 
 You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. The `srcclr.yml` file contains scan directives that determine the scan settings for your repo. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` file can set the scanner to use Python3, if your project requires it.
+
+### **Github Alerts**
+
+All DataBiosphere repos currently have Vulnerability Alerts and Automated Security Fixes enabled. If you'd like to verify they have been enabled for a specific repository visit:   [https://github.com/DataBiosphere/{repository}/network/alerts](https://github.com/DataBiosphere/%7Brepository%7D/network/alerts)\*\*\*\*
+
+**Procedure**
+
+1. Github detects a vulnerable dependency and creates an issue under the Alerts tab of the repository. 
+2. Github creates a pull request with the security fix. Tests are automatically run on the PR.
+3. Developers review and merge the security fix.
 
 **Tools:**
 
