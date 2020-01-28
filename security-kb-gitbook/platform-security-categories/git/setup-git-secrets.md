@@ -29,10 +29,9 @@ git config --global init.templateDir ~/.git-templates/git-secrets
 
 1. Download the script:
 
-{% code title="configure-gitsecrets.sh" %}
+{% code title="file:  configure-gitsecrets.sh" %}
 ```bash
-curl -O https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/sec
-urity-kb-gitbook/scripts/configure-gitsecrets.sh
+curl -O https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/security-kb-gitbook/scripts/configure-gitsecrets.sh
 ```
 {% endcode %}
 
