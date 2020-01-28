@@ -5,16 +5,13 @@
 * [General](security_resources/README.md)
   * [Onboarding](security_resources/dsp_appsec_onboarding_doc.md)
 
-## Secure Development
-
-* [Secure Development](secure-development/secure_development/README.md)
-  * [Secure Coding](secure-development/secure_development/secure_coding/README.md)
-    * [Security 101](secure-development/secure_development/secure_coding/security101.md)
-    * [Security 201](secure-development/secure_development/secure_coding/security201.md)
-    * [Security Resources](secure-development/secure_development/secure_coding/security_resources.md)
-
 ## Platform Security Categories
 
+* [Secure Development](platform-security-categories/secure_development/README.md)
+  * [Secure Coding](platform-security-categories/secure_development/secure_coding/README.md)
+    * [Security 101](platform-security-categories/secure_development/secure_coding/security101.md)
+    * [Security 201](platform-security-categories/secure_development/secure_coding/security201.md)
+    * [Security Resources](platform-security-categories/secure_development/secure_coding/security_resources.md)
 * [Google Cloud Platform](platform-security-categories/google-cloud-platform/README.md)
   * [Securing the Network](platform-security-categories/google-cloud-platform/securing-the-network.md)
   * [Secure GCE](platform-security-categories/google-cloud-platform/secure-gce.md)
@@ -53,6 +50,6 @@
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
   * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
 * [Contact](appsec-team-internal/contact.md)
-* [Appsec Team Projects](appsec-team-projects/README.md)
-  * [Internally Built Projects](appsec-team-projects/projects.md)
+* [Appsec Team Projects](appsec-team-internal/appsec-team-projects/README.md)
+  * [Internally Built Projects](appsec-team-internal/appsec-team-projects/projects.md)
 
