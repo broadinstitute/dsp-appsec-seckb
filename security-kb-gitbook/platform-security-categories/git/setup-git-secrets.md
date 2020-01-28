@@ -27,6 +27,17 @@ git config --global init.templateDir ~/.git-templates/git-secrets
 
 ### Configure git-secrets using [this script](https://github.com/broadinstitute/security-kb-gitbook/blob/master/security-kb-gitbook/scripts/configure-gitsecrets.sh) to recursively enable git-secrets for all repos under a certain directory
 
+1. Download the script:
+
+{% code title="configure-gitsecrets.sh" %}
+```bash
+curl -O https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/master/sec
+urity-kb-gitbook/scripts/configure-gitsecrets.sh
+```
+{% endcode %}
+
+   2. Configure git-secrets recursively by running: 
+
 ```text
 ./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir 
 ```
