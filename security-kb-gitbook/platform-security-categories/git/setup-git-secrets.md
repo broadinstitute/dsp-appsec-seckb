@@ -16,10 +16,11 @@ git clone https://github.com/awslabs/git-secrets.git
 git secrets --register-aws --global
 git secrets --install ~/.git-templates/git-secrets
 git secrets --add --global 'BEGINPRIVATEKEY.*ENDPRIVATEKEY' # google private key pattern
+git secrets --add --global 'BEGIN PRIVATE KEY.*END PRIVATE KEY' # (newer) google private key pattern
 git config --global init.templateDir ~/.git-templates/git-secrets
 ```
 
-### Now enable git-secrets for each _current_ repository: 
+### Now enable git-secrets for each _current_ repository:
 
 ```text
 (cd path/to/my/repo && git secrets --install)
@@ -35,10 +36,10 @@ curl -O https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/mas
 ```
 {% endcode %}
 
-   2. Configure git-secrets recursively by running: 
+   2. Configure git-secrets recursively by running:
 
 ```text
-./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir 
+./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir
 ```
 
 **GCP Example**
