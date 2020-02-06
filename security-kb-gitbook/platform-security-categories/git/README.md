@@ -12,3 +12,7 @@ description: Securing git and github
 
 {% page-ref page="git-commit-signing.md" %}
 
+{% page-ref page="github-actions.md" %}
+
+
+
