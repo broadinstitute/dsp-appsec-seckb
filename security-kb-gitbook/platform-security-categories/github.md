@@ -2,7 +2,7 @@
 description: Securing git and github
 ---
 
-# Github
+# Projects/Tooling
 
 ### Github Security Tooling
 
