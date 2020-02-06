@@ -36,7 +36,7 @@ curl -O https://raw.githubusercontent.com/broadinstitute/security-kb-gitbook/mas
 ```
 {% endcode %}
 
-   2. Configure git-secrets recursively by running:
+1. Configure git-secrets recursively by running:
 
 ```text
 ./configure-gitsecrets.sh ~/code-vscode ~/broad-code ~/some-dir

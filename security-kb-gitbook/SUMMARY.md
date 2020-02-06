@@ -20,6 +20,7 @@
   * [Did you accidentally commit a secret?](platform-security-categories/git/what-to-do-in-case-of-an-incident.md)
   * [Setup Git-Secrets](platform-security-categories/git/setup-git-secrets.md)
   * [Git Commit Signing](platform-security-categories/git/git-commit-signing.md)
+  * [Github Actions](platform-security-categories/git/github-actions.md)
 * [Projects/Tooling](platform-security-categories/github.md)
 * [Secrets Management](platform-security-categories/managing-secrets.md)
 * [Docker Security](platform-security-categories/docker/README.md)
