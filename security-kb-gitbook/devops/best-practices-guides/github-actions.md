@@ -29,8 +29,8 @@ After the action has been forked:
 
 ### Related articles <a id="Related-articles"></a>
 
-* Page:[Best Practices / Guides](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/228655105)
-* Page:[GitHub Actions](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/228687875/GitHub+Actions)
-* Page:[Terra Framework Deployment](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/213680129/Terra+Framework+Deployment)
-* Page:[DevOps Onboarding Guide](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/194773001/DevOps+Onboarding+Guide)
+* Page: [Best Practices / Guides](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/228655105)
+* Page: [GitHub Actions](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/228687875/GitHub+Actions)
+* Page: [Terra Framework Deployment](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/213680129/Terra+Framework+Deployment)
+* Page: [DevOps Onboarding Guide](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/194773001/DevOps+Onboarding+Guide)
 
