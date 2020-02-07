@@ -54,3 +54,8 @@
 * [Appsec Team Projects](appsec-team-internal/appsec-team-projects/README.md)
   * [Internally Built Projects](appsec-team-internal/appsec-team-projects/projects.md)
 
+## DevOps
+
+* [Best Practices / Guides](devops/best-practices-guides/README.md)
+  * [Github Actions](devops/best-practices-guides/github-actions.md)
+
