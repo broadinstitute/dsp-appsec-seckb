@@ -4,7 +4,7 @@ description: Securely integrating Github Actions into your CI pipeline...
 
 # Github Actions
 
-Generally, we prefer using internal workflows for Github Actions. If you want to use an action on the Github Marketplace, make sure to verify the action is safe and then pin the action's version to your workflow using the commit hash. If you are not sure whether a third party action is secure, please contact the Application Security team.
+Generally, we prefer using internal workflows for Github Actions. If you want to use an action on the Github Marketplace, make sure to verify the action is safe and then pin the action's version to your workflow using the commit hash. If you are not sure whether a third party action is secure, please consult the Application Security team.
 
 ### 1. Go to the third party Action's repo.
 
