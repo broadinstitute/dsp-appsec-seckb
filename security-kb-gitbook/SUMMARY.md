@@ -14,7 +14,7 @@
     * [Security Resources](platform-security-categories/secure_development/secure_coding/security_resources.md)
 * [Google Cloud Platform](platform-security-categories/google-cloud-platform/README.md)
   * [Securing the Network](platform-security-categories/google-cloud-platform/securing-the-network.md)
-  * [Secure GCE](platform-security-categories/google-cloud-platform/secure-gce.md)
+  * [Secure "Test Modifying Name" GCE](platform-security-categories/google-cloud-platform/secure-gce.md)
   * [GKE](platform-security-categories/google-cloud-platform/gke.md)
 * [Git & Github](platform-security-categories/git/README.md)
   * [Did you accidentally commit a secret?](platform-security-categories/git/what-to-do-in-case-of-an-incident.md)
