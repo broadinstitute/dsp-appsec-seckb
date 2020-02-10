@@ -1,4 +1,4 @@
-# Secure "test Modifying Name" GCE
+# Secure "Test Modifying Name" GCE
 
 1. Use a managed network with a subnet!
 
