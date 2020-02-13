@@ -23,6 +23,8 @@ Threat modeling is an approach for analyzing the security of an application. It 
   * Worst case is for when you’re trying to ship: Find problems, make ugly scope and schedule choices, revisit those features soon
 {% endhint %}
 
+
+
 ### Scope
 
 While doing threat modeling/secure architecture review we can primarily focus on the following areas:
