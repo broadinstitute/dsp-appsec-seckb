@@ -14,18 +14,24 @@ The purpose is to review the current security controls in the application archit
 
 While doing threat modeling/secure architecture review we can primarily focus on the following areas:
 
-1.  Application Architecture Documents
-2.  Deployment and Infrastructure Considerations
-3.  Input Validation
-4.  Authentication
-5.  Authorization
-6.  Configuration Management
-7.  Session Management
-8.  Cryptography
-9.  Parameter Manipulation
-10.  Exception Management
-11.  Auditing & Logging
-12.  Application Framework and Libraries
+* [ ]  Application Architecture Documents
+* [ ]  Deployment and Infrastructure Considerations
+* [ ]  Input Validation
+* [ ]  Authentication
+* [ ]  Authorization
+* [ ]  Configuration Management
+* [ ]  Session Management
+* [ ]  Cryptography
+* [ ]  Parameter Manipulation
+* [ ]  Exception Management
+* [ ]  Auditing & Logging
+* [ ]  Application Framework and Libraries
+
+
+
+
+
+
 
 
 
