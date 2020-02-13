@@ -34,7 +34,7 @@ While doing threat modeling/secure architecture review we can primarily focus on
 * [ ]  Authorization
 * [ ]  Configuration Management
 * [ ]  Session Management
-* [ ]  Cryptography
+* [ ]  Cryptography \(if applicable - hopefully not applicable 😅\)  
 * [ ]  Parameter Manipulation
 * [ ]  Exception Management
 * [ ]  Auditing & Logging
