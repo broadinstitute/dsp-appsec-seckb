@@ -7,7 +7,8 @@
 
 ## Platform Security Categories
 
-* [Secure Development](platform-security-categories/secure_development/README.md)
+* [Security Activities](platform-security-categories/secure_development/README.md)
+  * [Threat Modeling](platform-security-categories/secure_development/threat-modeling.md)
   * [Secure Coding](platform-security-categories/secure_development/secure_coding/README.md)
     * [Security 101](platform-security-categories/secure_development/secure_coding/security101.md)
     * [Security 201](platform-security-categories/secure_development/secure_coding/security201.md)
