@@ -8,7 +8,20 @@ description: DSP Appsec Threat modeling methodology
 
 Threat modeling is an approach for analyzing the security of an application. It is a structured approach that enables you to identify, quantify, and address the security risks associated with an application. 
 
-The purpose is to review the current security controls in the application architecture. This helps AppSec team to identify potential security flaws at an early stage and mitigate them before starting the development stage.
+{% hint style="info" %}
+   **Threat Modeling Basics**
+
+* **What?** 
+  * A repeatable process to find and address all threats to your product  
+* **Why?**  
+  * Because attackers think differently
+  * Find problems when there’s time to fix them 
+  * Security Development Lifecycle \(SDL\) requirement 
+  * Deliver more secure products 
+* **When?** 
+  * The earlier you start, the more time to plan and fix 
+  * Worst case is for when you’re trying to ship: Find problems, make ugly scope and schedule choices, revisit those features soon
+{% endhint %}
 
 ### Scope
 
