@@ -1,54 +1,72 @@
 # Securing the Network
 
-Disable the default **tcp:22** and default **tcp:3389** firewall rules which allows SSH and RDP access to all VMs on the default network. Also, deploy all your machines on a non-default network that does not include those rules.
+## Close SSH and RDP access
+
+1. Disable the `default-allow-ssh` and `default-allow-rdp` firewall rules. This disables port tcp:22 and tcp:3389, which allow access to all VMs on the default network.
+2. Make sure machines are deployed to a non-default network that does not include these rules.
+
+Example:
+
+`gcloud compute firewall-rules delete default-allow-ssh default-allow-rdp --project [PROJECT-NAME]`
 
 See Google Cloud's [Firewall documentation](https://cloud.google.com/vpc/docs/using-firewalls) for reference.
 
-Example: **gcloud compute firewall-rules delete default-allow-ssh default-allow-rdp --project my-project-name**
+## OPTIONAL: Create a new managed network and subnet
 
-Optionally, you can also delete the "default" network and create a managed network and subnet.
+### 1. Delete the Network
 
-1. **Delete the network.**
+Delete the default network.
 
-   a. `gcloud compute networks delete default`
+`gcloud compute networks delete default`
 
-2. **Create a managed network and subnet -- allow only Broad Networks to access.**
+### 2. Create a managed network and subnet - allow only Broad Networks to access
 
-   a. Create a network:
+Create a network:
 
-   `gcloud compute networks create [NETWORK-NAME]`
+`gcloud compute networks create [NETWORK-NAME]`
 
-   i. You can use any name for your network.
+Create a subnet:
 
-   b. Create a subnet:
+`gcloud compute networks subnets create [SUBNET-NAME] --network=[NETWORK-NAME] --enable-flow-logs --range=10.100.1.0/24`
 
-   `gcloud compute networks subnets create [SUBNET-NAME] --network=[NETWORK-NAME] --enable-flow-logs --range=10.100.1.0/24`
+We recommend using the `[NETWORK-NAME]-subnet` format for your subnet name. You may also want to change the range for your subnet, but please talk to BITs when creating a unique range.
 
-   * Note, your range might vary depending on what you want.
-   * You can use any name for your subnet. We would encourage subnet names to follow the form `[NETWORK-NAME]-subnet`
-   * You might want to talk to bits if you want to create an absolutely unique --range.
+### 3. Create Firewall Rules
 
-3. **Create firewall rules.**
+Firewall rules refer to either incoming \(ingress\) or outgoing \(egress\) traffic. You can target certain types of traffic based on its protocol, ports, sources, and destinations.
 
-   `gcloud --project --account compute firewall-rules create [RULES-NAME] --allow=tcp: --target-tags broad-allow --network=[NETWORK-NAME] --source-ranges=69.173.112.0/21,69.173.127.232/29,69.173.127.128/26,69.173.127.0/25,69.173.127.240/28,69.173.127.224/30,69.173.127.230/31,69.173.120.0/22,69.173.127.228/32,69.173.126.0/24,69.173.96.0/20,69.173.64.0/19,69.173.127.192/27,69.173.124.0/23 --enable-logging`
+* Be REALLY mindful when creating new rules. 
+* If you want to alter the range of ports, [update the current rule](https://cloud.google.com/vpc/docs/using-firewalls#updating_firewall_rules) rather than create a new one. 
+* DO NOT USE the `broad-allow` tag when creating a new rule. 
+* It is recommended to use the network in the rule's name.
 
-   i. There is a chance this command is slightly different depending on the exact version of gcloud you have.
+```text
+gcloud compute firewall-rules create NAME \
+    [--network NETWORK; default="default"] \
+    [--priority PRIORITY;default=1000] \
+    [--direction (ingress|egress|in|out); default="ingress"] \
+    [--action (deny | allow )] \
+    [--target-tags TAG,TAG,...] \
+    [--target-service-accounts=IAM Service Account,IAM Service Account,...] \
+    [--source-ranges CIDR-RANGE,CIDR-RANGE...] \
+    [--source-tags TAG,TAG,...] \
+    [--source-service-accounts=IAM Service Account,IAM Service Account,...] \
+    [--destination-ranges CIDR-RANGE,CIDR-RANGE...] \
+    [--rules (PROTOCOL[:PORT[-PORT]],[PROTOCOL[:PORT[-PORT]],...]] | all ) \
+    [--disabled | --no-disabled]
+    [--enable-logging | --no-enable-logging]       
+```
 
-   ii. Rules name can be anything you want. I encourage having the first part as the name of your network.
+The following example will enable all Broad users on VPN or at a Broad office to contact all machines in the network but be blocked to the rest of the world.
 
-   iii. The “tcp:port” can be a comma separated list of tcp ports or a range that you’re opening to specific targets.
+```text
+gcloud --project --account compute firewall-rules create [RULES-NAME] \
+    --allow=tcp \ # could also use tcp:0-60000
+    --target-tags broad-allow \ 
+    --network=[NETWORK-NAME] \
+    --source-ranges=69.173.112.0/21,69.173.127.232/29,69.173.127.128/26,69.173.127.0/25,69.173.127.240/28,69.173.127.224/30,69.173.127.230/31,69.173.120.0/22,69.173.127.228/32,69.173.126.0/24,69.173.96.0/20,69.173.64.0/19,69.173.127.192/27,69.173.124.0/23 \
+    --enable-logging
+```
 
-   * You can put 0-60000 if you want all ports
-
-     iv. **Anytime you want to open a port, alter this rule, don’t create a new one.**
-
-   * You can totally create a new rule, but be REALLY mindful of it.
-
-     v. **“--target-tag broad-allow” means that any machine with “broad-allow” tag on it will be accessible on all ports on Broad Networks only.**
-
-   * Use other tags when you create firewall rules of your own.
-
-   That above command will enable all Broad users on VPN or at a Broad office to contact all machines in the “managed” network but be blocked to the rest of the world.
-
-Look at the docs for Firewall rules to see more on how to open your machines to the outside world or how to **narrow** to a set of machines \(“targets”\).
+Look at the [docs for Firewall rules](https://cloud.google.com/vpc/docs/using-firewalls#creating_firewall_rules) to see more on how to open your machines to the outside world or how to **narrow** to a set of machines \(“targets”\).
 
