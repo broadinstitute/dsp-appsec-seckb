@@ -26,6 +26,8 @@ After the action has been forked:
 
 * [github-tag-action](https://github.com/broadinstitute/github-tag-action)
 * [repository-dispatch](https://github.com/broadinstitute/repository-dispatch)
+* [github-action-kustomize-deploy](https://github.com/broadinstitute/github-action-kustomize-deploy)
+* [github-action-differ](https://github.com/broadinstitute/github-action-differ)
 
 ### Related articles <a id="Related-articles"></a>
 

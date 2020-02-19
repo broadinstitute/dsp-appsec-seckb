@@ -60,6 +60,7 @@
 
 ## DevOps
 
+* [Terra Framework Deployment](devops/terra-framework-deployment.md)
 * [Best Practices / Guides](devops/best-practices-guides/README.md)
   * [Github Actions](devops/best-practices-guides/github-actions.md)
 
