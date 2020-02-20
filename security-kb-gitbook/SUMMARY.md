@@ -60,7 +60,10 @@
 
 ## DevOps
 
-* [Terra Framework Deployment](devops/terra-framework-deployment.md)
+* [Framework/Kernel/New Stack](devops/framework-kernel-new-stack/README.md)
+  * [Framework Quickstarts](devops/framework-kernel-new-stack/framework-quickstarts.md)
+  * [Terra Framework Deployment](devops/framework-kernel-new-stack/terra-framework-deployment.md)
 * [Best Practices / Guides](devops/best-practices-guides/README.md)
   * [Github Actions](devops/best-practices-guides/github-actions.md)
+* [Alpha Architecture](alpha-architecture.md)
 
