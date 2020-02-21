@@ -4,7 +4,9 @@ description: Documentation of the Terra kernel stack deployment POC
 
 # Terra Framework Deployment
 
-### [Quickstarts](framework-quickstarts.md) - Some recipes for getting started
+### [Quickstarts](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/226263044/Framework+Quickstarts)
+
+Some recipes for getting started
 
 ## Infrastructure - Terraform <a id="Infrastructure---Terraform"></a>
 
