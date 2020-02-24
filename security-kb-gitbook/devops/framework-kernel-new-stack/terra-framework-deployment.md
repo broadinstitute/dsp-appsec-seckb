@@ -4,9 +4,7 @@ description: Documentation of the Terra kernel stack deployment POC
 
 # Terra Framework Deployment
 
-### [Quickstarts](https://broadworkbench.atlassian.net/wiki/spaces/DEV/pages/226263044/Framework+Quickstarts)
-
-Some recipes for getting started
+### [Quickstarts](framework-quickstarts.md) - Some recipes for getting started
 
 ## Infrastructure - Terraform <a id="Infrastructure---Terraform"></a>
 
@@ -48,5 +46,35 @@ Any environment-specific configuration should be pulled out into kustomize overl
 
 ## Secrets - Vault and k8s secrets <a id="Secrets---Vault-and-k8s-secrets"></a>
 
-In the Broad, we use Vault for secrets, but we don’t want to force that choice onto the kernel framework. The pattern we’re currently following is to give the CI\(currently GitHub Actions\) Vault approle credentials, enabling it to create a temporary token and load any required secrets from Vault into k8s-native secret resources.
+In the Broad, we use Vault for secrets, but we don’t want to force that choice onto the kernel/framework. The pattern we’re currently following is to give the CI\(currently GitHub Actions\) Vault approle credentials, enabling it to create a temporary token and load any required secrets from Vault into k8s-native secret resources.
+
+Currently, the above workflow, namely translating secrets namespaced to environments and services from Vault into k8s on deploy, is not quite flushed out, so secrets for new services/environments must be laoded manually.
+
+### Vault - source of truth inside Broad
+
+Curently all framework-related secrets live under the following path: `secret/dsde/terra/kernel`
+
+Engineers in the 
+
+They are then namespaced by:
+
+1. The k8s cluster name
+2. The environment name
+3. The service, if any
+
+Some examples:
+
+* A secret for the **kernel-service-poc** service in the **dev** environment/namespace of the **terra-kernel-k8s** cluster will live in: `secret/dsde/terra/kernel/terra-kernel-k8s/dev/kernel-service-poc/[secret name]`
+  * Secrets can be further organized into logical folders, for example all secrets concerning DB connections can go inside a further folder called `db`
+* Secrets that may be used by any service in the dev environment of the cluster can live under: 
+
+  `secret/dsde/terra/kernel/terra-kernel-k8s/dev/common/[secret name]`
+
+* Similarly, secrets that may be used by services/configurations in any environment can live under: 
+
+  `secret/dsde/terra/kernel/terra-kernel-k8s/common/[secret name]`
+
+### k8s secrets translation
+
+Since as outlined above, we don't want to force anyone trying to deploy this stack to use Vault, we are comitting to building out a robust translation layer between Vault and native k8s secrets. This is still in progress, so for now loading 
 
