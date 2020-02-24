@@ -30,7 +30,7 @@ The k8s cluster configuration is captured in the [terra-kernel Helm chart in the
 
 Currently the deployment is manual, and involves invoking helm on the [terra-kernel Helm chart](https://github.com/broadinstitute/terra-helm/tree/master/charts/terra-kernel) and a [values override file](https://github.com/broadinstitute/terra-helm-definitions/tree/master/kernel). Some options being considered for an automated CD flow for this configuration include [Argo](https://argoproj.github.io/argo-cd/) and [GitHub actions](https://github.com/features/actions).
 
-## Java Service <a id="Java-Service"></a>
+## Java Services <a id="Java-Service"></a>
 
 ### Code <a id="Code"></a>
 
@@ -48,7 +48,7 @@ Any environment-specific configuration should be pulled out into kustomize overl
 
 In the Broad, we use Vault for secrets, but we don’t want to force that choice onto the kernel/framework. The pattern we’re currently following is to give the CI\(currently GitHub Actions\) Vault approle credentials, enabling it to create a temporary token and load any required secrets from Vault into k8s-native secret resources.
 
-Currently, the above workflow, namely translating secrets namespaced to environments and services from Vault into k8s on deploy, is not quite flushed out, so secrets for new services/environments must be laoded manually.
+The translation from Vault to k8s secrets is handled via the [secrets-manager CRD/application](https://github.com/tuenti/secrets-manager).
 
 ### Vault - source of truth inside Broad
 
@@ -74,7 +74,7 @@ Some examples:
 
   `secret/dsde/terra/kernel/terra-kernel-k8s/common/[secret name]`
 
-### k8s secrets translation
+### k8s secrets translation via [secrets-manager](https://github.com/tuenti/secrets-manager)
 
-Since as outlined above, we don't want to force anyone trying to deploy this stack to use Vault, we are comitting to building out a robust translation layer between Vault and native k8s secrets. This is still in progress, so for now loading 
+Secrets are translated from Vault to k8s by defining secrets-manager resources. These should be defined in either the env-base repo if the secret is shared by multiple services, or in the respective service repo. Based on whether the secret value changes from one environment/namespace to another, it should be defined in either the base kustomization or the overlay in the corresponding configuration repo.
 
