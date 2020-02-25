@@ -44,7 +44,7 @@ All k8s configuration YAMLs are also located in the [kernel-service-poc repo](ht
 
 Any environment-specific configuration should be pulled out into kustomize overlays, and committed to the corresponding service’s configuration repo. The configuration repo for the POC service is [kernel-service-poc-config](https://github.com/DataBiosphere/kernel-service-poc-config/).
 
-## Secrets - Vault and k8s secrets <a id="Secrets---Vault-and-k8s-secrets"></a>
+## Secrets - Vault and k8s secrets <a id="secrets"></a>
 
 In the Broad, we use Vault for secrets, but we don’t want to force that choice onto the kernel/framework. The pattern we’re currently following is to give the CI\(currently GitHub Actions\) Vault approle credentials, enabling it to create a temporary token and load any required secrets from Vault into k8s-native secret resources.
 
@@ -77,4 +77,42 @@ Some examples:
 ### k8s secrets translation via [secrets-manager](https://github.com/tuenti/secrets-manager)
 
 Secrets are translated from Vault to k8s by defining secrets-manager resources. These should be defined in either the env-base repo if the secret is shared by multiple services, or in the respective service repo. Based on whether the secret value changes from one environment/namespace to another, it should be defined in either the base kustomization or the overlay in the corresponding configuration repo.
+
+Some examples:
+
+{% tabs %}
+{% tab title="specific to service+env" %}
+```yaml
+# From  kernel-service-poc-config/gmalkov/secrets.yaml:
+apiVersion: secrets-manager.tuenti.io/v1alpha1
+kind: SecretDefinition
+metadata:
+  name: secretdefinition-kernel-service-poc-postgres-db-name
+spec:
+  name: kernel-service-poc/postgres-db-name
+  keysMap:
+    db-name:
+      path: secret/dsde/terra/kernel/terra-kernel-k8s/gmalkov/kernel-service-poc/postgres-db-name
+      key: name
+```
+{% endtab %}
+
+{% tab title="common to all envs" %}
+```yaml
+# From  env-base/config/secrets.yaml
+apiVersion: secrets-manager.tuenti.io/v1alpha1
+kind: SecretDefinition
+metadata:
+  name: secretdefinition-common-postgres-name
+spec:
+  name: postgres-cloudsql-instance-name
+  keysMap:
+    name:
+      path: secret/dsde/terra/kernel/terra-kernel-k8s/common/postgres/instance
+      key: name
+```
+{% endtab %}
+{% endtabs %}
+
+
 
