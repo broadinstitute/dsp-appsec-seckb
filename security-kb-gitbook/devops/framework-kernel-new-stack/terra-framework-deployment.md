@@ -18,6 +18,8 @@ Contained in the [terra-kernel-k8s profile in the terraform-terra repo](https://
 
 Currently the deployment is manual, and leverages the [profile-based deployment pattern](https://github.com/broadinstitute/dsp-k8s-deploy). This is an internal Broad pattern/tool, and its use for this stack is temporary while a more portable pattern is developed or the internal tooling is deemed fit for public use.
 
+The current plan is to make it a vanilla Terraform repo deployed with [Atlantis](https://www.runatlantis.io/).
+
 ## k8s Cluster Configuration - Helm <a id="k8s-Cluster-Configuration---Helm"></a>
 
 This layer is for configuration of the k8s cluster that is not service-specific, such as various cluster-wide settings and resources shared by all services.
@@ -28,7 +30,7 @@ The k8s cluster configuration is captured in the [terra-kernel Helm chart in the
 
 ### Deployment <a id="Deployment.1"></a>
 
-Currently the deployment is manual, and involves invoking helm on the [terra-kernel Helm chart](https://github.com/broadinstitute/terra-helm/tree/master/charts/terra-kernel) and a [values override file](https://github.com/broadinstitute/terra-helm-definitions/tree/master/kernel). Some options being considered for an automated CD flow for this configuration include [Argo](https://argoproj.github.io/argo-cd/) and [GitHub actions](https://github.com/features/actions).
+Currently the deployment is manual, and involves invoking helm on the [terra-kernel Helm chart](https://github.com/broadinstitute/terra-helm/tree/master/charts/terra-kernel) and a [values override file](https://github.com/broadinstitute/terra-helm-definitions/tree/master/kernel). Some options being considered for an automated CD flow for this configuration include [Flux](https://fluxcd.io/) [Argo](https://argoproj.github.io/argo-cd/) and [GitHub actions](https://github.com/features/actions).
 
 ## Java Services <a id="Java-Service"></a>
 
@@ -38,7 +40,7 @@ The POC service Java code lives in the [kernel-service-poc repo](https://github.
 
 ### k8s Deployment <a id="k8s-Deployment"></a>
 
-All k8s configuration YAMLs are also located in the [kernel-service-poc repo](https://github.com/DataBiosphere/kernel-service-poc), but are in [kustomize base format](https://github.com/kubernetes-sigs/kustomize#2-create-variants-using-overlays), meaning they need to be combined with an environment-specific overlay before they can be applied.
+All k8s configuration YAMLs live in the same repo, but are in [kustomize base format](https://github.com/kubernetes-sigs/kustomize#2-create-variants-using-overlays), meaning they need to be combined with an environment-specific overlay before they can be applied.
 
 ### Configuration <a id="Configuration"></a>
 
