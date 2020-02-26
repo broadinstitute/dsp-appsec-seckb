@@ -116,5 +116,12 @@ spec:
 {% endtab %}
 {% endtabs %}
 
+### Secret creation
 
+Currently required secrets need to be manually created in Vault for each environment. A useful snippet for copying secrets:
+
+```bash
+docker run --rm --cap-add IPC_LOCK -e "VAULT_TOKEN=$(cat ~/.vault-token)" -e "VAULT_ADDR=https://clotho.broadinstitute.org:8200" vault:1.1.0 vault read --format=json [from_path] | jq .data > secret.json
+docker run --rm --cap-add IPC_LOCK -e "VAULT_TOKEN=$(cat ~/.vault-token)" -e "VAULT_ADDR=https://clotho.broadinstitute.org:8200" -v $(pwd):/current vault:1.1.0 vault write [to_path] @/current/secret.json
+```
 
