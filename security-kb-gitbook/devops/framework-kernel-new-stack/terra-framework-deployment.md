@@ -38,9 +38,20 @@ Currently the deployment is manual, and involves invoking helm on the [terra-ker
 
 The POC service Java code lives in the [kernel-service-poc repo](https://github.com/DataBiosphere/kernel-service-poc)
 
-### k8s Deployment <a id="k8s-Deployment"></a>
+### k8s Resources <a id="k8s-Deployment"></a>
 
 All k8s configuration YAMLs live in the same repo, but are in [kustomize base format](https://github.com/kubernetes-sigs/kustomize#2-create-variants-using-overlays), meaning they need to be combined with an environment-specific overlay before they can be applied.
+
+### Deployment flow for pushes to master
+
+1. New commit is merged to master
+2. [The master\_push workflow](https://github.com/DataBiosphere/kernel-service-poc/blob/gm-deployment/.github/workflows/master_push.yml) is triggered. It builds the image, tags the image & commit, and pushes the image to GCR. It then sends a [dispatch](https://help.github.com/en/actions/reference/events-that-trigger-workflows#external-events-repository_dispatch) with the new version for the service to the [framework-version repo](https://github.com/DataBiosphere/framework-version).
+3. This triggers the [update workflow](https://github.com/DataBiosphere/framework-version/blob/master/.github/workflows/update.yml), which updates the JSON that maps services to versions to map to the new version for the service whose repo sent the dispatch. The JSON is then committed and pushed.
+4. This triggers the [tag workflow](https://github.com/DataBiosphere/framework-version/blob/master/.github/workflows/tag.yml), which tags the new commit in the framework-version repo with a bumped semantic version, yielding a new version of the whole stack incorporating the newly available version of the service.
+5. The new commit corresponding to the above version of the stack is now visible on the [deliverybot dashboard](https://app.deliverybot.dev/DataBiosphere/framework-version/branch/master). It can now be manually selected for deployment to an environment.
+6. Deploying a version of the stack to an environment from the dashboard triggers the [deploy workflow](https://github.com/DataBiosphere/framework-version/blob/master/.github/workflows/deploy.yml). This sends a dispatch to the [framework-env repo](https://github.com/DataBiosphere/framework-env) with the version that the chosen commit is tagged with, and the desired environment.
+7. The dispatch triggers the [update workflow in that repo](https://github.com/DataBiosphere/framework-env/blob/master/.github/workflows/update.yml), which similarly to the one in the framework-version one, updates a JSON. This JSON maps environments to versions of the stack. It is updated to reflect the desired deployment of the new stack version to the specified environment and the change is pushed up.
+8. The change to the JSON triggers the [apply workflow](https://github.com/DataBiosphere/framework-env/blob/master/.github/workflows/apply.yml), which actually deploys the desired resources to k8s. It determines the services that must be updated by diffing the stack versions that the environment in question is transitioning between and re-deploys the services that need updates.
 
 ### Configuration <a id="Configuration"></a>
 
