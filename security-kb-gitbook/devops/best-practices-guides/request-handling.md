@@ -8,7 +8,7 @@ description: Process for handling DevOps request tickets
 
 ### Locate
 
-All incoming request tickets should be on the [AP-DevOps-Requests](https://broadworkbench.atlassian.net/secure/RapidBoard.jspa?rapidView=71) board as unassigned **TO DO** tickets.
+All incoming request tickets should be on the [AP-DevOps-Requests](https://broadworkbench.atlassian.net/secure/RapidBoard.jspa?rapidView=71) board as unassigned **BACKLOG** tickets.
 
 ### Triage
 
