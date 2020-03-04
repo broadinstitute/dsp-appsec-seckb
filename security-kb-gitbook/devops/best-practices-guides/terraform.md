@@ -19,9 +19,11 @@ Our Atlantis deployment runs in the [dsp-tools k8s cluster](https://console.clou
 
 ### Configuring Atlantis to work with your Terraform repo
 
+* For now Terraform repos managed with Atlantis need to be in the DataBiosphere GitHub org. This will very soon be expanded to the BroadInstitute org as well.
 * The Atlantis GCP service account must have owner rights to the project that you want to manage. This is accomplished by submitting a PR to the [terraform-dsp-tools-k8s Terraform repo](https://github.com/broadinstitute/terraform-dsp-tools-k8s), which is not managed by Atlantis and must be applied manually.
   * Specifically, any additional projects that will be managed by Atlantis need to get added to the list of projects in the `atlantis_managed_projects` variable in that configuration.
 * Add an atlantis.yaml file at the root of your repo and configure your projects and workflows to correctly combine your workspaces & .tfvars files. See the [atlantis.yaml docs](https://www.runatlantis.io/docs/repo-level-atlantis-yaml.html) and project structure section below.
+* That should be it!
 
 ## Modules
 
