@@ -64,5 +64,6 @@
   * [Framework Quickstarts](devops/framework-kernel-new-stack/framework-quickstarts.md)
   * [Terra Framework Deployment](devops/framework-kernel-new-stack/terra-framework-deployment.md)
 * [Best Practices / Guides](devops/best-practices-guides/README.md)
+  * [Terraform](devops/best-practices-guides/terraform.md)
   * [Github Actions](devops/best-practices-guides/github-actions.md)
 
