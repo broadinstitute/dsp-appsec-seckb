@@ -15,11 +15,13 @@ There are several reasons why it makes sense to use [Atlantis](https://www.runat
 
 ### DSP's Atlantis
 
-TODO
+Our Atlantis deployment runs in the [dsp-tools k8s cluster](https://console.cloud.google.com/kubernetes/clusters/details/us-central1-a/dsp-tools?project=dsp-tools-k8s), and is [deployed with Helm](https://github.com/broadinstitute/terra-helm-definitions/blob/master/dsp-tools/atlantis.yaml).
 
 ### Configuring Atlantis to work with your Terraform repo
 
-TODO
+* The Atlantis GCP service account must have owner rights to the project that you want to manage. This is accomplished by submitting a PR to the [terraform-dsp-tools-k8s Terraform repo](https://github.com/broadinstitute/terraform-dsp-tools-k8s), which is not managed by Atlantis and must be applied manually.
+  * Specifically, any additional projects that will be managed by Atlantis need to get added to the list of projects in the `atlantis_managed_projects` variable in that configuration.
+* Add an atlantis.yaml file at the root of your repo and configure your projects and workflows to correctly combine your workspaces & .tfvars files. See the [atlantis.yaml docs](https://www.runatlantis.io/docs/repo-level-atlantis-yaml.html) and project structure section below.
 
 ## Modules
 
@@ -71,7 +73,43 @@ Below is an example Terraform project folder structure that incorporates the abo
 
 #### atlantis.yaml
 
-TODO
+An example `atlantis.yaml` file to go with the above project structure, defining the environment projects and instructing Atlantis to apply them in separate workspaces and with the correct .tfvars files.
+
+```text
+version: 3
+projects:
+- name: dev
+  dir: foo-app-definitions
+  workflow: dev
+  workspace: dev
+- name: staging
+  dir: foo-app-definitions
+  workflow: staging
+  workspace: staging
+- name: prod
+  dir: foo-app-definitions
+  workflow: prod
+  workspace: prod
+workflows:
+  dev:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-var-file", "dev.tfvars"]
+  staging:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-var-file", "staging.tfvars"]
+  prod:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-var-file", "prod.tfvars"]
+```
 
 
 
