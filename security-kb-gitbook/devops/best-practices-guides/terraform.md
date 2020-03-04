@@ -45,13 +45,13 @@ Ensure that your project's backend as well as the Vault and Google providers are
 
 {% tabs %}
 {% tab title="Google Provider" %}
-```
+```bash
+# In your terraform.tf file outside your app module:
 provider "google" {
   project = var.google_project
   region  = "us-central1"
   credentials = file("/var/secrets/atlantis-sa/atlantis-sa.json")
 }
-
 provider "google-beta" {
   project = var.google_project
   region  = "us-central1"
@@ -61,7 +61,17 @@ provider "google-beta" {
 {% endtab %}
 
 {% tab title="Vault Provider" %}
-```
+```bash
+# In your module's variables.tf, define these variables without defaults.
+# Atlantis will pass them in.
+variable "approle_role_id" {
+  description = "Vault approle role ID"
+}
+variable "approle_secret_id" {
+  description = "Vault approle secret ID"
+}
+
+# In your terraform.tf file outside your app module:
 provider "vault" {
   address = var.vault_addr
   auth_login {
@@ -76,7 +86,8 @@ provider "vault" {
 {% endtab %}
 
 {% tab title="Backend" %}
-```text
+```bash
+# In your terraform.tf file outside your app module:
 backend "gcs" {
   bucket = "dsp-tools-tf-state"
   path = "tfstate-managed/[your app name]"
