@@ -17,7 +17,7 @@
   * [GCP Basic Security Tasks](platform-security-categories/google-cloud-platform/gcp-basic-security-tasks.md)
   * [What Compute Environment Should I Use?](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/README.md)
     * [Secure GCE](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/secure-gce.md)
-    * [GKE](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/gke.md)
+    * [Secure GKE](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/gke.md)
   * [Securing the Network](platform-security-categories/google-cloud-platform/securing-the-network.md)
   * [Setting up a secure CloudSQL instance](platform-security-categories/google-cloud-platform/setting-up-a-secure-cloudsql-instance.md)
 * [Git & Github](platform-security-categories/git/README.md)

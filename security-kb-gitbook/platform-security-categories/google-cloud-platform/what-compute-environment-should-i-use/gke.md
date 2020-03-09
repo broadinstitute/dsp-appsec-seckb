@@ -1,4 +1,4 @@
-# GKE
+# Secure GKE
 
 1. Ensure **Stackdriver Logging** enabled on GKE Clusters - [https://cloud.google.com/monitoring/kubernetes-engine/legacy-stackdriver/logging](https://cloud.google.com/monitoring/kubernetes-engine/legacy-stackdriver/logging)
 2. Ensure legacy authorization is disabled. 
