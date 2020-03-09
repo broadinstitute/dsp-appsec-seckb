@@ -30,5 +30,9 @@
 
 Please see Infosec about getting on the Alpha for Kubernetes Threat Detection.
 
+{% hint style="info" %}
 _**Note: After March 1st, 2020 GKE Threat Detection will be enabled for all projects under broadinstitute gcp org.**_
+{% endhint %}
+
+
 
