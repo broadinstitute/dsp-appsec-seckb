@@ -4,5 +4,5 @@ description: Best practices for Analysis Platform Terraform repos
 
 # Terraform
 
-## [MOVED](https://dsp-security.gitbook.io/dsp-devops-portal/best-practices-guides/terraform)
+## [MOVED](https://docs.dsp-devops.broadinstitute.org/best-practices-guides/terraform)
 

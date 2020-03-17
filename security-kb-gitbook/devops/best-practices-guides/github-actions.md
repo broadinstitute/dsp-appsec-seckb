@@ -6,5 +6,5 @@ description: >-
 
 # Github Actions
 
-## [MOVED](https://dsp-security.gitbook.io/dsp-devops-portal/best-practices-guides/github-actions) <a id="Vetting-Actions"></a>
+## [MOVED](https://docs.dsp-devops.broadinstitute.org/best-practices-guides/github-actions) <a id="Vetting-Actions"></a>
 
