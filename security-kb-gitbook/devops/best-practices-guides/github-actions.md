@@ -6,24 +6,5 @@ description: >-
 
 # Github Actions
 
-## Vetting Actions <a id="Vetting-Actions"></a>
-
-Pending implementation of enforcement, before adding actions not maintained by GitHub or another trusted source, it is the engineer’s responsibility to make sure the action does not contain any malicious code and then fork the action into the Broad Institute org.
-
-### Forking or creating an action <a id="Forking-an-action"></a>
-
-After it has been determined that an action is not malicious and needs to be forked to the broadinstitute org, if you do not have permission to do so, ask in [\#dsp-devops-champions](https://broadinstitute.slack.com/archives/CADM7MZ35). Same with creating a new action repo.
-
-After the action has been forked/created:
-
-1. Remove any references to the original repo in the example workflow snippets in the README or add a descriptive README if it is a new action.
-2. [Add a tagging workflow](https://github.com/broadinstitute/repository-dispatch/commit/b2942f7810eaa5b54834876b9c302d8279f91d21) so that the action can be automatically versioned and tagged on commits to master
-3. Add the action to the list of actions below
-
-### Broad Institute Actions <a id="Broad-Institute-Actions"></a>
-
-* [github-tag-action](https://github.com/broadinstitute/github-tag-action)
-* [repository-dispatch](https://github.com/broadinstitute/repository-dispatch)
-* [github-action-kustomize-deploy](https://github.com/broadinstitute/github-action-kustomize-deploy)
-* [github-action-differ](https://github.com/broadinstitute/github-action-differ)
+## [MOVED](https://dsp-security.gitbook.io/dsp-devops-portal/best-practices-guides/github-actions) <a id="Vetting-Actions"></a>
 
