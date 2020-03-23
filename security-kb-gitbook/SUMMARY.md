@@ -40,6 +40,7 @@
   * [Tools](platform-security-categories/docker/tools.md)
   * [GKE \(GCP\)](platform-security-categories/docker/gke-gcp.md)
   * [Additional Resources for Docker Security](platform-security-categories/docker/additional-resources-for-docker-security.md)
+* [OS Base Hardening](platform-security-categories/os-base-hardening.md)
 
 ## Appsec Team Internal
 
