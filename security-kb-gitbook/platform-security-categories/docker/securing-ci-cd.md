@@ -10,5 +10,7 @@ description: Securing Docker via CI/CD pipeline
 
 ### Example Repo
 
-* Enter example repo url here: https://github.com/broadinstitute/example-test-etc
-* 
+* Enter example repo url here: [https://github.com/broadinstitute/trivy-cicd](https://github.com/broadinstitute/trivy-cicd)
+
+
+
