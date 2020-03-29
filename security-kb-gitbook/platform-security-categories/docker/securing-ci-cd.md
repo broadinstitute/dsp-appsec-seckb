@@ -22,6 +22,8 @@ Add this step in your Github Action workflow to scan an image.
     with:
       args: --exit-code 1 --severity CRITICAL --no-progress ${IMAGE_NAME}
 ```
+
+Examples for Github actions workflows: [https://github.com/broadinstitute/trivy-cicd/tree/master/.github/workflows](https://github.com/broadinstitute/trivy-cicd/tree/master/.github/workflows) 
 {% endtab %}
 
 {% tab title="CircleCI" %}
@@ -37,6 +39,8 @@ Add these steps to your `config.yml` to install trivy and scan an image.
   name: Scan the local image with trivy 
   command: trivy --exit-code 1 --severity CRITICAL --no-progress ${IMAGE_NAME}:${CIRCLE_SHA1}
 ```
+
+Examples for CircleCI workflows: [https://github.com/broadinstitute/trivy-cicd/tree/master/.circleci](https://github.com/broadinstitute/trivy-cicd/tree/master/.circleci)
 {% endtab %}
 
 {% tab title="TravisCI" %}
@@ -51,6 +55,8 @@ before_install:
 script:
     - ./trivy --exit-code 1 --severity CRITICAL --no-progress ${IMAGE_NAME}:${COMMIT}
 ```
+
+TravisCI workflow example: [https://github.com/broadinstitute/trivy-cicd/tree/master/travis](https://github.com/broadinstitute/trivy-cicd/tree/master/travis)
 {% endtab %}
 
 {% tab title="Other" %}
@@ -85,7 +91,7 @@ docker run --rm -v [YOUR_CACHE_DIR]:/root/.cache/ aquasec/trivy [YOUR_IMAGE_NAME
 If you'd like to mark an issue as False Positive you can do so using the following steps in Trivy.
 
 * [ ] Create `.trivyignore` file in your home directory.
-* [ ] Include vulnerabilities you want to mark as FP by adding them with their `VULNERABILITY ID` and comment the reason. 
+* [ ] Include vulnerabilities you want to mark as FP by adding them with their `VULNERABILITY ID` and commenting the reason. 
 
 ```text
 
