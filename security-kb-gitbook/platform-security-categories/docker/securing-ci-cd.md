@@ -4,6 +4,10 @@ description: Scan docker images in CI/CD pipeline using Trivy.
 
 # Securing CI/CD
 
+## Quick intro
+
+A common risk in containerized environments is deploying containers having vulnerabilities. Static archive files that include all components to run an application, may be missing critical security updates, or are just outdated. For this reason, before pushing images to container registries and deploy them, DSP Appsec team highly recommend to scan images using Trivy tool. 
+
 ### Trivy Setup
 
 Below you will find examples on how to setup `trivy` using your CI tool. 
@@ -59,7 +63,7 @@ script:
 TravisCI workflow example: [https://github.com/broadinstitute/trivy-cicd/tree/master/travis](https://github.com/broadinstitute/trivy-cicd/tree/master/travis)
 {% endtab %}
 
-{% tab title="Other" %}
+{% tab title="Docker" %}
 Test Trivy via Docker: 
 
 ```text
