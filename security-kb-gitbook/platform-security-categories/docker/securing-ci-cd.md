@@ -11,7 +11,7 @@ A common risk in containerized environments is deploying containers having vulne
 Some of image security issues are listed below:
 
 {% hint style="danger" %}
-**Image configuration defects**- image runs with greater privileges than needed, or when an image has an SSH daemon that exposes the container to unnecessary network risk. 
+**Image configuration defects**-  images may also have configuration defects, for example when an image runs with greater privileges than needed, or when an image has an SSH daemon that exposes the container to unnecessary network risk. 
 {% endhint %}
 
 {% hint style="danger" %}
