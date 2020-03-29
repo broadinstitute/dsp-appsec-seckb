@@ -6,7 +6,25 @@ description: Scan docker images in CI/CD pipeline using Trivy.
 
 ## Quick intro
 
-A common risk in containerized environments is deploying containers having vulnerabilities. Static archive files that include all components to run an application, may be missing critical security updates, or are just outdated. For this reason, before pushing images to container registries and deploy them, DSP Appsec team highly recommend to scan images using Trivy tool. 
+A common risk in containerized environments is deploying containers having vulnerabilities. Static archive files that include all components to run an application, may be missing critical security updates, or are just outdated. For this reason, before pushing images to container registries and deploy them, DSP Appsec team highly recommend to scan images using Trivy tool.  
+
+Some of image security issues are listed below:
+
+{% hint style="danger" %}
+**Image configuration defects**- image runs with greater privileges than needed, or when an image has an SSH daemon that exposes the container to unnecessary network risk. 
+{% endhint %}
+
+{% hint style="danger" %}
+**Embedded malware** - malicious files could be included within a container and be used to attack other containers or hosts within the environment. A possible source of this embedded malware is by third party of which the full provenance is not known. 
+{% endhint %}
+
+{% hint style="danger" %}
+**Embedded clear text secrets** - when secrets are included into an image, they are directly into the image file system. Anyone with a access to the image can easily read these secrets. 
+{% endhint %}
+
+{% hint style="danger" %}
+**Use of untrusted images** - using externally provided images results in risks such as introducing malware, leaking data or including components with vulnerabilities.
+{% endhint %}
 
 ### Trivy Setup
 
