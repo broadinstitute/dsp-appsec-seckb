@@ -45,7 +45,7 @@ Add this step in your Github Action workflow to scan an image.
       args: --exit-code 1 --severity CRITICAL --no-progress ${IMAGE_NAME}
 ```
 
-Examples for Github actions workflows: [https://github.com/broadinstitute/trivy-cicd/tree/master/.github/workflows](https://github.com/broadinstitute/trivy-cicd/tree/master/.github/workflows) 
+Examples for Github actions workflows: [https://github.com/broadinstitute/dsp-appsec-trivy-cicd/tree/master/.github/workflows](https://github.com/broadinstitute/trivy-cicd/tree/master/.github/workflows) 
 {% endtab %}
 
 {% tab title="CircleCI" %}
@@ -62,7 +62,7 @@ Add these steps to your `config.yml` to install trivy and scan an image.
   command: trivy --exit-code 1 --severity CRITICAL --no-progress ${IMAGE_NAME}:${CIRCLE_SHA1}
 ```
 
-Examples for CircleCI workflows: [https://github.com/broadinstitute/trivy-cicd/tree/master/.circleci](https://github.com/broadinstitute/trivy-cicd/tree/master/.circleci)
+Examples for CircleCI workflows: [https://github.com/broadinstitute/dsp-appsec-trivy-cicd/tree/master/.circleci](https://github.com/broadinstitute/trivy-cicd/tree/master/.circleci)
 {% endtab %}
 
 {% tab title="TravisCI" %}
@@ -78,7 +78,7 @@ script:
     - ./trivy --exit-code 1 --severity CRITICAL --no-progress ${IMAGE_NAME}:${COMMIT}
 ```
 
-TravisCI workflow example: [https://github.com/broadinstitute/trivy-cicd/tree/master/travis](https://github.com/broadinstitute/trivy-cicd/tree/master/travis)
+TravisCI workflow example: [https://github.com/broadinstitute/dsp-appsec-trivy-cicd/tree/master/travis](https://github.com/broadinstitute/trivy-cicd/tree/master/travis)
 {% endtab %}
 
 {% tab title="Docker" %}
@@ -127,7 +127,7 @@ CVE-2016-2779
 
 \*\*\*\*
 
- **Example repository:** [**https://github.com/broadinstitute/trivy-cicd**](https://github.com/broadinstitute/trivy-cicd) ****
+ **Example repository:** [**https://github.com/broadinstitute/dsp-appsec-trivy-cicd**](https://github.com/broadinstitute/trivy-cicd) ****
 
 ### Questions
 
