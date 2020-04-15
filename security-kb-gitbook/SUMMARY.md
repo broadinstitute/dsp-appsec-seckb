@@ -13,13 +13,6 @@
     * [Security 101](platform-security-categories/secure_development/secure_coding/security101.md)
     * [Security 201](platform-security-categories/secure_development/secure_coding/security201.md)
     * [Security Resources](platform-security-categories/secure_development/secure_coding/security_resources.md)
-* [Google Cloud Platform](platform-security-categories/google-cloud-platform/README.md)
-  * [GCP Basic Security Tasks](platform-security-categories/google-cloud-platform/gcp-basic-security-tasks.md)
-  * [What Compute Environment Should I Use?](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/README.md)
-    * [Secure GCE](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/secure-gce.md)
-    * [Secure GKE](platform-security-categories/google-cloud-platform/what-compute-environment-should-i-use/gke.md)
-  * [Securing the Network](platform-security-categories/google-cloud-platform/securing-the-network.md)
-  * [Setting up a secure CloudSQL instance](platform-security-categories/google-cloud-platform/setting-up-a-secure-cloudsql-instance.md)
 * [Git & Github](platform-security-categories/git/README.md)
   * [Did you accidentally commit a secret?](platform-security-categories/git/what-to-do-in-case-of-an-incident.md)
   * [Setup Git-Secrets](platform-security-categories/git/setup-git-secrets.md)
@@ -68,4 +61,16 @@
 * [Best Practices / Guides](devops/best-practices-guides/README.md)
   * [Terraform](devops/best-practices-guides/terraform.md)
   * [Github Actions](devops/best-practices-guides/github-actions.md)
+
+## Cloud Security
+
+* [Google Cloud Platform](cloud-security/google-cloud-platform/README.md)
+  * [GCP Basic Security Tasks](cloud-security/google-cloud-platform/gcp-basic-security-tasks.md)
+  * [What Compute Environment Should I Use?](cloud-security/google-cloud-platform/what-compute-environment-should-i-use/README.md)
+    * [Secure GCE](cloud-security/google-cloud-platform/what-compute-environment-should-i-use/secure-gce.md)
+    * [Secure GKE](cloud-security/google-cloud-platform/what-compute-environment-should-i-use/gke.md)
+  * [Securing the Network](cloud-security/google-cloud-platform/securing-the-network.md)
+  * [Setting up a secure CloudSQL instance](cloud-security/google-cloud-platform/setting-up-a-secure-cloudsql-instance.md)
+* [AWS \(Amazon Web Services\)](cloud-security/aws-amazon-web-services.md)
+* [Azure \(Microsoft\)](cloud-security/azure-microsoft.md)
 
