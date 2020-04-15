@@ -4,39 +4,68 @@ description: 'Resources on how to harden a base OS such as Debian9, CentOS 8 etc
 
 # OS Base Hardening
 
-## Option A: Use a dsp-appsec machine image
+## Option A: Use a dsp-appsec custom image
 
-DSP has pre-configured machine images that are hardened according to CIS benchmarks. Machines instances include additional security features such as the default DSP secure network and pre-set IAM permissions. You can start an instance based on a machine image using `gcloud` or the GCP console.
+DSP has pre-configured images that are hardened according to CIS benchmarks. You can start an instance based on an image using `gcloud` or the GCP console, using the deployment manager, or using the GCP console. 
 
-```text
-gcloud beta compute instances create [YOUR-NEW-INSTANCE-NAME] \
-    --zone [ZONE] \
-    --source-machine-image [MACHINE-IMAGE-NAME]
-```
+**Note**: You need to request image reader permissions from dsp-appsec before gaining access to these images.
 
-You can also click on the machine instance in the GCP console and click the "Create Instance" button at the top of the page.
-
-![You can create a hardened instance from a dsp-appsec machine image.](../.gitbook/assets/screen-shot-2020-03-23-at-7.34.53-pm.png)
-
-You can find a list of hardened machine images here \[TBD\].
-
-## Option B: Use a dsp-appsec custom image
-
-DSP has pre-configured images that are hardened according to CIS benchmarks. You can start an instance based on an image using `gcloud` or the GCP console. 
+#### 1. gcloud command
 
 ```text
 gcloud compute instances create [INSTANCE_NAME] \
     --image [IMAGE] \
-    --image-project dsp-appsec-prod
+    --image-project dsp-appsec
 ```
 
-You can also click on the instance in the GCP console and click the "Create Instance" button at the top of the page.
+#### 2. Deployment Manager
+
+You can also use Google's deployment manager to manage the instance for you. Use the configuration file  `example.yaml` template below to specify the properties of your instance.
+
+N**ote**: You may need to change zone, network, or machine type properties for your project.
+
+```yaml
+resources:
+- type: compute.v1.instance
+  name: [INSTANCE NAME]
+  properties:
+    zone: us-central1-f
+    machineType: https://www.googleapis.com/compute/v1/projects/[YOUR-PROJECT]/zones/us-central1-f/machineTypes/f1-micro
+    disks:
+    - deviceName: boot
+      type: PERSISTENT
+      boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: https://www.googleapis.com/compute/v1/projects/dsp-appsec/global/images/[CIS-IMAGE]
+    networkInterfaces:
+    - network: https://www.googleapis.com/compute/v1/projects/[YOUR-PROJECT]/global/networks/default
+      accessConfigs:
+      - name: External NAT
+        type: ONE_TO_ONE_NAT
+```
+
+You can then deploy the instance using the command
+
+```text
+gcloud deployment-manager deployments create [DEPLOYMENT-NAME] --config example.yaml
+```
+
+#### 3. Console
+
+You can click on the instance in the GCP console and click the "Create Instance" button at the top of the page.
 
 ![You can create a hardened instance from a dsp-appsec image.](../.gitbook/assets/screen-shot-2020-03-23-at-8.03.04-pm.png)
 
-You can find a list of hardened images here \[TBD\].
+You can then go to custom images and select `dsp-appsec` as your project before choosing an image.
 
-## Option C: Use dsp-appsec's ansible playbook for CIS hardening
+![Choosing a custom CIS hardened image.](../.gitbook/assets/screen-shot-2020-04-15-at-4.34.50-pm.png)
+
+dsp-appsec currently has the following images:
+
+* `dsp-appsec-cis-debian9`
+
+## Option B: Use dsp-appsec's ansible playbook for CIS hardening
 
 To run CIS hardening via ansible, clone this repo and call the script. The script will automatically install all the requirements and run the playbook in a virtual environment.
 
