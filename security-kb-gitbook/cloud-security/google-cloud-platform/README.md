@@ -8,11 +8,9 @@ description: >-
 
 {% page-ref page="gcp-basic-security-tasks.md" %}
 
-{% page-ref page="what-compute-environment-should-i-use/" %}
+{% page-ref page="secure-gce.md" %}
 
-{% page-ref page="what-compute-environment-should-i-use/secure-gce.md" %}
-
-{% page-ref page="what-compute-environment-should-i-use/gke.md" %}
+{% page-ref page="gke.md" %}
 
 {% page-ref page="securing-the-network.md" %}
 

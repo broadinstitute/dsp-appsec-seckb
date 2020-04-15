@@ -65,12 +65,14 @@
 ## Cloud Security
 
 * [Google Cloud Platform](cloud-security/google-cloud-platform/README.md)
-  * [GCP Basic Security Tasks](cloud-security/google-cloud-platform/gcp-basic-security-tasks.md)
-  * [What Compute Environment Should I Use?](cloud-security/google-cloud-platform/what-compute-environment-should-i-use/README.md)
-    * [Secure GCE](cloud-security/google-cloud-platform/what-compute-environment-should-i-use/secure-gce.md)
-    * [Secure GKE](cloud-security/google-cloud-platform/what-compute-environment-should-i-use/gke.md)
+  * [Before Starting a Project](cloud-security/google-cloud-platform/gcp-basic-security-tasks.md)
   * [Securing the Network](cloud-security/google-cloud-platform/securing-the-network.md)
+  * [VPC Service Control](cloud-security/google-cloud-platform/vpc-service-control.md)
   * [Setting up a secure CloudSQL instance](cloud-security/google-cloud-platform/setting-up-a-secure-cloudsql-instance.md)
+  * [IAM](cloud-security/google-cloud-platform/iam.md)
+  * [Secure GCE](cloud-security/google-cloud-platform/secure-gce.md)
+  * [Secure GKE](cloud-security/google-cloud-platform/gke.md)
+  * [Docker Security on GCP](cloud-security/google-cloud-platform/gcp-docker.md)
 * [AWS \(Amazon Web Services\)](cloud-security/aws-amazon-web-services.md)
 * [Azure \(Microsoft\)](cloud-security/azure-microsoft.md)
 

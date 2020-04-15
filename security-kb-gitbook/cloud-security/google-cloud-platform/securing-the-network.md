@@ -1,3 +1,7 @@
+---
+description: 'Note: You should do this even if you’re not using GCE'
+---
+
 # Securing the Network
 
 ## Close SSH and RDP access
