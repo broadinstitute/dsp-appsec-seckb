@@ -14,7 +14,7 @@ description: Starting a GCP project securely...
 
 Make sure your gcloud command line tool is up to date and latest. It changes often.
 
-```text
+```bash
 # Check you current version of gcloud
 gcloud version
 
