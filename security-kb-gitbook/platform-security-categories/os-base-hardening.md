@@ -4,13 +4,16 @@ description: 'Resources on how to harden a base OS such as Debian9, CentOS 8 etc
 
 # OS Base Hardening
 
-## Option A: Use a dsp-appsec custom image
+## 1. Use a dsp-appsec custom image
+
+#### Prerequisites:
+
+* `roles/compute.imageUser` permissions from dsp-appsec
+  * dsp-appsec will need your Google APIs service account to grant your project permission to use the images. This service account can be found in the IAM section of your project and is in the form `[PROJECT_NUMBER]@cloudservices.gserviceaccount.com`
 
 DSP has pre-configured images that are hardened according to CIS benchmarks. You can start an instance based on an image using `gcloud` or the GCP console, using the deployment manager, or using the GCP console. 
 
-**Note**: You need to request image reader permissions from dsp-appsec before gaining access to these images.
-
-#### 1. gcloud command
+#### A. gcloud command
 
 ```text
 gcloud compute instances create [INSTANCE_NAME] \
@@ -18,7 +21,7 @@ gcloud compute instances create [INSTANCE_NAME] \
     --image-project dsp-appsec
 ```
 
-#### 2. Deployment Manager
+#### B. Deployment Manager
 
 You can also use Google's deployment manager to manage the instance for you. Use the configuration file  `example.yaml` template below to specify the properties of your instance.
 
@@ -51,11 +54,15 @@ You can then deploy the instance using the command
 gcloud deployment-manager deployments create [DEPLOYMENT-NAME] --config example.yaml
 ```
 
-#### 3. Console
+#### C. Console
 
 You can click on the instance in the GCP console and click the "Create Instance" button at the top of the page.
 
-![You can create a hardened instance from a dsp-appsec image.](../.gitbook/assets/screen-shot-2020-03-23-at-8.03.04-pm.png)
+![Create an new instance](../.gitbook/assets/screen-shot-2020-04-15-at-4.59.19-pm.png)
+
+Name your instance and set any other properties before scrolling down to Boot disk. Click the **Change** button.
+
+![](../.gitbook/assets/screen-shot-2020-04-15-at-4.59.59-pm.png)
 
 You can then go to custom images and select `dsp-appsec` as your project before choosing an image.
 
@@ -65,9 +72,14 @@ dsp-appsec currently has the following images:
 
 * `dsp-appsec-cis-debian9`
 
-## Option B: Use dsp-appsec's ansible playbook for CIS hardening
+## 2. Use dsp-appsec's ansible playbook for CIS hardening
 
 To run CIS hardening via ansible, clone this repo and call the script. The script will automatically install all the requirements and run the playbook in a virtual environment.
+
+#### Prerequisites:
+
+* ssh access to the compute instance
+* git installed
 
 Make sure to replace the `[OS]` below with your system.
 
