@@ -38,5 +38,9 @@ Someone from the appsec team will reach out to you a few seconds after an incide
 **Step 3:** Review access logs to see if there was some suspicious activity. If you do find suspicious activity please reach out to appsec@broadinstitute.org.
 {% endhint %}
 
+{% hint style="danger" %}
+**Step 4:** Short write-up for incident tracking and briefly document the recovery steps you took. Including time stamps if you have them for discovery and actions taken. This can be a brief report and we mainly need it for compliance/documentation purposes. 
+{% endhint %}
+
 Some secrets can lead to other secrets. E.g. Slack tokens can give access to messages and shared files generally containing other secrets. GitHub tokens can give access to private repositories also containing secrets. Depending on your findings, if part of your infrastructure or data has been further exposed, you may need to take additional mitigation actions.
 
