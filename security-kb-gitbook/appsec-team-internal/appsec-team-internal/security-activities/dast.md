@@ -109,10 +109,10 @@ The OWASP ZAProxy tool is used as part of weekly scans against dev environments.
 | **Leo** | **https://leonardo.dsde-dev.broadinstitute.org** |
 | **Job Manager UI** | **https://job-manager.dsde-dev.broadinstitute.org/** |
 | **Job Manager Server** | **https://job-manager.dsde-dev.broadinstitute.org/** |
-| **CromIAM** | **TBD** |
-| **Cromwell** | **TBD** |
+| **CromIAM** | **https://cromiam101.dsde-dev.broadinstitute.org/, https://cromiam102.dsde-dev.broadinstitute.org/ and https://cromiam103.dsde-dev.broadinstitute.org/** |
+| **Cromwell** | **cromwell1.dsde-dev.broadinstitute.org** |
 | **Agora** | **https://agora.dsde-dev.broadinstitute.org/** |
-| **Martha** | **TBD** |
+| **Martha** | **https://us-central1-broad-dsde-dev.cloudfunctions.net/martha\_v2** |
 | **Bond** | **https://broad-bond-dev.appspot.com** |
 | **Thurloe** | **https://thurloe.dsde-dev.broadinstitute.org/** |
 | **Calhoun** | **https://terra-calhoun-dev.appspot.com** |
