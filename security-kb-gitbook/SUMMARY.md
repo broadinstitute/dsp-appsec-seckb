@@ -53,15 +53,6 @@
 * [Appsec Team Projects](appsec-team-internal/appsec-team-projects/README.md)
   * [Internally Built Projects](appsec-team-internal/appsec-team-projects/projects.md)
 
-## DevOps
-
-* [Framework/Kernel/New Stack](devops/framework-kernel-new-stack/README.md)
-  * [Framework Quickstarts](devops/framework-kernel-new-stack/framework-quickstarts.md)
-  * [Terra Framework Deployment](devops/framework-kernel-new-stack/terra-framework-deployment.md)
-* [Best Practices / Guides](devops/best-practices-guides/README.md)
-  * [Terraform](devops/best-practices-guides/terraform.md)
-  * [Github Actions](devops/best-practices-guides/github-actions.md)
-
 ## Cloud Security
 
 * [Google Cloud Platform](cloud-security/google-cloud-platform/README.md)

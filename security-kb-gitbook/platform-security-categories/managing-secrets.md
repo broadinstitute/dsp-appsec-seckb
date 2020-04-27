@@ -159,8 +159,12 @@ before_install:
 script:
 -  docker run -it --rm \
     -v $HOME:/root \
-    broadinstitute/dsde-toolbox:dev vault -format=json read path/to/secret >> config.json
+    broadinstitute/dsde-toolbox:dev vault -format=json read path/to/secret >> config.json@deni
 ```
+{% endtab %}
+
+{% tab title="GKE Secrets" %}
+
 {% endtab %}
 {% endtabs %}
 
