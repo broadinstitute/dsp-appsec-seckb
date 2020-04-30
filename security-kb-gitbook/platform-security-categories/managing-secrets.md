@@ -212,11 +212,11 @@ Storing these securely in GKE can be accomplished with:
 
 Options \(1-3\) are best, since they offer both a _dedicated_ secrets storage medium, and _auditability_ of _individual_ secret management/access by default \([Kubernetes Secrets](https://cloud.google.com/kubernetes-engine/docs/how-to/audit-logging#enabling_data_access_logs), [Secret Manager](https://cloud.google.com/secret-manager/docs/audit-logging)\). 
 
-Kubernetes Secrets is slightly easier to use in the default configuration, as it doesn't require modification of the existing application code. However, enabling application-level encryption requires more work. Use Secret Manager if you can modify the application code.
+Kubernetes Secrets are slightly easier to use in the default configuration, as it doesn't require modification of the existing application code. However, enabling application-level encryption requires more work. Use Secret Manager if you can modify the application code.
 
-Option \(4\) is also good as a general secrets _encryption_ solution, however it doesn't enable audit at the individual secret level \(only at the _encryption key_ level\). Use it when other options are not available.
+\(4\) is also good as a general secrets _encryption_ solution, however it doesn't enable audit at the individual secret level \(only at the _encryption key_ level\). Use it when other options are not available.
 
-Option \(5\) may be possible for access to third-party APIs and other cloud providers, starting with only Google credentials. Setting them up depends on the particular service provider. [Here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html)'s an example for AWS.
+\(5\) may be possible for access to third-party APIs and other cloud providers, starting with only Google credentials. Setting them up depends on the particular service provider. [Here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html)'s an example for AWS.
 
 ### Short-term credentials
 
