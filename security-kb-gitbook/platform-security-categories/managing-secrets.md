@@ -184,7 +184,7 @@ GKE apps can access Service Account credentials \(which are used to access other
 
 ### SSL certificates
 
-GKE apps may present HTTPS endpoints using SSL certificates:
+GKE apps may present HTTPS endpoints using SSL certificates with:
 
 1. \(**best practice**\) [Google-managed SSL certificates](https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs).
 2. \(**good practice**\) [Cert-manager](https://cert-manager.io/docs/installation/kubernetes/).
