@@ -210,7 +210,7 @@ Storing these securely in GKE can be accomplished with:
 4. \(good practice\) [Cloud KMS](https://cloud.google.com/kms/docs/quickstart).
 5. \(**best practice**\) Federated access.
 
-Options \(1-3\) are best, since they offer both a _dedicated_ secrets storage medium, and _auditability_ of _individual_ secret management and access by default \([Kubernetes Secrets](https://cloud.google.com/kubernetes-engine/docs/how-to/audit-logging#enabling_data_access_logs), [Secret Manager](https://cloud.google.com/secret-manager/docs/audit-logging)\). 
+Options \(1-3\) are best, since they offer both a _dedicated_ secrets storage medium, and _auditability_ of _individual_ secret management/access by default \([Kubernetes Secrets](https://cloud.google.com/kubernetes-engine/docs/how-to/audit-logging#enabling_data_access_logs), [Secret Manager](https://cloud.google.com/secret-manager/docs/audit-logging)\). 
 
 Kubernetes Secrets is slightly easier to use in the default configuration, as it doesn't require modification of the existing application code. However, enabling application-level encryption requires more work. Use Secret Manager if you can modify the application code.
 
