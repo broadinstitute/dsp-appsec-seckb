@@ -171,12 +171,12 @@ script:
 GKE apps can access Service Account credentials \(which are used to access other Google APIs and services\) through:
 
 1. \(**best practice**\) [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#workload_identity_recommended), if configured for the cluster and Pods.
-2. \(_deprecated_\) Default or custom [Node Service Account](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#node_service_account) assigned to GKE nodes.
+2. \(_deprecated_\) Default or custom [Node Service Account](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#node_service_account).
 3. \(discouraged\) [Service Account Keys](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#service_account_json_key). 
 
-\(3\) is still being used in many examples from Google documentation, however it's not advisable, mainly because long-term credentials should be rotated on a regular basis, and it can be hard to configure that while simpler alternatives \(1 and 2\) exist.
+\(3\) is still being used in many examples from Google documentation, however it's not advisable, mainly because long-term credentials should be rotated on a regular basis, and it can be hard to configure that, while simpler alternatives \(1 and 2\) exist.
 
-\(2\) and \(1\) allow for Service Account credentials to be discovered _**automatically**_ by Google client libraries, i.e. it's not necessary to "point" your app to a particular key location like in method \(3\). Just initialize [Google API SDK](https://cloud.google.com/apis/docs/cloud-client-libraries) for you language of choice, and the credentials will be "picked up" from the environment. 
+\(2\) and \(1\) allow for Service Account credentials to be discovered _**automatically**_ by Google client libraries, i.e. it's not necessary to "point" your app to a particular key location like in method \(3\). Just initialize [Google API SDK](https://cloud.google.com/apis/docs/cloud-client-libraries) for your language of choice, and the credentials will be "picked up" from the environment. 
 
 \(2\) is simple, however in an environment with _multiple_ apps per cluster, it leads to over-granting of permissions for various apps and unnecessary sharing of permissions between them.
 
@@ -216,12 +216,12 @@ Kubernetes Secrets is slightly easier to use in the default configuration, as it
 
 Option \(4\) is also good as a general secrets _encryption_ solution, however it doesn't enable audit at the individual secret level \(only at the _encryption key_ level\). Use it when other options are not available.
 
-Option \(5\) may be possible for access to third-party APIs and other cloud providers, starting with only Google credentials. Setting them up depends on the particular service provider.
+Option \(5\) may be possible for access to third-party APIs and other cloud providers, starting with only Google credentials. Setting them up depends on the particular service provider. [Here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html)'s an example for AWS.
 
 ### Short-term credentials
 
-* Google OAuth and other API tokens
-* Session tokens for web apps etc
+* Google OAuth, JWT and other temporary API tokens.
+* Session cookies for web apps etc.
 
 1. \(**best practice**\) Avoid handling of tokens explicitly in your code, unless your app authentication mechanism requires it. If possible, use [Cloud IAP](https://cloud.google.com/iap/docs/enabling-kubernetes-howto), [Istio/Envoy proxy](https://cloud.google.com/istio/docs/istio-on-gke/installing), [Cloud Endpoints](https://cloud.google.com/endpoints/docs/openapi/get-started-kubernetes-engine), or another application-level authentication proxy that handles token validation for your API.
 2. \(**good practice**\) Use well-established libraries \(e.g. [Google libraries](https://developers.google.com/identity/sign-in/web/backend-auth), [JWT libraries](https://jwt.io/)\) if you have to validate the tokens or otherwise process them on the backend. Additionally, clear variables used to store them as soon as you are finished with them, to avoid accidental leakage through the logs, third-party libraries etc.
