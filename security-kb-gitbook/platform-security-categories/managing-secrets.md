@@ -168,13 +168,13 @@ script:
 
 ### Service Account credentials
 
-GKE apps can have access to Service Account credentials \(which are used to access other Google APIs and services\) through:
+GKE apps can access Service Account credentials \(which are used to access other Google APIs and services\) through:
 
-1. \(**best practice**\) [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#workload_identity_recommended), if configured for the cluster and Pods \(and considered best-practice\).
+1. \(**best practice**\) [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#workload_identity_recommended), if configured for the cluster and Pods.
 2. \(_deprecated_\) Default or custom [Node Service Account](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#node_service_account) assigned to GKE nodes.
 3. \(discouraged\) [Service Account Keys](https://cloud.google.com/kubernetes-engine/docs/concepts/security-overview#service_account_json_key). 
 
-\(3\) is still being used in many examples from Google documentation, however it's not advisable, mainly because long-term credentials should be rotated on a regular basis, and it can be hard to configure that while easier alternatives \(1 and 2\) exist.
+\(3\) is still being used in many examples from Google documentation, however it's not advisable, mainly because long-term credentials should be rotated on a regular basis, and it can be hard to configure that while simpler alternatives \(1 and 2\) exist.
 
 \(2\) and \(1\) allow for Service Account credentials to be discovered _**automatically**_ by Google client libraries, i.e. it's not necessary to "point" your app to a particular key location like in method \(3\). Just initialize [Google API SDK](https://cloud.google.com/apis/docs/cloud-client-libraries) for you language of choice, and the credentials will be "picked up" from the environment. 
 
@@ -190,7 +190,7 @@ GKE apps may present HTTPS endpoints using SSL certificates:
 2. \(**good practice**\) [Cert-manager](https://cert-manager.io/docs/installation/kubernetes/).
 3. \(discouraged\) [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-Method \(3\) is still used by many, but it is not great by the same arguments as for storing Service Account keys. Simpler/better methods exist \(1 and 2\).
+Method \(3\) is still used by many, but it is not great by the same arguments as for storing Service Account keys. Simpler methods exist \(1 and 2\).
 
 \(2\) can be used to _automatically_ provision and manage certs with Let's Encrypt \(or other providers\).
 
@@ -206,7 +206,7 @@ Storing these securely in GKE can be accomplished with:
 
 1. \(**best practice**\) [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), optionally with [application-level encryption](https://cloud.google.com/kubernetes-engine/docs/how-to/encrypting-secrets).
 2. \(**best practice**\) [Secret Manager](https://cloud.google.com/secret-manager/docs/quickstart).
-3. \(**best practice**\) Hashicorp Vault.
+3. \(**best practice**\) [Hashicorp Vault](https://docs.dsp-devops.broadinstitute.org/framework-kernel-new-stack/framework-deployment#secrets).
 4. \(good practice\) [Cloud KMS](https://cloud.google.com/kms/docs/quickstart).
 5. \(**best practice**\) Federated access.
 
