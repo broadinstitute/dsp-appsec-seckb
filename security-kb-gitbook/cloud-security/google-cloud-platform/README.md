@@ -10,7 +10,7 @@ description: >-
 
 {% page-ref page="secure-gce.md" %}
 
-{% page-ref page="gke.md" %}
+{% page-ref page="gke/" %}
 
 {% page-ref page="securing-the-network.md" %}
 
