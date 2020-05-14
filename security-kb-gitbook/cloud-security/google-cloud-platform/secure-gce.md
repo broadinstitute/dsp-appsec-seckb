@@ -18,15 +18,9 @@ Scroll to the bottom and click "Management, security, disks, networking, sole te
 
 ![Choose a network tag to determine the firewall rules for this instance.](../../.gitbook/assets/gce-network%20%282%29.png)
 
-### 3. Use only [CIS hardened images](https://console.cloud.google.com/marketplace/browse?q=CIS) or Shielded VM images for your boot disk \(or create your own hardened image\).
+### 3. Use only [hardened images](https://github.com/broadinstitute/dsp-appsec-base-image-hardening) for your boot disk.
 
-For GCE Image, use \(if your use-case allows -- for sensitive data like PII only. This is overkill for De-ID’d and non-sensitive data. Only use for Broad Classification.
-
-![Click &quot;Change&quot; image under Boot Disk, and check the box to see Shielded VMs.](../../.gitbook/assets/screen-shot-2020-02-07-at-6.03.31-pm.png)
-
-Use your own image and harden it to an official standard like CIS or NIST
-
-Pre-made scripts to auto do this are here: https://github.com/dev-sec
+For GCE Image, use hardened images, if your use-case allows -- for sensitive data like PII only. This is overkill for De-ID’d and non-sensitive data. Only use for Broad Classification. Broad provides custom hardened images, or use your own image and harden it using Broad Institute [image hardening scripts](https://github.com/broadinstitute/dsp-appsec-base-image-hardening). For more information, see [OS Base Image Hardening](https://dsp-security.broadinstitute.org/platform-security-categories/os-base-hardening).
 
 ### 4. Use Google IAM for SSH Access
 
