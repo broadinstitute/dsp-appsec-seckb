@@ -42,6 +42,178 @@ While doing threat modeling/secure architecture review we can primarily focus on
 * [ ]  Auditing & Logging
 * [ ]  Application Framework and Libraries
 
+### Threat Modeling Considerations
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Subject</th>
+      <th style="text-align:left">Considerations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>Authentication/Authorization</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>How do users and other actors in the system, including clients and servers,
+            authenticate each other so that there is a guarantee against impersonation?</li>
+          <li>Do all operations in the system require authorization, and are these given
+            to only the level necessary, and no more (for example a user accessing
+            a database has limited access to only those tables and columns they really
+            need access to)?</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Access Control</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>Is access granted in a role-based fashion? Are all access decisions relevant
+            at the time access is performed? (token/permissions updated with state-changing
+            actions; token/permissions checked before access is granted).</li>
+          <li>Are all objects in the system subject to proper access control with the
+            appropriate mechanisms (files, web pages, resources, operations on resources,
+            etc.)?</li>
+          <li>Is access to sensitive data and secrets limited to only those who need
+            it?</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Trust Boundaries</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>Can you clearly identify where the levels of trust change in your model?</li>
+          <li>Can you map those to access control, authentication and authorization?</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Auditing</b>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Are security-relevant operations being logged?</li>
+          <li>Are logging best practices being followed: no PII, secrets are logged.
+            Logging to a central location, compatible with industry standards such
+            as SIEM, RFC 5424 and 5427, and OWASP.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Cryptography (if applicable)</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>Are keys of a sufficient length and algorithms in use known to be good
+            (no collisions, no easy brute-forcing, etc.)?</li>
+          <li>Are all implementations of crypto well-tested and up to their latest known
+            secure patch, and is there no use of cryptography developed in house?</li>
+          <li>Can cryptography be easily configured/updated to adapt to changes?</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Secret Management</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>What are the tokens, keys, credentials, secrets, etc. in your system?
+            <ul>
+              <li>How are they protected?</li>
+              <li>Are any secrets distributed with the application (hard-coded)?</li>
+            </ul>
+          </li>
+          <li>Are well-established and tested systems being used to store secrets?</li>
+          <li>Are any secrets (API or SSH keys, client secrets, AWS access keys, SSL
+            private keys, chat client tokens, etc.) stored unencrypted in repositories,
+            document shares, container images, local storage in browser, etc.?</li>
+          <li>Are secrets passed in through environmental variables as part of any build/deploy
+            procedures?</li>
+          <li>Are secrets and sensitive data scrubbed from memory as soon as they are
+            used, or is there a possibility that they would be logged?</li>
+          <li>Can keys be easily rotated?</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Injection</b>
+      </td>
+      <td style="text-align:left">Are all inputs coming from outside the system being inspected for malformed
+        or dangerous input? (this is especially relevant to systems accepting data
+        files, input that gets displayed as part of web pages, binaries, scripts
+        or input that gets directly incorporated into SQL queries, and to systems
+        that embed interpreters of, among others, Lua, JavaScript, LISP, etc.).
+        Are you using context-aware templating systems/frameworks? E.g. React</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Resiliency/DOS</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>Does the system depend on any single point of failure that could suffer
+            a denial of service attack?</li>
+          <li>If the system is distributed among many service nodes, is it possible
+            to isolate a part of them, degrading the service but not interrupting it,
+            in case of a localized security breach?</li>
+          <li>Does the system provide feedback controls (monitoring) to allow it to
+            call for help as a denial of service or system probing takes place?</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Third Party Components</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <ul>
+          <li>Are all dependencies (both direct and transitive):
+            <ul>
+              <li>Updated to mitigate all known vulnerabilities?</li>
+              <li>Obtained from trusted sources (e.g. published by a well known company
+                or developer that promptly addresses security issues) and verified as originating
+                from the same trusted source?</li>
+              <li>Code-signing for libraries and installers is highly recommended - has
+                code-signing been implemented?</li>
+            </ul>
+          </li>
+          <li>Does the installer validate checksums for components downloaded from external
+            sources?</li>
+          <li>Is there an embedded browser (embedded Chromium, Electron framework, and/or
+            Gecko)? If so, please see the &quot;API&quot; section under &quot;Performing
+            Threat Model&quot;.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Threat Modeling Output
+
+Check out: [https://github.com/broadinstitute/dsp-appsec-terra-threat-models](https://github.com/broadinstitute/dsp-appsec-terra-threat-models)
+
+The output, a threat model, is a document \(MS Word, HTML, etc.\) that should be appropriately stored so that only stakeholders have access. The final Threat Model document must have a brief description of your product, Data Flow Diagram\(s\) and the threats identified \(following the structure described later in this Handbook\). A complete threat model will include the following:
+
+1. General and detailed Data Flow Diagrams \(L0 and L1 DFDs\)   
+2. Network traffic requirements \(ports in use, requirements from firewalls, etc.\)   
+3. Questions in the "Performing Threat Model" section have been answered.   
+4. Findings the development team identified with ticket links \(format specified below in the section, "Documenting Findings"\).   
+5. In the Threat Model document, list:
+
+* Location and nature of sensitive data – the “crown jewels” \(data, assets, functionality\) that we want to protect.
+* Uses of cryptography.
+* The threat model Curator and other stakeholders involved.
+
 
 
 
