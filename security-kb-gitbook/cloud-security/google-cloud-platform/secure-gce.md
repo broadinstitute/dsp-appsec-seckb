@@ -14,6 +14,8 @@ When launching
 
 ### 2. Use a managed network with a subnet.
 
+First, make sure you set up a [Managed Network](../securing-the-network.md) already.   
+
 Scroll to the bottom and click "Management, security, disks, networking, sole tenancy". Select the "Networking" tab. Use a Network tag to set the firewall rules for the instance.
 
 ![Choose a network tag to determine the firewall rules for this instance.](../../.gitbook/assets/gce-network%20%282%29.png)
