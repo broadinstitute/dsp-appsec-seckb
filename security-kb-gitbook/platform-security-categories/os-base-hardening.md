@@ -6,6 +6,12 @@ description: 'Resources on how to harden a base OS such as Debian9, CentOS 8 etc
 
 ## 1. Use a dsp-appsec custom image
 
+#### Prerequisites:
+
+* `roles/compute.imageUser` permissions from dsp-appsec
+  * All active Broadies should have permission by default
+  * dsp-appsec will need your Google APIs service account to grant your project permission to use the images. This service account can be found in the IAM section of your project and is in the form `[PROJECT_NUMBER]@cloudservices.gserviceaccount.com`
+
 DSP has pre-configured images that are hardened according to CIS benchmarks. You can start an instance based on an image using `gcloud` or the GCP console, using the deployment manager, or using the GCP console. The images are stored in the `dsp-appsec-hardened-images` GCP project, on which all Broadies have image user permissions.
 
 #### A. gcloud command
