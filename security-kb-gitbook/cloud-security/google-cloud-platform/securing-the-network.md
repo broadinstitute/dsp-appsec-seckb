@@ -15,7 +15,7 @@ Example:
 
 See Google Cloud's [Firewall documentation](https://cloud.google.com/vpc/docs/using-firewalls) for reference.
 
-## OPTIONAL: Create a new managed network and subnet
+## Recommended: Create a new managed network and subnet
 
 ### 1. Delete the Network
 
