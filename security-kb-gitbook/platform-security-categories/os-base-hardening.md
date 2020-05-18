@@ -6,19 +6,14 @@ description: 'Resources on how to harden a base OS such as Debian9, CentOS 8 etc
 
 ## 1. Use a dsp-appsec custom image
 
-#### Prerequisites:
-
-* `roles/compute.imageUser` permissions from dsp-appsec
-  * dsp-appsec will need your Google APIs service account to grant your project permission to use the images. This service account can be found in the IAM section of your project and is in the form `[PROJECT_NUMBER]@cloudservices.gserviceaccount.com`
-
-DSP has pre-configured images that are hardened according to CIS benchmarks. You can start an instance based on an image using `gcloud` or the GCP console, using the deployment manager, or using the GCP console. 
+DSP has pre-configured images that are hardened according to CIS benchmarks. You can start an instance based on an image using `gcloud` or the GCP console, using the deployment manager, or using the GCP console. The images are stored in the `dsp-appsec-hardened-images` GCP project, on which all Broadies have image user permissions.
 
 #### A. gcloud command
 
 ```text
 gcloud compute instances create [INSTANCE_NAME] \
     --image [IMAGE] \
-    --image-project dsp-appsec
+    --image-project dsp-appsec-hardened-images
 ```
 
 #### B. Deployment Manager
@@ -40,7 +35,7 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: https://www.googleapis.com/compute/v1/projects/dsp-appsec/global/images/[CIS-IMAGE]
+        sourceImage: https://www.googleapis.com/compute/v1/projects/dsp-appsec-hardened-images/global/images/[CIS-IMAGE]
     networkInterfaces:
     - network: https://www.googleapis.com/compute/v1/projects/[YOUR-PROJECT]/global/networks/default
       accessConfigs:
@@ -66,7 +61,7 @@ Name your instance and set any other properties before scrolling down to Boot di
 
 You can then go to custom images and select `dsp-appsec` as your project before choosing an image.
 
-![Choosing a custom CIS hardened image.](../.gitbook/assets/screen-shot-2020-04-15-at-4.34.50-pm.png)
+![](../.gitbook/assets/screen-shot-2020-05-18-at-3.33.54-pm.png)
 
 dsp-appsec currently has the following images:
 
