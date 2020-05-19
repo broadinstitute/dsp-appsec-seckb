@@ -27,12 +27,3 @@
 7. Ensure **Network and PodSecurity policies** are enabled for a cluster. [https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies)
 8. Create cluster with limited service account access scopes.
 9. Use a private cluster if you can - [https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters)
-
-Please see Infosec about getting on the Alpha for Kubernetes Threat Detection.
-
-{% hint style="info" %}
-_**Note: After March 1st, 2020 GKE Threat Detection will be enabled for all projects under broadinstitute gcp org.**_
-{% endhint %}
-
-
-
