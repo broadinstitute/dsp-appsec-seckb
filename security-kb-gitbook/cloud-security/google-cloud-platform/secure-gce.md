@@ -8,19 +8,17 @@ When launching
 
 ### 1. **Use a Compute Service Account that has only the permissions you need.**
 
-1. [https://cloud.google.com/compute/docs/access/service-accounts](https://cloud.google.com/compute/docs/access/service-accounts). By default, Google comes with a "Default service account" that is very powerful. Every GCE you spin up will have this account if you don't change it. We recommend deleting this account and creating one that you can use with your GCE nodes that has far less permissions. 
+1. [https://cloud.google.com/compute/docs/access/service-accounts](https://cloud.google.com/compute/docs/access/service-accounts)
 2. “The Compute Engine default service account is created with the IAM project editor role, but you can modify the service account's roles to securely limit which Google APIs the service account can access.”
-3. Consider a “user managed service account” for each kind or function of GCE that you're creating. No need to create a key.
+3. Consider a “user managed service account” with a fresh service account used just for your GCEs. No need to create a key.
 
 ### 2. Use a managed network with a subnet.
-
-First, make sure you set up a [Managed Network](securing-the-network.md) already.   
 
 Scroll to the bottom and click "Management, security, disks, networking, sole tenancy". Select the "Networking" tab. Use a Network tag to set the firewall rules for the instance.
 
 ![Choose a network tag to determine the firewall rules for this instance.](../../.gitbook/assets/gce-network%20%282%29.png)
 
-### 3. For sensitive data, Use only [hardened images](https://github.com/broadinstitute/dsp-appsec-base-image-hardening) for your boot disk.
+### 3. Use only [hardened images](https://github.com/broadinstitute/dsp-appsec-base-image-hardening) for your boot disk.
 
 For GCE Image, use hardened images, if your use-case allows -- for sensitive data like PII only. This is overkill for De-ID’d and non-sensitive data. Only use for Broad Classification. Broad provides custom hardened images, or use your own image and harden it using Broad Institute [image hardening scripts](https://github.com/broadinstitute/dsp-appsec-base-image-hardening). For more information, see [OS Base Image Hardening](https://dsp-security.broadinstitute.org/platform-security-categories/os-base-hardening).
 
@@ -37,7 +35,7 @@ If a user needs access to a Compute Engine instance, add them to the subnet's IA
 
 ## Production/Sensitive Data Requirements
 
-### 1. Make sure OS automatic updates are on.(skip if using hardened images as it's on by default).
+### 1. Make sure OS automatic updates are on.
 
 * Centos - [https://serversforhackers.com/c/automatic-security-updates-centos](https://serversforhackers.com/c/automatic-security-updates-centos) 
 * Ubuntu - [https://help.ubuntu.com/lts/serverguide/automatic-updates.h](https://help.ubuntu.com/lts/serverguide/automatic-updates.html.en)

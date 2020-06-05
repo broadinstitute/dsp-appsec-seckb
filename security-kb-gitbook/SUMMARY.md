@@ -51,7 +51,7 @@
     * [Training and Documentation](appsec-team-internal/appsec-team-internal/security-activities/training-and-documentation.md)
   * [Security Automation](appsec-team-internal/appsec-team-internal/security-automation.md)
   * [Pentesting Methodology](appsec-team-internal/appsec-team-internal/pentesting-methodology.md)
-* [Contact](appsec-team-internal/contact.md)
+* [Tools](appsec-team-internal/contact.md)
 * [Appsec Team Projects](appsec-team-internal/appsec-team-projects/README.md)
   * [Internally Built Projects](appsec-team-internal/appsec-team-projects/projects.md)
 

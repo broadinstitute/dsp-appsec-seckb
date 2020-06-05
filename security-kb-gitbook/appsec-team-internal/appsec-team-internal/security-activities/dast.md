@@ -97,7 +97,9 @@ The OWASP ZAProxy tool is used as part of weekly scans against dev environments.
       </td>
     </tr>
   </tbody>
-</table>#### Projects Scanned by ZAProxy
+</table>
+
+#### Projects Scanned by ZAProxy
 
 | **Service** | **URL** |
 | :--- | :--- |

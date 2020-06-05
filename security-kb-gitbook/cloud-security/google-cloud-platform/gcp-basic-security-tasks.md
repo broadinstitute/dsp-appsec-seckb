@@ -29,10 +29,10 @@ gcloud auth login
 
 | **Use** | **If your project...** |
 | :--- | :--- |
-| Cloud Functions (CF) | is written in Node.js, Python, or Go and can be triggered by an "event" \(like a Pub/Sub topic or HTTP request\). |
-| App Engine (GAE) | is a web-based application. |
-| Kubernetes Engine (GKE) | has a bunch of different applications that have been Dockerized. |
-| Compute Engine (GCE) | has special infrastructure requirements. Don't use unless absolutely necessary. Unlike the above Google functions, this starts from an insecure posture and needs to be manually secured. |
+| Cloud Functions | is written in Node.js, Python, or Go and can be triggered by an "event" \(like a Pub/Sub topic or HTTP request\). |
+| App Engine | is a web-based application. |
+| Compute Engine | has special infrastructure requirements. Don't use unless absolutely necessary. |
+| GKE | has a bunch of different applications that have been Dockerized. |
 
 ### Security of GAE and Cloud Functions
 
