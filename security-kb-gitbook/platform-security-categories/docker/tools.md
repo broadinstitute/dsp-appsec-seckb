@@ -6,7 +6,7 @@ description: Docker related security tools
 
 ### Docker Best Practices
 
-When it comes to building docker images, because no one knows what the requirements are better than you do. The following tips provide the most customization \(at the cost of slightly more work from the developer, and then for any images built, AppSec can scan them automatically.
+When it comes to building docker images, no one knows what the requirements are better than you do. The following tips provide the most customization \(at the cost of slightly more work from the developer, and then for any images built, AppSec can scan them automatically.
 
 Important things to keep in mind when building docker images. 
 
