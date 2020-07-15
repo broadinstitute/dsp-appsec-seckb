@@ -4,6 +4,19 @@ description: Docker related security tools
 
 # Tools
 
+### Docker Best Practices
+
+When it comes to building docker images, because no one knows what the requirements are better than you do. The following tips provide the most customization \(at the cost of slightly more work from the developer, and then for any images built, AppSec can scan them automatically.
+
+Important things to keep in mind when building docker images. 
+
+1. Minimal images: This decreases the attack surface
+2. Separation of Build-time and Run-time dependencies
+3. Consistent Builds 
+4. Build from things such as [`gcr.io/distroless/java:11`](http://gcr.io/distroless/java:11), and install only the packages/layers that you need
+
+The best environment to ensure you're following best practices when working with Dockerfiles is your IDE
+
 {% tabs %}
 {% tab title="IDE/Linter" %}
 {% hint style="info" %}
