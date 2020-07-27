@@ -112,7 +112,7 @@ docker run --rm -v [YOUR_CACHE_DIR]:/root/.cache/ aquasec/trivy [YOUR_IMAGE_NAME
 
 If you'd like to mark an issue as False Positive you can do so using the following steps in Trivy.
 
-* [ ] Create `.trivyignore` file in your home directory.
+* [ ] Create `.trivyignore` file.
 * [ ] Include vulnerabilities you want to mark as FP by adding them with their `VULNERABILITY ID` and commenting the reason. 
 
 ```text
