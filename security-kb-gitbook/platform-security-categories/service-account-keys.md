@@ -7,15 +7,15 @@ description: Do not download service account keys.
   
 If an attacker can access your downloaded service account key, he can sign a JWT token and be granted an API access token. 
 
-There is a way to do this without downloading the service account key.  
+There is a way to avoid this and instead of downloading the service account key, use
 
-#### Use —impersonate-service-account flag.
+####  —impersonate-service-account flag.
 
 ```text
 gcloud --impersonate-service-account=k8s@project.iam.gserviceaccount.com container clusters get-credentials my-cluster
 ```
 
-It allows this command to use a service account wither actually having the key, by using service account impersonation.
+It allows this command to use a service account without actually having the key, but by using service account impersonation.
 
 If you are running multiple commands with same SA, use this commands before: 
 
