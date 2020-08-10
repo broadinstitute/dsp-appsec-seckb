@@ -21,6 +21,7 @@
   * [Github Actions](platform-security-categories/git/github-actions.md)
 * [Projects/Tooling](platform-security-categories/github.md)
 * [Secrets Management](platform-security-categories/managing-secrets.md)
+* [Service Account Keys](platform-security-categories/service-account-keys.md)
 * [Docker Security](platform-security-categories/docker/README.md)
   * [Attacking Dockers](platform-security-categories/docker/attacking-dockers/README.md)
     * [Capabilities](platform-security-categories/docker/attacking-dockers/capabilities.md)
