@@ -5,7 +5,7 @@ description: Resources
 # Getting Started
 
 {% hint style="info" %}
-**For Questions or Assistance:** reach out via the [DevSecOps Slack Channel](https://broadinstitute.slack.com/messages/CABML2U9G) or **adrazhi@broadinstitute.org**
+**For Questions or Assistance:** reach out via the [DSP Infosec Champions Slack Channel](https://app.slack.com/client/T0CMFS7GX/CADU7L0SZ) or **appsec@broadinstitute.org**
 {% endhint %}
 
 {% hint style="info" %}
