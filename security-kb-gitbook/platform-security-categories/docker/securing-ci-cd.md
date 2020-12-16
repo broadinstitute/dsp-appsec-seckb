@@ -6,24 +6,24 @@ description: Scan docker images in CI/CD pipeline using Trivy.
 
 ## Quick intro
 
-A common risk in containerized environments is deploying containers having vulnerabilities. Static archive files that include all components to run an application, may be missing critical security updates, or are just outdated. For this reason, before pushing images to container registries and deploy them, DSP Appsec team highly recommend to scan images using Trivy tool.  
+A common risk in containerized environments is deploying containers having vulnerabilities. Static archive files that include all components to run an application, may be missing critical security updates, or are just outdated. For this reason, before pushing images to container registries and deploy them, DSP Appsec team highly recommends scanning images using Trivy tool.  
 
-Some of image security issues are listed below:
+Some of the image security issues are listed below:
 
 {% hint style="danger" %}
 **Image configuration defects**-  images may also have configuration defects, for example when an image runs with greater privileges than needed, or when an image has an SSH daemon that exposes the container to unnecessary network risk. 
 {% endhint %}
 
 {% hint style="danger" %}
-**Embedded malware** - malicious files could be included within a container and be used to attack other containers or hosts within the environment. A possible source of this embedded malware is by third party of which the full provenance is not known. 
+**Embedded malware** - malicious files could be included within a container and be used to attack other containers or hosts within the environment. A possible source of this embedded malware is by the third party of which the full provenance is not known. 
 {% endhint %}
 
 {% hint style="danger" %}
-**Embedded clear text secrets** - when secrets are included into an image, they are directly into the image file system. Anyone with a access to the image can easily read these secrets. 
+**Embedded clear text secrets** - when secrets are included in an image, they are directly into the image file system. Anyone with access to the image can easily read these secrets. 
 {% endhint %}
 
 {% hint style="danger" %}
-**Use of untrusted images** - using externally provided images results in risks such as introducing malware, leaking data or including components with vulnerabilities.
+**Use of untrusted images** - using externally provided images results in risks such as introducing malware, leaking data, or including components with vulnerabilities.
 {% endhint %}
 
 ### Trivy Setup
@@ -113,7 +113,7 @@ docker run --rm -v [YOUR_CACHE_DIR]:/root/.cache/ aquasec/trivy [YOUR_IMAGE_NAME
 If you'd like to mark an issue as False Positive you can do so using the following steps in Trivy.
 
 * [ ] Create `.trivyignore` file.
-* [ ] Include vulnerabilities you want to mark as FP by adding them with their `VULNERABILITY ID` and commenting the reason. 
+* [ ] Include vulnerabilities you want to mark as FP by adding them with their `VULNERABILITY ID` and commenting on the reason. 
 
 ```text
 
@@ -125,7 +125,13 @@ CVE-2016-2779
 
 ```
 
-\*\*\*\*
+If your image is built via a script in a CI/CD tool \(e.g Jenkins\), please make sure to mount `.trivyignore` file.
+
+Add  `-v "$PWD/.trivyignore":/.trityignore:ro  --ignorefile /.trivyignore`
+
+```text
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME"/Library/Caches:/root/.cache/ -v "$PWD/.trivyignore":/.trivyignore:ro aquasec/trivy --exit-code 1 --severity CRITICAL --ignorefile /.trivyignore "$IMAGE_NAME":"$TAG"
+```
 
  **Example repository:** [**https://github.com/broadinstitute/dsp-appsec-trivy-cicd**](https://github.com/broadinstitute/trivy-cicd) ****
 
