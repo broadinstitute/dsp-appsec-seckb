@@ -25,7 +25,9 @@ The Github Action is located in the [dsp-appsec-sourceclear-github-actions](http
 * Workspace should be one of `dsde` or `kdux`.
 * Make sure `project.json` is valid JSON.
 
-3. Make a PR. Someone from appsec will approve it. You can then merge your PR.
+3. Create a PR in this repository and someone from AppsSec team will approve it. 
+
+4. You can then merge your PR.
 
 #### If Your Project uses Python3...
 

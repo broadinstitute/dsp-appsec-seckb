@@ -52,13 +52,13 @@ Defect Dojo currently contains documentation on various DSP projects and teams, 
 
 CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc. and generate reports that include data on the vulnerability and how to fix it.
 
-**New Service Security Requirements**
+**SDARQ/ New Service Security Requirements**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-techops.broadinstitute.org). Once the form is submitted, a notification is sent to \#dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo.
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org/). Once the form is submitted, a notification is sent to \#dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo. 
 {% endtab %}
 
 {% tab title="Sensitive Data" %}
-Developers should avoid putting secret information in Github repos or Jenkins logs. To prevent this, we use Vault to securely store keys and other sensitive data used in the development and production environments, as well as protected branches and pullapprove on Github. See [Github & Git](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/git-and-github/README.md) for more information.
+Developers should avoid putting secret information in Github repos or Jenkins logs. To prevent this, we use Vault to securely store keys and other sensitive data used in the development and production environments, as well as protected branches and pull-approve on Github. See [Github & Git](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/git-and-github/README.md) for more information.
 
 **Git Secrets**
 
@@ -66,7 +66,7 @@ Prevents developers from accidently commiting secrets to Github. See installatio
 
 **Trufflehog/Github Broad Secret Scanner**
 
-Scans commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See [Git and Github](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is commited.
+Scan commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See [Git and Github](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is commited.
 
 **Vault**
 
