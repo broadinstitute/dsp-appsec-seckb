@@ -17,7 +17,7 @@ gcloud --impersonate-service-account=k8s@project.iam.gserviceaccount.com contain
 
 It allows this command to use a service account without actually having the key, but by using service account impersonation.
 
-If you are running multiple commands with same SA, use this commands before: 
+If you are running multiple commands with same SA, use these commands before: 
 
 ```text
 gcloud config set auth/impersonate_service_account \

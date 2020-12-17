@@ -4,25 +4,25 @@ description: Repository Integrity with signed commits
 
 # Git Commit Signing
 
-Signing git commits because it helps ensure repository integrity. When someone has write access to a repository is is very easy to spoof commits pretending to be someone else. However there is also an external attack vector for those projects that accept PRs from outside collaborators. Example shown below.
+Signing git commits because it helps ensure repository integrity. When someone has write access to a repository it is very easy to spoof commits pretending to be someone else. However, there is also an external attack vector for those projects that accept PRs from outside collaborators. The example shown below.
 
 **Scenario 1 - legit commit**
 
 ![Legitimate pull request](../../.gitbook/assets/legit-commit.png)
 
-**Scenario 2 - spoofed commit from user who has access to repo** ![Spoofed commit from user with access](../../.gitbook/assets/fake-commit-1.png)
+**Scenario 2 - spoofed commit from a user who has access to the repo** ![Spoofed commit from user with access](../../.gitbook/assets/fake-commit-1.png)
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 
 ![Spoofed commit from outside collaborator](../../.gitbook/assets/outside-pr.png)
 
-**Steps to follow to setup commit signing are located below.** Alternatively you can just run the following [script](https://github.com/broadinstitute/dsp-security-knowledgebase/blob/master/source/scripts/gitsign.sh). Please ensure you have [installed gpg](https://gpgtools.org/). prior to running the script.
+**Steps to follow to set up commit signing are located below.** Alternatively, you can just run the following [script](https://github.com/broadinstitute/dsp-security-knowledgebase/blob/master/source/scripts/gitsign.sh). Please ensure you have [installed gpg](https://gpgtools.org/). prior to running the script.
 
 * Generate a GPG key:
 
   [https://help.github.com/en/articles/generating-a-new-gpg-key](https://help.github.com/en/articles/generating-a-new-gpg-key)
 
-* Add the GPG key to your github account:
+* Add the GPG key to your Github account:
 
   [https://help.github.com/en/articles/adding-a-new-gpg-key-to-your-github-account](https://help.github.com/en/articles/adding-a-new-gpg-key-to-your-github-account)
 

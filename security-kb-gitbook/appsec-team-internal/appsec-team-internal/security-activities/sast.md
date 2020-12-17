@@ -13,7 +13,7 @@ Monitor Github for secrets checking and other anomalous behavior.
 * Git Secrets:[https://github.com/awslabs/git-secrets](https://github.com/awslabs/git-secrets)
 * Protected Branches:[https://help.github.com/articles/about-protected-branches/](https://help.github.com/articles/about-protected-branches/)
 * Pullapprove:[https://www.pullapprove.com/](https://www.pullapprove.com/)
-* Git-secrets client side protection
+* Git-secrets client-side protection
 * TruffleHog/Gitrob as a server-side protection 
 
 **How Can We Do Better?**
@@ -39,16 +39,16 @@ Static Code Analysis is an activity that is performed continuously and aims to i
 **How Can We Do Better?**
 {% endtab %}
 
-{% tab title="Third Party Libraries" %}
-## Third Party Libraries
+{% tab title="Third-Party Libraries" %}
+## Third-Party Libraries
 
 **Description:**
 
 Third-party libraries have several interesting risks. Obviously, vulnerabilities can be introduced into libraries and we need to ensure that our developers are aware when such things happen.
 
-**Third Party Component Remediation Procedure:**
+**Third-Party Component Remediation Procedure:**
 
-Currently, Sourceclear is our source of truth for open source and third party vulnerability scanning.
+Currently, Sourceclear is our source of truth for open source and third-party vulnerability scanning.
 
 1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below. 
 2. Security engineers see the vulnerability report and work with developers to assess the risk by reaching out to the project's security champion on Slack. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself. 

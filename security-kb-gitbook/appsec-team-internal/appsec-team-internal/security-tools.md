@@ -36,7 +36,7 @@ Can be used to automatically scan Ruby projects for vulnerabilities.
 {% tab title="Pentesting" %}
 **Burp**
 
-Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities. Results of the scans are then uploaded to CodeDx and Defect Dojo \(see _Project Management_ tab.
+Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built-in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities. Results of the scans are then uploaded to CodeDx and Defect Dojo \(see _Project Management_ tab.
 
 **OWASP Zap**
 
@@ -62,7 +62,7 @@ Developers should avoid putting secret information in Github repos or Jenkins lo
 
 **Git Secrets**
 
-Prevents developers from accidently commiting secrets to Github. See installation instructions [here](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/setup-git-secrets.md)
+Prevents developers from accidently committing secrets to Github. See installation instructions [here](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/setup-git-secrets.md)
 
 **Trufflehog/Github Broad Secret Scanner**
 

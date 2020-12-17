@@ -11,7 +11,7 @@ Appsec team has built security tooling targeted at Github. This includes both ap
 #### Tools
 
 * [Automated Security Alerts](https://github.com/broadinstitute/appsec-tools-for-github/blob/master/automated-security-alerts-api)
-* [Python Security Alerts](https://github.com/broadinstitute/appsec-tools-for-github/blob/master/github-security-bot)
+* [Python Security Alerts](https://github.com/broadinstitute/dsp-appsec-tools-for-github/tree/master/python-security-alerts)
 * [Python 2FA Alerter](https://github.com/broadinstitute/appsec-tools-for-github/blob/master/python-2fa-alerter)
 * [Github Security Bot](https://github.com/broadinstitute/appsec-tools-for-github/blob/master/python-security-alerts)
 
