@@ -4,11 +4,11 @@
 {% tab title="Component Analysis" %}
 **Component Analysis**
 
-There are several tools used to anlyze third party components in our software projects. Most the these tools are used in Jenkins jobs under the _Security Scans_ tab in the Broad [Jenkins instance](https://fc-jenkins.dsp-techops.broadinstitute.org).
+There are several tools used to analyze third party components in our software projects. Most of these tools are used in Jenkins jobs under the _Security Scans_ tab in the Broad [Jenkins instance](https://fc-jenkins.dsp-techops.broadinstitute.org).
 
 **Sourceclear**
 
-Sourceclear scans our Github repositories and finds vulnerabilities in third party libraries and modules. Repos are scanned on Saturday mornings and vulnerabilities are reported to our [Sourceclear database](https://broadinstitute-dsp.sourceclear.io/login). AppSec team members then work with developers to identify false positives and remediate any issues.
+Sourceclear scans our Github repositories and finds vulnerabilities in third-party libraries and modules. Repos are scanned on Saturday mornings and vulnerabilities are reported to our [Sourceclear database](https://broadinstitute-dsp.sourceclear.io/login). AppSec team members then work with developers to identify false positives and remediate any issues.
 
 **Snyk**
 
@@ -16,7 +16,7 @@ Analyzes open source libraries and containers.
 
 **Github Security Alerts**
 
-Some repos have Github security alerts setup to scan for vulnerable dependencies.
+Some repositories have Github security alerts setup to scan for vulnerable dependencies.
 
 **Trivy**
 
