@@ -6,13 +6,11 @@
 
 **Description:**
 
-Where is our catalog of applications and related assets \(domains, databases, infrastructure, and more\). Where do we keep track of engagements?
+Where is our catalog of applications and related assets \(domains, databases, infrastructure, and more\)? Where do we keep track of engagements?
 
 **Tools:**
 
-* DefectDojo:[https://defect-dojo.dsp-techops.broadinstitute.org/dashboard](https://defect-dojo.dsp-techops.broadinstitute.org/dashboard)
-
-**How Can We Do Better?**
+* DefectDojo:[https://defect-dojo.dsp-appsec.broadinstitute.org/dashboard](https://defect-dojo.dsp-techops.broadinstitute.org/dashboard)
 {% endtab %}
 
 {% tab title="Threat Modeling" %}
@@ -37,8 +35,10 @@ More often than not, we are going to discover more vulnerabilities that can be p
 **Tools:**
 
 * Jira:[https://broadinstitute.atlassian.net/secure/Dashboard.jspa](https://broadinstitute.atlassian.net/secure/Dashboard.jspa)
-* DefectDojo:[https://defect-dojo.dsptechops.broadinstitute.org/dashboard](https://defect-dojo.dsptechops.broadinstitute.org/dashboard)
-* CodeDx:[https://codedx101.dsp-techops.broadinstitute.org/codedx/projects/](https://codedx101.dsp-techops.broadinstitute.org/codedx/projects/)
+* DefectDojo:[https://defect-dojo.dsp-appsec.broadinstitute.org/dashboard](https://defect-dojo.dsptechops.broadinstitute.org/dashboard)
+* CodeDx:[https://codedx101.dsp-appsec.broadinstitute.org/codedx/projects/](https://codedx101.dsp-techops.broadinstitute.org/codedx/projects/)
 {% endtab %}
 {% endtabs %}
+
+
 
