@@ -24,9 +24,7 @@ Catching security risks and flaws early save time and effort \(and money\). Desi
 
 **Tools:**
 
-* Lucidchart:[https://www.lucidchart.com/](https://www.lucidchart.com/)
-
-**How Can We Do Better?** What's a good TM tool in 2019? MSTF was good but deprecated.
+* PyTM : [https://github.com/broadinstitute/dsp-appsec-terra-threat-models](https://github.com/broadinstitute/dsp-appsec-terra-threat-models)
 {% endtab %}
 
 {% tab title="Vulnerability Management" %}
