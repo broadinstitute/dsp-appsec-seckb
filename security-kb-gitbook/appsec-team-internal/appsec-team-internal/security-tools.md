@@ -16,7 +16,7 @@ Analyzes open source libraries and containers.
 
 **Github Security Alerts**
 
-Some repositories have Github security alerts setup to scan for vulnerable dependencies.
+Some repositories have Github security alerts set up to scan for vulnerable dependencies.
 
 **Trivy**
 
@@ -26,7 +26,7 @@ Scans docker images for vulnerabilities in base images.
 {% tab title="Code Analysis" %}
 **Codacy**
 
-Scans code for errors before allowing developers to merge with master branch.
+Scans code for errors before allowing developers to merge with the master branch.
 
 **Brakeman**
 
@@ -40,7 +40,7 @@ Burp is currently the main pentesting tool used for application testing. AppSec 
 
 **OWASP Zap**
 
-OWASP Zap is an open source pentesting tool with similar applications to Burp. Because Zap is open source, you can find a wider variety of tools available, such as a Zap CLI and docker image.
+OWASP Zap is an open-source pentesting tool with similar applications to Burp. Because Zap is open source, you can find a wider variety of tools available, such as a Zap CLI and docker image.
 {% endtab %}
 
 {% tab title="Project Management" %}
@@ -50,7 +50,7 @@ Defect Dojo currently contains documentation on various DSP projects and teams, 
 
 **CodeDx**
 
-CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc. and generate reports that include data on the vulnerability and how to fix it.
+CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc., and generate reports that include data on the vulnerability and how to fix it.
 
 **SDARQ/ New Service Security Requirements**
 
@@ -62,11 +62,11 @@ Developers should avoid putting secret information in Github repos or Jenkins lo
 
 **Git Secrets**
 
-Prevents developers from accidently committing secrets to Github. See installation instructions [here](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/setup-git-secrets.md)
+Prevents developers from accidentally committing secrets to Github. See installation instructions [here](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/setup-git-secrets.md)
 
 **Trufflehog/Github Broad Secret Scanner**
 
-Scan commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See [Git and Github](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is commited.
+Scan commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See [Git and Github](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is committed.
 
 **Vault**
 

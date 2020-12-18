@@ -6,15 +6,11 @@
 
 **Description:**
 
-How do we enable developer to understand what security requirements are applicable to a service they are launching as early as possible? How do we make sure security is involved in a discussion ideally at the design/architecture phase?
+How do we enable developers to understand what security requirements are applicable to a service they are launching as early as possible? How do we make sure security is involved in a discussion ideally at the design/architecture phase?
 
 **Tools:**
 
-* SDARQ \(Security & DeVops Applicable Requirements\):[https://sdarq.dsp-techops.broadinstitute.org](https://sdarq.dsp-techops.broadinstitute.org)
-
-**How Can We Do Better?**
-
-V2 Tbd with updated questionnaire tree and ability to allow non-technical folks to edit/add questions and conditions.
+* SDARQ \(Security & DevOps Applicable Requirements\):[https://sdarq.dsp-appsec.broadinstitute.org/](https://sdarq.dsp-appsec.broadinstitute.org/)
 {% endtab %}
 
 {% tab title="CI/CD security" %}
@@ -38,9 +34,9 @@ Make sure secrets are properly stored and encrypted. Access to secrets is grante
 
 **Tools:**
 
-* Vault:[https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault](https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault)
-
-**How Can We Do Better?**
+* Vault: [https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault](https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault)
+* Secret Manager
+* Git Secrets
 {% endtab %}
 {% endtabs %}
 

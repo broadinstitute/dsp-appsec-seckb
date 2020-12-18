@@ -9,7 +9,7 @@ If an attacker can access your downloaded service account key, he can sign a JWT
 
 There is a way to avoid this and instead of downloading the service account key, use
 
-####  —impersonate-service-account flag.
+####  —impersonate-service-account flag
 
 ```text
 gcloud --impersonate-service-account=k8s@project.iam.gserviceaccount.com container clusters get-credentials my-cluster
@@ -28,7 +28,7 @@ gcloud container clusters get-credentials my-cluster
 
 ```
 
-If you are switching to different SA, write a simple bash script to switch between different SA:
+If you are switching to a different SA, write a simple bash script to switch between different SA:
 
 ```text
 #!/bin/bash

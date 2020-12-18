@@ -1,13 +1,13 @@
 # Sourceclear Scans
 
-Broad has a Github Action that scans your project's third party components each week using the Sourceclear CLI agent. Results our uploaded to Broad's Sourceclear database before being verified by application security engineers, who will contact you with any high risk vulnerabilities and required patches.
+Broad has a Github Action that scans your project's third-party components each week using the Sourceclear CLI agent. Results are uploaded to Broad's Sourceclear database before being verified by application security engineers, who will contact you with any high-risk vulnerabilities and required patches.
 
 The Github Action is located in the [dsp-appsec-sourceclear-github-actions](https://github.com/broadinstitute/dsp-appsec-sourceclear-github-actions) repo. 
 
 ### To Add a Repo to the Scans:
 
 1. Clone the repo and make a new branch, named `add-[YOUR-PROJECT]`.
-2. Add your project to the list in the `projects.json` file. Project should be in the following format.
+2. Add your project to the list in the`projects.json`file. Project should be in the following format.
 
 ```text
 {

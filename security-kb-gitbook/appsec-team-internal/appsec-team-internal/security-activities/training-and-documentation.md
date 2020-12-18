@@ -16,7 +16,7 @@ Engineers should go through some sort of application security training once a ye
 * Need to train new Developers once they join and make security training part of the required training.
 * How can we provide more team-specific granular training?
 * Hunter: [https://hunter2.com/](https://hunter2.com/) \(Albano Drazhi is currently evaluating their learning modules\).
-* Onboarding cirriculum
+* Onboarding curriculum
 {% endtab %}
 
 {% tab title="Documentation & Internal KB" %}
@@ -27,8 +27,6 @@ It should include secure engineering guidelines advice from infrastructure secur
 **Tools:**
 
 * Security KB:[https://dsp-security.broadinstitute.org/](https://dsp-security.broadinstitute.org/)
-
-**How Can We Do Better?** Updates/Edits in progress
 {% endtab %}
 
 {% tab title="Security Knowledge/Rules \(Internal\)" %}

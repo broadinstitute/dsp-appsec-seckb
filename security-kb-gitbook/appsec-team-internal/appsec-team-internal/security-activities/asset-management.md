@@ -20,7 +20,7 @@ Where is our catalog of applications and related assets \(domains, databases, in
 
 **Description:**
 
-Catching security risks and flaws early saves time and effort \(and money\). Design Review/Secure Architecture Analysis is an activity that is done as early as possible when a new service is spun up and it's a continuous process.
+Catching security risks and flaws early save time and effort \(and money\). Design Review/Secure Architecture Analysis is an activity that is done as early as possible when a new service is spun up and it's a continuous process.
 
 **Tools:**
 
@@ -41,8 +41,6 @@ More often than not, we are going to discover more vulnerabilities that can be p
 * Jira:[https://broadinstitute.atlassian.net/secure/Dashboard.jspa](https://broadinstitute.atlassian.net/secure/Dashboard.jspa)
 * DefectDojo:[https://defect-dojo.dsptechops.broadinstitute.org/dashboard](https://defect-dojo.dsptechops.broadinstitute.org/dashboard)
 * CodeDx:[https://codedx101.dsp-techops.broadinstitute.org/codedx/projects/](https://codedx101.dsp-techops.broadinstitute.org/codedx/projects/)
-
-**How Can We Do Better?**
 {% endtab %}
 {% endtabs %}
 

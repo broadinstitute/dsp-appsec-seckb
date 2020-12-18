@@ -99,22 +99,18 @@ Need to analyze containers for security issues. Must Integrate into our CI/CD pi
 
 **Tools:**
 
-* Trivy:[https://github.com/knqyf263/trivy](https://github.com/knqyf263/trivy) \(For docker image scanning via ci/cd. In progress by Albano Drazhi.\)
+* Trivy
 
-Docker Other, FYI David Bernick Zybjana Bedo. Add if I missed something about the following areas. This does not involve Kubernetes stuff which of course has gotten a bit complex in general and security is a big contributor to this complexity.
+This does not involve Kubernetes, which of course has gotten a bit complex in general and security is a big contributor to this complexity.
 
 * User Namespaces
 * Syscalls: SecComp, Sysdig, Falco 
-* Runtimes: gvisor \(experiment in Leo ATM\), Kata, Firecracker
+* Runtimes: gvisor, Kata, Firecracker
 * image scanning → trivy \(see above, main item\)
 * Image signing: Notary, ContentTrust
 * Docker API: Twistlock probably the only one worth it
 * Service Mesh: Istio, Envoy
 * CIS: CIS benchmark docker, DevSec image framework
-
-**How Can We Do Better?**
-
-The process would go like: Scan the image when a new change is pushed, and prevent the image from being pushed to the container registry if a vulnerability is detected. This ensures that the vulnerable images are never available to be deployed.
 
 Other potential tools/ideas:
 

@@ -13,7 +13,7 @@ Important things to keep in mind when building docker images.
 1. Minimal images: This decreases the attack surface
 2. Separation of Build-time and Run-time dependencies
 3. Consistent Builds 
-4. Build from things such as [`gcr.io/distroless/java:11`](http://gcr.io/distroless/java:11), and install only the packages/layers that you need
+4. Build from things such as [`gcr.io/distroless/java:11`](http://gcr.io/distroless/java:11) or use DSP AppSec blessed images and install only the packages/layers that you need
 
 The best environment to ensure you're following best practices when working with Dockerfiles is your IDE
 

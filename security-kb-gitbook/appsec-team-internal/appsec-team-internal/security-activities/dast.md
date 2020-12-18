@@ -1,7 +1,7 @@
 # DAST
 
 {% tabs %}
-{% tab title="Dynamic Application Security Testing \(Auto\)" %}
+{% tab title="Dynamic Application Security Testing" %}
 **Description:**
 
 As a part of Terra’s development process, all services are routinely scanned for vulnerabilities. Automated tests are conducted against running applications in testing and development environments.
@@ -128,8 +128,6 @@ The OWASP ZAProxy tool is used as part of weekly scans against dev environments.
 
 * Burp Suite:[https://portswigger.net/burp](https://portswigger.net/burp)
 * Burp Pro Automator:[https://github.com/broadinstitute/burp-automator](https://github.com/broadinstitute/burp-automator)
-
-**How Can We Do Better?**
 {% endtab %}
 
 {% tab title="Dynamic Application Security Testing \(Manual\)" %}
