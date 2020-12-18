@@ -12,10 +12,7 @@ Engineers should go through some sort of application security training once a ye
 
 **How Can We Do Better?**
 
-* Codebashing currently in progress.
 * Need to train new Developers once they join and make security training part of the required training.
-* How can we provide more team-specific granular training?
-* Hunter: [https://hunter2.com/](https://hunter2.com/) \(Albano Drazhi is currently evaluating their learning modules\).
 * Onboarding curriculum
 {% endtab %}
 

@@ -20,5 +20,8 @@ description: Projects developed by Appsec team at Broad Institute
 | 12 | [https://github.com/broadinstitute/dsp-security-cicd](https://github.com/broadinstitute/dsp-security-cicd) | Examples of Automating Security in Circle CI and Travis |
 | 13 | [https://github.com/broadinstitute/codedx-api-client-python](https://github.com/broadinstitute/codedx-api-client-python) | CodeDx API Client in Python |
 | 14 | [https://github.com/broadinstitute/sourceclear-scanner-docker](https://github.com/broadinstitute/sourceclear-scanner-docker) | Automated SourceClear Scans Docker Image |
-| 15 | [https://github.com/broadinstitute/open-control-compliance](https://github.com/broadinstitute/open-control-compliance) | Open Control Compliance Tool |
+| 15 | [https://github.com/broadinstitute/dsp-appsec-infrastructure-apps/tree/master/sdarq](https://github.com/broadinstitute/dsp-appsec-infrastructure-apps/tree/master/sdarq) | SDARQ |
+| 16 | [https://github.com/broadinstitute/open-control-compliance](https://github.com/broadinstitute/open-control-compliance) | Open Control Compliance Tool |
+
+
 
