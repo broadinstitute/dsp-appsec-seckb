@@ -1,16 +1,14 @@
 # Secure Development
 
 {% tabs %}
-{% tab title="New Service Security Requirements" %}
-## New Service Security Requirements + Engaging with Developer as early as possible
-
+{% tab title="SDARQ" %}
 **Description:**
 
 How do we enable developers to understand what security requirements are applicable to a service they are launching as early as possible? How do we make sure security is involved in a discussion ideally at the design/architecture phase?
 
 **Tools:**
 
-* SDARQ \(Security & DevOps Applicable Requirements\):[https://sdarq.dsp-appsec.broadinstitute.org/](https://sdarq.dsp-appsec.broadinstitute.org/)
+* SDARQ: [https://sdarq.dsp-appsec.broadinstitute.org/](https://sdarq.dsp-appsec.broadinstitute.org/)
 {% endtab %}
 
 {% tab title="CI/CD security" %}
@@ -19,10 +17,6 @@ How do we enable developers to understand what security requirements are applica
 **Description:**
 
 Are our deployments secure with the right levels of authorization and authentication so that only the "right" people can kick off deployments? Production deploys should not be able to run from "random" PRs without some sort of security process.
-
-**Tools:**
-
-**How Can We Do Better?**
 {% endtab %}
 
 {% tab title="Secrets Management" %}
