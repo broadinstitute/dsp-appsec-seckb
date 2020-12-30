@@ -36,7 +36,6 @@
   * [Additional Resources for Docker Security](platform-security-categories/docker/additional-resources-for-docker-security.md)
 * [OS Base Hardening](platform-security-categories/os-base-hardening.md)
 * [Sourceclear Scans](platform-security-categories/sourceclear-scans.md)
-* [Projects/Tooling](platform-security-categories/github.md)
 
 ## Appsec Team Internal
 
