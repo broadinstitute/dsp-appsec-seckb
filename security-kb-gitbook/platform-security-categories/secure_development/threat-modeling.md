@@ -218,5 +218,3 @@ The output, a threat model, is a document \(MS Word, HTML, etc.\) that should be
 
 
 
-
-
