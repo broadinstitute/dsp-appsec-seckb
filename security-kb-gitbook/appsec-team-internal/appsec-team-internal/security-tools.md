@@ -52,9 +52,11 @@ Defect Dojo currently contains documentation on various DSP projects and teams, 
 
 CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc., and generate reports that include data on the vulnerability and how to fix it.
 
-**SDARQ/ New Service Security Requirements**
+**SDARQ**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org/). Once the form is submitted, a notification is sent to \#dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo. 
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org/). Once the form is submitted, a notification is sent to \#dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request.   
+  
+Sdarq and CIS Scanner \(a different service integrated to SDARQ\) assess the security posture of GCP projects. Dev must provide GCP project id, and Sdarq returns to developers the results of the scanner. 
 {% endtab %}
 
 {% tab title="Sensitive Data" %}
@@ -71,6 +73,8 @@ Scan commits for service account keys, access keys, and other secrets, and repor
 **Vault**
 
 Vault is used to securely store secrets and other sensitive data. See the [DSDE Toolbox](https://github.com/broadinstitute/dsde-toolbox#authenticating-to-vault) for more information.
+
+\*\*\*\*[**Secret Manager**](https://cloud.google.com/secret-manager)\*\*\*\*
 {% endtab %}
 {% endtabs %}
 
