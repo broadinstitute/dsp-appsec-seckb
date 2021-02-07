@@ -12,7 +12,7 @@ Denis Loginov: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)
 
 Sarada Symonds: [ssymonds@broadinstitute.org](mailto:ssymonds@broadinstitute.org)
 
-Other options? Drop a message at `dsp-infosec-champions`
+Or just drop a message at `dsp-infosec-champions`
 
 ## Are you building a new service?
 
