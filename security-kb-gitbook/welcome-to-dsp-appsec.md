@@ -14,7 +14,7 @@ Denis: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)
 
 Sarada: [ssymonds@broadinstitute.org](mailto:ssymonds@broadinstitute.org)
 
-Or just drop a message at `dsp-infosec-champions`
+Reach AppSec team via email [appsec@broadinstitute.org](mailto:appsec@broadinstitute.org) , or just drop a message at `dsp-infosec-champions`
 
 ## Are you building a new service?
 
