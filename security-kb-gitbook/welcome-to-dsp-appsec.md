@@ -25,7 +25,7 @@ If you have any questions about this, please do not hesitate to contact us.
 You can choose one of these options:
 
 * [SDARQ Jira ticket risk assessment](https://sdarq.dsp-appsec.broadinstitute.org/jira-ticket-risk-assesment) \(accessed via VPN\)
-* [Jira ticket risk assessment site](https://broadinstitute.github.io/dsp-appsec-security-risk-assessment/) \(no VPN\)
+* [Jira ticket risk assessment](https://broadinstitute.github.io/dsp-appsec-security-risk-assessment/) \(no VPN\)
 
 ## Do you need a Threat Model for your service? 
 
