@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Welcome to DSP AppSec](welcome-to-dsp-appsec.md)
 * [Getting Started](getting-started.md)
 * [General](security_resources/README.md)
   * [Terra Best Practices](security_resources/terra-best-practices.md)
