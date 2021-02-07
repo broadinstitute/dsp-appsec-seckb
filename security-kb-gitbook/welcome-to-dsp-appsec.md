@@ -6,11 +6,13 @@ description: Main Page
 
 ## Security consultation
 
-Zybjana Bedo \(Ana\): [zbedo@broadinstitute.org](mailto:zbedo@broadinstitute.org)
+You can directly contact:
 
-Denis Loginov: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)
+Ana: [zbedo@broadinstitute.org](mailto:zbedo@broadinstitute.org)
 
-Sarada Symonds: [ssymonds@broadinstitute.org](mailto:ssymonds@broadinstitute.org)
+Denis: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)
+
+Sarada: [ssymonds@broadinstitute.org](mailto:ssymonds@broadinstitute.org)
 
 Or just drop a message at `dsp-infosec-champions`
 
