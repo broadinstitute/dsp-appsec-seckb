@@ -2,7 +2,10 @@
 
 1. Ensure **Stackdriver Logging** enabled on GKE Clusters - [https://cloud.google.com/monitoring/kubernetes-engine/legacy-stackdriver/logging](https://cloud.google.com/monitoring/kubernetes-engine/legacy-stackdriver/logging)
 2. Ensure legacy authorization is disabled. 
-3. **“Master authorized networks”** should be enabled and should use the Networks from the Securing the Network section.  ****[https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks)                                                                                                                                                                                 
+3. **“Master authorized networks”** should be enabled and should use the Networks from the Securing the Network section.  ****[https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks)        
+
+
+   The most up-to-date list of Broad IP ranges can be found at [gs://broad-institute-networking/internal\_networks.json](gs://broad-institute-networking/internal_networks.json)                                                                                                                                                             
 
    ```text
    (69.173.127.0/25)
@@ -20,8 +23,6 @@
    (69.173.127.240/28)
    (69.173.112.0/21)
    ```
-
-   The most up-to-date list of Broad IP ranges can be found at [gs://broad-institute-networking/internal\_networks.json](gs://broad-institute-networking/internal_networks.json)
 
 4. Ensure the **Kubernetes Web Dashboard** is disabled.
 5. Ensure **Basic Auth** is disabled.
