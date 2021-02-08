@@ -21,6 +21,8 @@
    (69.173.112.0/21)
    ```
 
+   The most up-to-date list of Broad IP ranges can be found at [gs://broad-institute-networking/internal\_networks.json](gs://broad-institute-networking/internal_networks.json)
+
 4. Ensure the **Kubernetes Web Dashboard** is disabled.
 5. Ensure **Basic Auth** is disabled.
 6. Ensure **automatic node repair and/or upgrades** is enabled [https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-upgrades](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-upgrades)
