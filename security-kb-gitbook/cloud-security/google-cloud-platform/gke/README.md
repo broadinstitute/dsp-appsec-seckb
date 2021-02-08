@@ -5,7 +5,7 @@
 3. **“Master authorized networks”** should be enabled and should use the Networks from the Securing the Network section.  ****[https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks)        
 
 
-   The most up-to-date list of Broad IP ranges can be found at [gs://broad-institute-networking/internal\_networks.json](gs://broad-institute-networking/internal_networks.json)                                                                                                                                                             
+   The most up-to-date list of Broad IP ranges can be found at [gs://broad-institute-networking/internal\_networks.json](https://console.cloud.google.com/storage/browser/_details/broad-institute-networking/internal_networks.json)                                                                                                                                                             
 
    ```text
    (69.173.127.0/25)
