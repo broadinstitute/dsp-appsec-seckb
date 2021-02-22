@@ -27,8 +27,6 @@ Static Code Analysis is an activity that is performed continuously and aims to i
 {% endtab %}
 
 {% tab title="Third-Party Libraries" %}
-## Third-Party Libraries
-
 **Description:**
 
 Third-party libraries have several interesting risks. Obviously, vulnerabilities can be introduced into libraries and we need to ensure that our developers are aware when such things happen.
@@ -46,7 +44,7 @@ Currently, Sourceclear is our source of truth for open source and third-party vu
 
 **Sourceclear Scanning**
 
-Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies. [78% of vulnerabilities](https://snyk.io/blog/78-of-vulnerabilities-are-found-in-indirect-dependencies-making-remediation-complex/) came from indirect dependencies in 2018.
+Sourceclear scans projects by cloning the project repo, identifying the package manager, building the project, and examining third party code. It also looks at indirect dependencies.
 
 You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. The `srcclr.yml` file contains scan directives that determine the scan settings for your repo. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` file can set the scanner to use Python3, if your project requires it.
 
@@ -62,19 +60,10 @@ All DataBiosphere repos currently have Vulnerability Alerts and Automated Securi
 
 **Tools:**
 
-* SourceClear:[https://broadinstitute-dsp.sourceclear.io/login](https://broadinstitute-dsp.sourceclear.io/login)
+* SourceClear
 * Dependabot: Enabled via Github
-* Snyk
 * Github Vulnerability Alerts - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/viewing-and-updating-vulnerable-dependencies-in-your-repository)
-* Github Automated Security Fixes - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/configuring-automated-security-updates)
-* Jenkins SourceClear Trigger job - [seceng-source-code-scan-setup](https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/seceng-source-code-scan-setup/)
-* Jenkins SourceClear Scanner job - [seceng-srcclr-scan](https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/seceng-srcclr-scan/)
-* SourceClear Scanner Docker image - [repo](https://github.com/broadinstitute/sourceclear-scanner-docker)
-* SourceClear Scanner Docker image - [GCR](https://console.cloud.google.com/gcr/images/dsp-appsec-dev/US/srcclr_scanner?project=dsp-appsec-dev&organizationId=548622027621&gcrImageListsize=30)
-
-**How Can We Do Better?**
-
-More automated triage; currently a robust process
+* Github Automated Security Fixes - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/configuring-automated-security-updates)\*\*\*\*
 {% endtab %}
 
 {% tab title="Docker" %}
