@@ -67,8 +67,6 @@ All DataBiosphere repos currently have Vulnerability Alerts and Automated Securi
 {% endtab %}
 
 {% tab title="Docker" %}
-## Docker
-
 **Description:**
 
 Need to analyze containers for security issues. Must Integrate into our CI/CD pipeline to ensure that only images that meet your security and compliance requirements are deployed.
@@ -82,20 +80,11 @@ This does not involve Kubernetes, which of course has gotten a bit complex in ge
 * User Namespaces
 * Syscalls: SecComp, Sysdig, Falco 
 * Runtimes: gvisor, Kata, Firecracker
-* image scanning → trivy \(see above, main item\)
+* Image scanning → trivy \(see above, main item\)
 * Image signing: Notary, ContentTrust
 * Docker API: Twistlock probably the only one worth it
 * Service Mesh: Istio, Envoy
 * CIS: CIS benchmark docker, DevSec image framework
-
-Other potential tools/ideas:
-
-* Quay:[https://quay.io/](https://quay.io/)
-* Anchore:[https://anchore.io/](https://anchore.io/)
-* Docker Bench Test:[https://github.com/alexei-led/docker-bench-test](https://github.com/alexei-led/docker-bench-test)
-* RArchitecture:[https://success.docker.com/article/security-best-practices](https://success.docker.com/article/security-best-practices)
-* Falco:[https://sysdig.com/opensource/falco/](https://sysdig.com/opensource/falco/)
-* Dagda:[https://github.com/eliasgranderubio/dagda/](https://github.com/eliasgranderubio/dagda/)
 {% endtab %}
 {% endtabs %}
 
