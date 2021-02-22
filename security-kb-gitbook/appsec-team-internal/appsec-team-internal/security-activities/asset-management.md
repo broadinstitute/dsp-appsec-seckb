@@ -12,8 +12,6 @@ Where is our catalog of applications and related assets \(domains, databases, in
 {% endtab %}
 
 {% tab title="Threat Modeling" %}
-## Threat Modeling
-
 **Description:**
 
 Catching security risks and flaws early save time and effort. Design Review/Secure Architecture Analysis is an activity that is done as early as possible when a new service is spun up and it's a continuous process.
