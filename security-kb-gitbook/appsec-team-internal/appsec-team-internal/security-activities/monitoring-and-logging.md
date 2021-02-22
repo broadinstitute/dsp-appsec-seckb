@@ -14,6 +14,8 @@ Collect data from HTTP request processing, inside the application, in the browse
 {% tab title="RASP" %}
 **Description:**
 
+Uses runtime instrumentation to detect and block attacks by taking advantage of information from inside the running software.
+
 We need to provide a precise picture of just how an attack against a given application would or would not be successful in realtime.
 
 **Tools:**
