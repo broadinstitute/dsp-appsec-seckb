@@ -8,7 +8,7 @@ description: Security-related onboarding items for new DSP members
 {% tab title="General Security Onboarding Items" %}
 ## New Hire Security Checklist
 
-* Make sure you have installed git-secrets. [Instructions Here](https://github.com/broadinstitute/security-kb-gitbook/tree/a5348cc55c991761e37fc28083529f37b733ac4a/security-kb-gitbook/security_platform_categories/security_git.md#how-do-i-verify-git-secrets-works-on-my-machine).
+* Make sure you have installed git-secrets. Instructions [here](https://dsp-security.broadinstitute.org/platform-security-categories/git/setup-git-secrets).
 * Make sure you have completed assigned Codebashing modules. These will be assigned by your team leader.
 {% endtab %}
 
