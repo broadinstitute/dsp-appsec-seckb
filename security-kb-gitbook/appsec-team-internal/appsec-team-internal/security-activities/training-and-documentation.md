@@ -18,7 +18,7 @@ It should include secure engineering guidelines advice from infrastructure secur
 
 **Tools:**
 
-* [Security KB](https://dsp-security.broadinstitute.org/)
+* [Security KB](https://security-kb.dsp-techops.broadinstitute.org/)
 {% endtab %}
 {% endtabs %}
 

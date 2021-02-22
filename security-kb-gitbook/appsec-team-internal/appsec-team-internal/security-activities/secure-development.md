@@ -4,11 +4,11 @@
 {% tab title="SDARQ" %}
 **Description:**
 
-How do we enable developers to understand what security requirements are applicable to a service they are launching as early as possible? How do we make sure security is involved in a discussion ideally at the design/architecture phase?
+Developers should understand as early as possible what security requirements are applicable to a service before they are launching it. To make sure security is involved in a discussion at the design/architecture phase, developers must go through a list of steps to define these security requirements.
 
 **Tools:**
 
-* SDARQ: [https://sdarq.dsp-appsec.broadinstitute.org/](https://sdarq.dsp-appsec.broadinstitute.org/)
+* [SDARQ](https://sdarq.dsp-appsec.broadinstitute.org/newservice)
 {% endtab %}
 
 {% tab title="CI/CD security" %}
