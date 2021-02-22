@@ -28,7 +28,7 @@ An open-source static code analysis tool that scans repositories for insecure co
 {% tab title="Pentesting" %}
 **Burp**
 
-Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built-in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities. Results of the scans are then uploaded to CodeDx and Defect Dojo \(see _Project Management_ tab.
+Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built-in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities.
 
 **OWASP Zap**
 
@@ -52,15 +52,15 @@ Sdarq and CIS Scanner \(a different service integrated to SDARQ\) assess the sec
 {% endtab %}
 
 {% tab title="Sensitive Data" %}
-Developers should avoid putting secret information in Github repos or Jenkins logs. To prevent this, we use Vault to securely store keys and other sensitive data used in the development and production environments, as well as protected branches and pull-approve on Github. See [Github & Git](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/git-and-github/README.md) for more information.
+Developers should avoid putting secret information in Github repos or Jenkins logs. To prevent this, we use Vault to securely store keys and other sensitive data used in the development and production environments, as well as protected branches and pull-approve on Github.
 
 **Git Secrets**
 
-Prevents developers from accidentally committing secrets to Github. See installation instructions [here](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/setup-git-secrets.md)
+Prevents developers from accidentally committing secrets to Github. See installation instructions [here](https://dsp-security.broadinstitute.org/platform-security-categories/git/setup-git-secrets)
 
 **Trufflehog/Github Broad Secret Scanner**
 
-Scan commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See [Git and Github](https://github.com/broadinstitute/security-kb-gitbook/tree/55fb84dd3346c31f2e7bdad35cdeb22537dee6ae/security-kb-gitbook/appsec-team-internal/platform-security-categories/git-and-github/what-to-do-in-case-of-an-incident.md) for what to do when a secret is committed.
+Scan commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See this [link](https://dsp-security.broadinstitute.org/platform-security-categories/git/what-to-do-in-case-of-an-incident) for what to do when a secret is committed.
 
 **Vault**
 
