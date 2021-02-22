@@ -26,18 +26,11 @@ We need to provide a precise picture of just how an attack against a given appli
 {% tab title="Cloud Tenant Config Management" %}
 **Description:**
 
-Ensures all Cloud configurations are monitored and alerted when a change has been made
+Ensures all Cloud configurations are monitored and alerted when a change has been made.
 
 **Tools:**
 
 * Jenkins GCP Audit:[https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/Security-gcp-audit/](https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/Security-gcp-audit/)
-* AWS:[https://aws.amazon.com/guardduty/](https://aws.amazon.com/guardduty/)
-
-**How Can We Do Better?**
-
-For Google, virtually nothing works. We are doing an EA of a product called guardian that isn't announced.
-
-For AWS, this should be configured: [https://aws.amazon.com/guardduty/](https://aws.amazon.com/guardduty/)
 {% endtab %}
 
 {% tab title="Platform Logging" %}
