@@ -54,7 +54,7 @@ DDP logs go to Enterprise Splunk. Threat intel is applied but limited to custom 
 {% tab title="Platform Security" %}
 **Description:**
 
-Alert when the Platform \(GCP\) has anomalous or bad changes
+Alert when the Platform \(GCP\) has anomalous or bad changes.
 
 **Tools:**
 
