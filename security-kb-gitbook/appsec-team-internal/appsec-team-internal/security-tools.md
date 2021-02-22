@@ -28,7 +28,7 @@ An open-source static code analysis tool that scans repositories for insecure co
 {% tab title="Pentesting" %}
 **Burp**
 
-Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built-in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities.
+Burp is currently the main pentesting tool used for application testing. AppSec engineers use Burp's proxy to analyze and modify HTTP requests and responses. Burp has many built-in tools and extensions that allow testers to look for XSS, injection, and other vulnerabilities. Results of the scans are then uploaded to CodeDx and Defect Dojo \(see _Project Management_ tab.
 
 **OWASP Zap**
 
