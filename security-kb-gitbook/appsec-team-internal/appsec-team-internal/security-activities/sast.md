@@ -2,8 +2,6 @@
 
 {% tabs %}
 {% tab title="Code Repository Management" %}
-## Code Repository Management
-
 **Description:**
 
 Monitor Github for secrets checking and other anomalous behavior.
@@ -18,17 +16,14 @@ Monitor Github for secrets checking and other anomalous behavior.
 {% endtab %}
 
 {% tab title="Static Code Analysis" %}
-## Static Code Analysis
-
 **Description:**
 
 Static Code Analysis is an activity that is performed continuously and aims to identify issues at a code level.
 
 **Tools:**
 
-* Codacy:[https://app.codacy.com/organization/BroadInstitute](https://app.codacy.com/organization/BroadInstitute)
-
-**How Can We Do Better?**
+* Codacy
+* Semgrep
 {% endtab %}
 
 {% tab title="Third-Party Libraries" %}
