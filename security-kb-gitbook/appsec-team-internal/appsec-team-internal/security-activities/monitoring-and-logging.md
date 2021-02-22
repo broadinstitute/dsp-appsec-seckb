@@ -44,19 +44,11 @@ Alerts/Anamolies for GCP from Google's Stackdriver Platform
 {% endtab %}
 
 {% tab title="Application Security Logging" %}
-**Description:**
-
 **Tools:**
 
 * [https://logit.io/](https://logit.io/) for Firecloud logs
 
-DDP logs go to Enterprise Splunk. Threat intel is applied but limited for custom applications.
-
-**How Can We Do Better?**
-
-Needs to be tuned for alerting of anomalous behavior. Currently alerts if there are a lot of 500s in a certain amount of time.
-
-These are mostly Apache and JVM logs. Is there a better way to derive events from this?
+DDP logs go to Enterprise Splunk. Threat intel is applied but limited to custom applications.
 {% endtab %}
 
 {% tab title="Platform Security" %}
