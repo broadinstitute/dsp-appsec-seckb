@@ -20,15 +20,13 @@ _Production deployments should not be able to run from "random" PRs without some
 {% endtab %}
 
 {% tab title="Secrets Management" %}
-## Secrets Management
-
 **Description:**
 
 Make sure secrets are properly stored and encrypted. Access to secrets is granted on a need-to-know basis. Secrets must be regularly expired and rotated. Robust logs are stored so that access can be audited in the future.
 
 **Tools:**
 
-* Vault: [https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault](https://broadinstitute.atlassian.net/wiki/spaces/DO/pages/113874856/Vault)
+* Vault
 * Secret Manager
 * Git Secrets
 {% endtab %}
