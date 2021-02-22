@@ -8,12 +8,7 @@ Engineers should go through some sort of application security training once a ye
 
 **Tools:**
 
-* Codebashing:[https://www.learn.codebashing.com](https://www.learn.codebashing.com)
-
-**How Can We Do Better?**
-
-* Need to train new Developers once they join and make security training part of the required training.
-* Onboarding curriculum
+* [Codebashing](https://www.learn.codebashing.com)
 {% endtab %}
 
 {% tab title="Documentation & Internal KB" %}
