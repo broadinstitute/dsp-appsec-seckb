@@ -29,100 +29,36 @@ The OWASP ZAProxy tool is used as part of weekly scans against dev environments.
 
 #### Technologies Used
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Technology</b>
-      </th>
-      <th style="text-align:left"><b>Description</b>
-      </th>
-      <th style="text-align:left"><b>Links</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>Jenkins</b>
-      </td>
-      <td style="text-align:left"><b>Jenkins jobs are used to trigger other jobs and to run scripts</b>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/automated-security-report-generation/"><b>Automatic Security Scan and  Report Generation</b></a><b><br /></b>
-        </p>
-        <p><a href="https://fc-jenkins.dsp-techops.broadinstitute.org/view/Security%20Scans/job/terra-automated-scan-setup/"><b>terra-automated-scan-setup</b></a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>CodeDx</b>
-      </td>
-      <td style="text-align:left"><b>Vulnerability Database</b>
-      </td>
-      <td style="text-align:left"><a href="https://codedx101.dsp-techops.broadinstitute.org/codedx/projects/"><b>Broad CodeDx instance</b></a>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>OWASP ZAP</b>
-      </td>
-      <td style="text-align:left"><b>Docker image used to perform a security scan</b>
-      </td>
-      <td style="text-align:left"><a href="https://github.com/zaproxy/zaproxy"><b>ZAProxy Github</b></a>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Slack</b>
-      </td>
-      <td style="text-align:left"><b>Reports sent to #automated-security-scans sing Slack API</b>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>CodeDx API Wrapper</b>
-      </td>
-      <td style="text-align:left"><b>Python API Client for CodeDx </b>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/broadinstitute/codedx-api-client-python"><b>CodeDx API Wrapper Github</b></a><b><br /></b>
-        </p>
-        <p><a href="https://console.cloud.google.com/gcr/images/dsp-appsec-dev/GLOBAL/codedx-api-wrapper?project=dsp-appsec-dev&amp;organizationId=548622027621&amp;gcrImageListsize=30"><b>Codedx-api-wrapper image on GCR</b></a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Script</b>
-      </td>
-      <td style="text-align:left"><b>Script run by Jenkins for ZAProxy scans and CodeDx uploads</b>
-      </td>
-      <td style="text-align:left"><a href="https://github.com/broadinstitute/dsp-security-zap-scans"><b>Script Github</b></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-#### Projects Scanned by ZAProxy
-
-| **Service** | **URL** |
+| **Technology** | **Description** |
 | :--- | :--- |
-| **Terra UI** | **https://bvdp-saturn-dev.appspot.com** |
-| **Firecloud-Orchestration** | **https://firecloud-orchestration.dsde-dev.broadinstitute.org** |
-| **TOS** | **https://us-central1-broad-workbench-tos-dev.cloudfunctions.net** |
-| **Rawls** | **https://rawls.dsde-dev.broadinstitute.org** |
-| **Sam** | **https://sam.dsde-dev.broadinstitute.org** |
-| **Leo** | **https://leonardo.dsde-dev.broadinstitute.org** |
-| **Job Manager UI** | **https://job-manager.dsde-dev.broadinstitute.org/** |
-| **Job Manager Server** | **https://job-manager.dsde-dev.broadinstitute.org/** |
-| **CromIAM** | **https://cromiam101.dsde-dev.broadinstitute.org/, https://cromiam102.dsde-dev.broadinstitute.org/ and https://cromiam103.dsde-dev.broadinstitute.org/** |
-| **Cromwell** | **cromwell1.dsde-dev.broadinstitute.org** |
-| **Agora** | **https://agora.dsde-dev.broadinstitute.org/** |
-| **Martha** | **https://us-central1-broad-dsde-dev.cloudfunctions.net/martha\_v2** |
-| **Bond** | **https://broad-bond-dev.appspot.com** |
-| **Thurloe** | **https://thurloe.dsde-dev.broadinstitute.org/** |
-| **Calhoun** | **https://terra-calhoun-dev.appspot.com** |
-| **Rex** | **https://terra-rex-dev.appspot.com** |
-| **NCBIAccess** | **TBD** |
-| **Firecloud-UI** | **TBD** |
-| **Duos** | **TBD** |
-| **Hamm \(IN DEVEL\)** | **TBD** |
+| **Jenkins** | **Jenkins jobs are used to trigger other jobs and to run scripts** |
+| **CodeDx** | **Vulnerability Database** |
+| **OWASP ZAP** | **Docker image used to perform a security scan** |
+| **Slack** | **Reports sent to \#automated-security-scans sing Slack API** |
+| **CodeDx API Wrapper** | **Python API Client for CodeDx**  |
+
+|  |
+| :--- |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
 
 **Tools:**
 
