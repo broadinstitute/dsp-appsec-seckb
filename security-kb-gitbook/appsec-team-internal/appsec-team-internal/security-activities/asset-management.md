@@ -2,15 +2,13 @@
 
 {% tabs %}
 {% tab title="Asset Management and Engagement Tracking" %}
-## Asset Management and Engagement Tracking
-
 **Description:**
 
 Where is our catalog of applications and related assets \(domains, databases, infrastructure, and more\)? Where do we keep track of engagements?
 
 **Tools:**
 
-* DefectDojo:[https://defect-dojo.dsp-appsec.broadinstitute.org/dashboard](https://defect-dojo.dsp-techops.broadinstitute.org/dashboard)
+* [DefectDojo](https://defect-dojo.dsp-appsec.broadinstitute.org/dashboard)
 {% endtab %}
 
 {% tab title="Threat Modeling" %}
