@@ -14,8 +14,6 @@ description: Securing the image pipeline from creation to delivery to deployment
 
 {% page-ref page="tools.md" %}
 
-{% page-ref page="gke-gcp.md" %}
-
 
 
 
