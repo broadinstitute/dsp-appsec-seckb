@@ -41,10 +41,6 @@ Alerts/Anamolies for GCP from Google's Stackdriver Platform
 **Tools:**
 
 * SumoLogic:[https://service.sumologic.com/ui/](https://service.sumologic.com/ui/)
-
-**How Can We Do Better?**
-
-Needs to be tuned for alerting of anomalous behavior. A vendor is making a Redlock.io -like product for us called Guardian that should further enhance this.
 {% endtab %}
 
 {% tab title="Application Security Logging" %}
