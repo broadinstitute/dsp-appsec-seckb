@@ -4,7 +4,7 @@
 {% tab title="WAF" %}
 **Description:**
 
-Collect data from HTTP request processing, inside the application, in the browser – and aggregate and analyze in the cloud. The output is meaningful, actionable alerts on active attacks.
+Collect data from HTTP request processing, inside the application, in the browser and aggregate and analyze in the cloud. The output is meaningful, actionable alerts on active attacks.
 
 **Tools:**
 
