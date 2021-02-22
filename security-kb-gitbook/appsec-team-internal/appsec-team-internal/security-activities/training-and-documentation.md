@@ -20,18 +20,7 @@ It should include secure engineering guidelines advice from infrastructure secur
 
 * [Security KB](https://dsp-security.broadinstitute.org/)
 {% endtab %}
-
-{% tab title="Security Knowledge/Rules \(Internal\)" %}
-**Description:**
-
-Sort of a framework in order to create a guide-system available for all developers so they can develop applications secure by design from the start.
-
-**Tools:** No tools currently in use.
-
-**How Can We Do Better?**
-
-* Look into [https://github.com/blabla1337/skf-flask](https://github.com/blabla1337/skf-flask%20%20%20%20)
-* Team Mentor [https://www.teammentor.net/jade/index.html](https://www.teammentor.net/jade/index.html)
-{% endtab %}
 {% endtabs %}
+
+
 
