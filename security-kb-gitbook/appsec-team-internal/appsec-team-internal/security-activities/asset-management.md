@@ -16,11 +16,11 @@ Where is our catalog of applications and related assets \(domains, databases, in
 
 **Description:**
 
-Catching security risks and flaws early save time and effort \(and money\). Design Review/Secure Architecture Analysis is an activity that is done as early as possible when a new service is spun up and it's a continuous process.
+Catching security risks and flaws early save time and effort. Design Review/Secure Architecture Analysis is an activity that is done as early as possible when a new service is spun up and it's a continuous process.
 
 **Tools:**
 
-* PyTM : [https://github.com/broadinstitute/dsp-appsec-terra-threat-models](https://github.com/broadinstitute/dsp-appsec-terra-threat-models)
+* [PyTM](https://github.com/broadinstitute/dsp-appsec-terra-threat-models)
 {% endtab %}
 
 {% tab title="Vulnerability Management" %}
