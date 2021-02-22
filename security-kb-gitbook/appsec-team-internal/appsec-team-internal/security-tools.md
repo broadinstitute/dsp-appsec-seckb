@@ -38,15 +38,15 @@ OWASP Zap is an open-source pentesting tool with similar applications to Burp. B
 {% tab title="Project Management" %}
 **Defect Dojo**
 
-Defect Dojo currently contains documentation on various DSP projects and teams, including the Security Champion of each project. Data from the New Security Requirements form is used to create new engagements. Broad's Defect Dojo can be found [here](https://defect-dojo.dsp-techops.broadinstitute.org/).
+Defect Dojo currently contains documentation on various DSP projects and teams, including the Security Champion of each project. Data from the New Security Requirements form is used to create new products. 
 
 **CodeDx**
 
-CodeDx is [our database](https://codedx101.dsp-techops.broadinstitute.org/codedx) of vulnerabilities found during pentesting. Scans from Burp, Zap, Brakeman, and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc., and generate reports that include data on the vulnerability and how to fix it.
+CodeDx is our database of vulnerabilities found during pentesting. Scans from Burp, Zap and many other security tools can be automatically imported to a CodeDx project. CodeDx can then filter vulnerabilities based on type, severity, paths, etc., and generate reports that include data on the vulnerability and how to fix it.
 
 **SDARQ**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org/). Once the form is submitted, a notification is sent to \#dsp-security in Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request.   
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org/). Once the form is submitted, a notification is sent to a Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request.   
   
 Sdarq and CIS Scanner \(a different service integrated to SDARQ\) assess the security posture of GCP projects. Devs must provide GCP project id, and Sdarq returns to devs scanner results. 
 {% endtab %}
