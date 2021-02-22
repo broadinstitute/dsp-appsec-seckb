@@ -2,8 +2,6 @@
 
 {% tabs %}
 {% tab title="Code Repository Management" %}
-## Code Repository Management
-
 **Description:**
 
 Monitor Github for secrets checking and other anomalous behavior.
@@ -15,14 +13,6 @@ Monitor Github for secrets checking and other anomalous behavior.
 * Pullapprove:[https://www.pullapprove.com/](https://www.pullapprove.com/)
 * Git-secrets client-side protection
 * TruffleHog/Gitrob as a server-side protection 
-
-**How Can We Do Better?**
-
-Is it widely used? How can we detect that it's being used?
-
-Zybjana Bedo has setup jenkins jobs
-
-Discussion with GitGuardian Split jenkins jobs into smaller ones Zybjana Bedo
 {% endtab %}
 
 {% tab title="Static Code Analysis" %}
