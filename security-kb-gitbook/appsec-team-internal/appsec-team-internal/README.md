@@ -8,11 +8,5 @@ description: >-
 
 {% page-ref page="security-tools.md" %}
 
-{% page-ref page="security-activities/" %}
-
-{% page-ref page="security-automation.md" %}
-
-{% page-ref page="pentesting-methodology.md" %}
-
 
 

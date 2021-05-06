@@ -135,6 +135,12 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME"/Library/
 
  **Example repository:** [**https://github.com/broadinstitute/dsp-appsec-trivy-cicd**](https://github.com/broadinstitute/trivy-cicd) ****
 
+## AppSec team solution to protect CI/CD
+
+Appsec team built its own **blessed images** that are scanned frequently. Created a Github Action which is integrated with all services reporitories and that action will check if they are using our blessed images, and if not the action will run Trivy against the base image. 
+
+Check this repository to learn more about [Appsec Trivy Action.](https://github.com/broadinstitute/dsp-appsec-trivy-action)
+
 ### Questions
 
 Reach out to appsec@broadinstitute.org

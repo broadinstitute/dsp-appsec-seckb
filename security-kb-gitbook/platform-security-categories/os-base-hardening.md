@@ -4,6 +4,10 @@ description: 'Resources on how to harden a base OS such as Debian9, CentOS 8 etc
 
 # OS Base Hardening
 
+## Compute Instances
+
+These images are for launching hardened compute instances. DSP is in the process of migrating away from Google Compute Engine and towards an orchestrated environment using Kubernetes, which will focus on container and Docker security. For blessed Docker images, please see  [https://github.com/broadinstitute/dsp-appsec-blessed-images](https://github.com/broadinstitute/dsp-appsec-blessed-images). 
+
 ## 1. Use a dsp-appsec custom image
 
 #### Prerequisites:
@@ -69,9 +73,21 @@ You can then go to custom images and select `dsp-appsec` as your project before 
 
 ![](../.gitbook/assets/screen-shot-2020-05-18-at-3.33.54-pm.png)
 
-dsp-appsec currently has the following images:
+dsp-appsec currently supportss the following OS families :
 
-* `dsp-appsec-cis-debian9`
+* `debian9`
+* `centos7`
+
+Images are hardened automatically when a new version is released. Please use the most recent version of the OS image. Image names will have the following format, where the date corresponds to the date the OS image was released:
+
+* `dsp-appsec-cis-debian-9-stretch-v20210217`
+* `dsp-appsec-cis-centos-7-v20210217`
+
+Please try running: `gcloud compute images list --project dsp-appsec-hardened-images --filter="name~'dsp-appsec'"`
+
+\`\`
+
+\`\`
 
 ## 2. Use dsp-appsec's ansible playbook for CIS hardening
 
@@ -87,6 +103,7 @@ Make sure to replace the `[OS]` below with your system.
 Currently, supported systems include:
 
 * `debian9`
+* `centos7`
 
 ```text
 git clone https://github.com/broadinstitute/dsp-appsec-base-image-hardening.git

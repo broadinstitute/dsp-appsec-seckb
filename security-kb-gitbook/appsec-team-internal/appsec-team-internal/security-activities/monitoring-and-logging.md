@@ -58,7 +58,7 @@ Alert when the Platform \(GCP\) has anomalous or bad changes.
 
 **Tools:**
 
-* Redlock - implemented to alert on CIS Benchmark Level 1
+* CIS Scanner via Sdarq - implemented to alert on CIS Benchmark
 * Google Cloud Security Console - Will deprecate Redlock and alerts will roll to SIEM.
 {% endtab %}
 {% endtabs %}

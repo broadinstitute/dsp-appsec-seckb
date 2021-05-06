@@ -11,16 +11,6 @@ Where is our catalog of applications and related assets \(domains, databases, in
 * [DefectDojo](https://defect-dojo.dsp-appsec.broadinstitute.org/dashboard)
 {% endtab %}
 
-{% tab title="Threat Modeling" %}
-**Description:**
-
-Catching security risks and flaws early save time and effort. Design Review/Secure Architecture Analysis is an activity that is done as early as possible when a new service is spun up and it's a continuous process.
-
-**Tools:**
-
-* [PyTM](https://github.com/broadinstitute/dsp-appsec-terra-threat-models)
-{% endtab %}
-
 {% tab title="Vulnerability Management" %}
 **Description:**
 
@@ -33,6 +23,4 @@ More often than not, we are going to discover more vulnerabilities that can be p
 * [CodeDx](https://codedx.dsp-appsec.broadinstitute.org/codedx/login)
 {% endtab %}
 {% endtabs %}
-
-
 

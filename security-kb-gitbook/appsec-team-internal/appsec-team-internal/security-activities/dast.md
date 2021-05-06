@@ -31,6 +31,8 @@ The OWASP ZAProxy tool is used as part of weekly scans against dev environments.
 {% endtab %}
 
 {% tab title="Dynamic Application Security Testing \(Manual\)" %}
+
+
 **Description:**
 
 No matter how good our automatic DAST testing is, it’s always good to take a step back and run a Pentest against an application, service, or system.
@@ -50,8 +52,6 @@ Our virtual machines are scanned regularly and if security issues are found, the
 * Qualys tool scans all IPs owned by Broad \(on-prem and cloud\) and reports back to Qualys.
 {% endtab %}
 {% endtabs %}
-
-## 
 
 
 

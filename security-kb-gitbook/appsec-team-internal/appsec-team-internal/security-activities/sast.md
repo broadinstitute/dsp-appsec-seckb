@@ -63,7 +63,7 @@ All DataBiosphere repos currently have Vulnerability Alerts and Automated Securi
 * SourceClear
 * Dependabot: Enabled via Github
 * Github Vulnerability Alerts - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/viewing-and-updating-vulnerable-dependencies-in-your-repository)
-* Github Automated Security Fixes - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/configuring-automated-security-updates)\*\*\*\*
+* Github Automated Security Fixes - [Link](https://help.github.com/en/github/managing-security-vulnerabilities/configuring-automated-security-updates)
 {% endtab %}
 
 {% tab title="Docker" %}
@@ -87,4 +87,6 @@ This does not involve Kubernetes, which of course has gotten a bit complex in ge
 * CIS: CIS benchmark docker, DevSec image framework
 {% endtab %}
 {% endtabs %}
+
+
 
