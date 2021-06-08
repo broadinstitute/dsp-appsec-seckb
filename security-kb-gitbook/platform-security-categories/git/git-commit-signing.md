@@ -10,11 +10,11 @@ Signing git commits because it helps ensure repository integrity. When someone h
 
 ![Legitimate pull request](../../.gitbook/assets/legit-commit.png)
 
-**Scenario 2 - spoofed commit from a user who has access to the repo** ![Spoofed commit from user with access](../../.gitbook/assets/fake-commit-1.png)
+**Scenario 2 - spoofed commit from a user who has access to the repo** ![Spoofed commit from user with access](../../.gitbook/assets/fake-commit%20%282%29.png)
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 
-![Spoofed commit from outside collaborator](../../.gitbook/assets/outside-pr.png)
+![Spoofed commit from outside collaborator](../../.gitbook/assets/outside-pr%20%281%29.png)
 
 **Steps to follow to set up commit signing are located below.** Alternatively, you can just run the following [script](https://github.com/broadinstitute/dsp-security-knowledgebase/blob/master/source/scripts/gitsign.sh). Please ensure you have [installed gpg](https://gpgtools.org/). prior to running the script.
 
