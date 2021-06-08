@@ -1,10 +1,6 @@
 # Security Activities
 
-{% page-ref page="threat-modeling.md" %}
+{% page-ref page="threat\_modeling/" %}
 
 {% page-ref page="secure\_coding/" %}
-
-
-
-
 
