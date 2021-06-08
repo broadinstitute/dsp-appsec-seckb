@@ -2,7 +2,7 @@
 description: Main Page
 ---
 
-# Welcome to DSP AppSec
+# Welcome to DSP AppSec Portal
 
 ## Do you need a security consultation?
 
