@@ -1,6 +1,6 @@
 # Security Resources
 
-Stay up to date!
+Stay up to date! Here are some links.
 
 * [Portswigger Daily Swig](https://portswigger.net/daily-swig)
 * [The Hacker News](https://thehackernews.com/)
