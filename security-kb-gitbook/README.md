@@ -10,5 +10,3 @@ In DevSecOps, testing and security are shifted to the left through the automated
 
 
 
-
-
