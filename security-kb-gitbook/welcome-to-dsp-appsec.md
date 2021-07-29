@@ -10,7 +10,6 @@ You can directly contact:
 
 Ana: [zbedo@broadinstitute.org](mailto:zbedo@broadinstitute.org)  
 Denis: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)  
-Sarada: [ssymonds@broadinstitute.org](mailto:ssymonds@broadinstitute.org)  
 Tom: [tconner@broadinstitute.org](mailto:tconner@broadinstitute.org) 
 
 
