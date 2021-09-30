@@ -35,3 +35,9 @@ Please go through this short questionnaire to request a threat model for your se
 
 [Sdarq threat model request](https://sdarq.dsp-appsec.broadinstitute.org/threat-model/request)
 
+## Do you need a Security Pentest for your service?
+
+Please go through this short questionnaire to request a security pentest for your service.
+
+[Sdarq security pentest request](https://sdarq.dsp-appsec.broadinstitute.org/security-pentest/request)
+
