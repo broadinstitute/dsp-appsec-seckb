@@ -4,13 +4,10 @@ description: General Items
 
 # General
 
-{% page-ref page="terra-best-practices.md" %}
+{% content-ref url="terra-best-practices.md" %}
+[terra-best-practices.md](terra-best-practices.md)
+{% endcontent-ref %}
 
-{% page-ref page="dsp\_appsec\_onboarding\_doc.md" %}
-
-
-
-
-
-
-
+{% content-ref url="dsp_appsec_onboarding_doc.md" %}
+[dsp\_appsec\_onboarding\_doc.md](dsp\_appsec\_onboarding\_doc.md)
+{% endcontent-ref %}

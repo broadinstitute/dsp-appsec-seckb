@@ -1,6 +1,5 @@
 # Security Activities
 
-{% page-ref page="threat\_modeling/" %}
-
-{% page-ref page="secure\_coding/" %}
-
+{% content-ref url="secure_coding/" %}
+[secure\_coding](secure\_coding/)
+{% endcontent-ref %}

@@ -14,7 +14,7 @@ Developers should understand as early as possible what security requirements are
 {% tab title="CI/CD security" %}
 **Description:**
 
-Are our deployments secure with the right levels of authorization and authentication so that only the "right" people can kick off deployments? 
+Are our deployments secure with the right levels of authorization and authentication so that only the "right" people can kick off deployments?
 
 _Production deployments should not be able to run from "random" PRs without some sort of security process._
 {% endtab %}
@@ -30,5 +30,10 @@ Make sure secrets are properly stored and encrypted. Access to secrets is grante
 * Secret Manager
 * Git Secrets
 {% endtab %}
-{% endtabs %}
 
+{% tab title="Secure Development Guidelines" %}
+{% content-ref url="log4j-rce.md" %}
+[log4j-rce.md](log4j-rce.md)
+{% endcontent-ref %}
+{% endtab %}
+{% endtabs %}

@@ -10,9 +10,9 @@ Monitor Github for secrets checking and other anomalous behavior.
 
 * Git Secrets:[https://github.com/awslabs/git-secrets](https://github.com/awslabs/git-secrets)
 * Protected Branches:[https://help.github.com/articles/about-protected-branches/](https://help.github.com/articles/about-protected-branches/)
-* Pullapprove:[https://www.pullapprove.com/](https://www.pullapprove.com/)
+* Pullapprove:[https://www.pullapprove.com/](https://www.pullapprove.com)
 * Git-secrets client-side protection
-* TruffleHog/Gitrob as a server-side protection 
+* TruffleHog/Gitrob as a server-side protection&#x20;
 {% endtab %}
 
 {% tab title="Static Code Analysis" %}
@@ -35,8 +35,8 @@ Third-party libraries have several interesting risks. Obviously, vulnerabilities
 
 Currently, Sourceclear is our source of truth for open source and third-party vulnerability scanning.
 
-1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below. 
-2. Security engineers see the vulnerability report and work with developers to assess the risk by reaching out to the project's security champion on Slack. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself. 
+1. SourceClear identifies a vulnerable library in your project. Sourceclear then sends a report to Broad's Sourceclear database. See "Sourceclear Scanning" below.&#x20;
+2. Security engineers see the vulnerability report and work with developers to assess the risk by reaching out to the project's security champion on Slack. Vulnerabilities are then classified as "High", "Medium", or "Low" severity based on how the library is used and the vulnerability itself.&#x20;
 3. Developers create a remediation plan. Usually, this simply means updating the library to a version that is currently identified as "safe". Based on severity, vulnerabilities must be mitigated within a certain timeline:
    * `High` - Fixed within 30 days
    * `Medium` - Fixed within 90 days
@@ -48,13 +48,13 @@ Sourceclear scans projects by cloning the project repo, identifying the package 
 
 You may need to customize Sourceclear scans by adding a `srcclr.yml` file to your project's root directory. The `srcclr.yml` file contains scan directives that determine the scan settings for your repo. For example, Sourceclear uses Python2.7 by default, but a `srcclr.yml` file can set the scanner to use Python3, if your project requires it.
 
-### **Github Alerts**
+## **Github Alerts**
 
-All DataBiosphere repos currently have Vulnerability Alerts and Automated Security Fixes enabled. If you'd like to verify they have been enabled for a specific repository visit:   [https://github.com/DataBiosphere/{repository}/network/alerts](https://github.com/DataBiosphere/%7Brepository%7D/network/alerts)\*\*\*\*
+All DataBiosphere repos currently have Vulnerability Alerts and Automated Security Fixes enabled. If you'd like to verify they have been enabled for a specific repository visit: [https://github.com/DataBiosphere/{repository}/network/alerts](https://github.com/DataBiosphere/%7Brepository%7D/network/alerts)\*\*\*\*
 
 **Procedure**
 
-1. Github detects a vulnerable dependency and creates an issue under the Alerts tab of the repository. 
+1. Github detects a vulnerable dependency and creates an issue under the Alerts tab of the repository.&#x20;
 2. Github creates a pull request with the security fix. Tests are automatically run on the PR.
 3. Developers review and merge the security fix.
 
@@ -78,13 +78,12 @@ Need to analyze containers for security issues. Must Integrate into our CI/CD pi
 This does not involve Kubernetes, which of course has gotten a bit complex in general and security is a big contributor to this complexity.
 
 * User Namespaces
-* Syscalls: SecComp, Sysdig, Falco 
+* Syscalls: SecComp, Sysdig, Falco&#x20;
 * Runtimes: gvisor, Kata, Firecracker
-* Image scanning → trivy \(see above, main item\)
+* Image scanning → trivy (see above, main item)
 * Image signing: Notary, ContentTrust
 * Docker API: Twistlock probably the only one worth it
 * Service Mesh: Istio, Envoy
 * CIS: CIS benchmark docker, DevSec image framework
 {% endtab %}
 {% endtabs %}
-

@@ -11,7 +11,7 @@ description: Use Workload Identity
 
 **Note:** You can use an existing cluster, namespace, or Google Service Account instead of creating new ones.
 
-### 1. Enable Workload Identity on a New or Existing Clusters
+## 1. Enable Workload Identity on a New or Existing Clusters
 
 Option 1: Create a new cluster with workload identity enabled
 
@@ -28,25 +28,25 @@ gcloud container clusters update $CLUSTER_NAME \
   --workload-pool=$YOUR_PROJECT_ID.svc.id.goog
 ```
 
-### 2. Create a Kubernetes Namespace
+## 2. Create a Kubernetes Namespace
 
 ```bash
 kubectl create namespace $NAMESPACE
 ```
 
-### 3. Create a Google Services Account
+## 3. Create a Google Services Account
 
 ```bash
 gcloud iam service-accounts create $GSA_NAME
 ```
 
-### 4. Create the Kubernetes Service Account
+## 4. Create the Kubernetes Service Account
 
 ```bash
 kubectl create serviceaccount --namespace $NAMESPACE $KSA_NAME
 ```
 
-### 5. Create the IAM Policy Bindings
+## 5. Create the IAM Policy Bindings
 
 ```bash
 gcloud iam service-accounts add-iam-policy-binding \
@@ -55,7 +55,7 @@ gcloud iam service-accounts add-iam-policy-binding \
   $GSA_NAME@$YOUR_PROJECT_ID.iam.gserviceaccount.com
 ```
 
-### 6. Annotate the Kubernetes Service Account
+## 6. Annotate the Kubernetes Service Account
 
 ```bash
 kubectl annotate serviceaccount \
@@ -64,7 +64,7 @@ kubectl annotate serviceaccount \
   iam.gke.io/gcp-service-account=$GSA_NAME@$YOUR_PROJECT_ID.iam.gserviceaccount.com
 ```
 
-In order to access services, you then need to grant permissions to your google service account using Google IAM. You can verify if you configured the service accounts correctly by creating a pod and launching it interactively \(see below\).
+In order to access services, you then need to grant permissions to your google service account using Google IAM. You can verify if you configured the service accounts correctly by creating a pod and launching it interactively (see below).
 
 ```bash
 kubectl run -it \
@@ -76,4 +76,3 @@ kubectl run -it \
 ```
 
 You can then run `google auth list` inside the pod to see the Google Service Account.
-

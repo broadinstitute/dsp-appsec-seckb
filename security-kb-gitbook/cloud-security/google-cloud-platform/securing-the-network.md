@@ -37,14 +37,14 @@ We recommend using the `[NETWORK-NAME]-subnet` format for your subnet name. You 
 
 ### 3. Create Firewall Rules
 
-Firewall rules refer to either incoming \(ingress\) or outgoing \(egress\) traffic. You can target certain types of traffic based on its protocol, ports, sources, and destinations.
+Firewall rules refer to either incoming (ingress) or outgoing (egress) traffic. You can target certain types of traffic based on its protocol, ports, sources, and destinations.
 
-* Be REALLY mindful when creating new rules. 
-* If you want to alter the range of ports, [update the current rule](https://cloud.google.com/vpc/docs/using-firewalls#updating_firewall_rules) rather than create a new one. 
-* DO NOT USE the `broad-allow` tag when creating a new rule. 
+* Be REALLY mindful when creating new rules.&#x20;
+* If you want to alter the range of ports, [update the current rule](https://cloud.google.com/vpc/docs/using-firewalls#updating\_firewall\_rules) rather than create a new one.&#x20;
+* DO NOT USE the `broad-allow` tag when creating a new rule.&#x20;
 * It is recommended to use the network in the rule's name.
 
-```text
+```
 gcloud compute firewall-rules create NAME \
     [--network NETWORK; default="default"] \
     [--priority PRIORITY;default=1000] \
@@ -58,12 +58,12 @@ gcloud compute firewall-rules create NAME \
     [--destination-ranges CIDR-RANGE,CIDR-RANGE...] \
     [--rules (PROTOCOL[:PORT[-PORT]],[PROTOCOL[:PORT[-PORT]],...]] | all ) \
     [--disabled | --no-disabled]
-    [--enable-logging | --no-enable-logging]       
+    [--enable-logging | --no-enable-logging]
 ```
 
 The following example will enable all Broad users on VPN or at a Broad office to contact all machines in the network but be blocked to the rest of the world.
 
-```text
+```
 gcloud --project --account compute firewall-rules create [RULES-NAME] \
     --allow=tcp \ # could also use tcp:0-60000
     --target-tags broad-allow \ 
@@ -72,5 +72,4 @@ gcloud --project --account compute firewall-rules create [RULES-NAME] \
     --enable-logging
 ```
 
-Look at the [docs for Firewall rules](https://cloud.google.com/vpc/docs/using-firewalls#creating_firewall_rules) to see more on how to open your machines to the outside world or how to **narrow** to a set of machines \(“targets”\).
-
+Look at the [docs for Firewall rules](https://cloud.google.com/vpc/docs/using-firewalls#creating\_firewall\_rules) to see more on how to open your machines to the outside world or how to **narrow** to a set of machines (“targets”).
