@@ -8,28 +8,29 @@ description: Main Page
 
 You can directly contact:
 
-Ana: [zbedo@broadinstitute.org](mailto:zbedo@broadinstitute.org)  
-Denis: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)  
-Tom: [tconner@broadinstitute.org](mailto:tconner@broadinstitute.org) 
+Ana: [zbedo@broadinstitute.org](mailto:zbedo@broadinstitute.org)\
+Denis: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)\
+Tom: [tconner@broadinstitute.org](mailto:tconner@broadinstitute.org)\
+Sarah: [sgibson@broadinstitute.org](mailto:sgibson@broadinstitute.org)
 
 
 
-Reach AppSec team via email ****[**appsec@broadinstitute.org**](mailto:appsec@broadinstitute.org)**,** or just drop a message in this Slack channel`dsp-infosec-champions`
+Reach AppSec team via email **** [**appsec@broadinstitute.org**](mailto:appsec@broadinstitute.org)**,** or just drop a message in this Slack channel`dsp-infosec-champions`
 
 ## Are you building a new service?
 
-Please go through [SDARQ questionnaire](https://sdarq.dsp-appsec.broadinstitute.org/questionnaire). 
+Please go through [SDARQ questionnaire](https://sdarq.dsp-appsec.broadinstitute.org/questionnaire).&#x20;
 
-If you have any questions about this, please do not hesitate to contact us. 
+If you have any questions about this, please do not hesitate to contact us.&#x20;
 
-##  Do you want to calculate the risk of your Jira ticket?
+## &#x20;Do you want to calculate the risk of your Jira ticket?
 
 You can choose one of these options:
 
-* [SDARQ Jira ticket risk assessment](https://sdarq.dsp-appsec.broadinstitute.org/jira-ticket-risk-assesment) \(accessed via VPN\)
-* [Jira ticket risk assessment](https://broadinstitute.github.io/dsp-appsec-security-risk-assessment/) \(no VPN\)
+* [SDARQ Jira ticket risk assessment](https://sdarq.dsp-appsec.broadinstitute.org/jira-ticket-risk-assesment) (accessed via VPN)
+* [Jira ticket risk assessment](https://broadinstitute.github.io/dsp-appsec-security-risk-assessment/) (no VPN)
 
-## Do you need a Threat Model for your service? 
+## Do you need a Threat Model for your service?&#x20;
 
 Please go through this short questionnaire to request a threat model for your service.
 
@@ -40,4 +41,3 @@ Please go through this short questionnaire to request a threat model for your se
 Please go through this short questionnaire to request a security pentest for your service.
 
 [Sdarq security pentest request](https://sdarq.dsp-appsec.broadinstitute.org/security-pentest/request)
-
