@@ -4,7 +4,7 @@ description: Set up a secure compute engine instance.
 
 # Secure GCE
 
-When launching 
+When launching&#x20;
 
 ### 1. **Use a Compute Service Account that has only the permissions you need.**
 
@@ -16,7 +16,7 @@ When launching
 
 Scroll to the bottom and click "Management, security, disks, networking, sole tenancy". Select the "Networking" tab. Use a Network tag to set the firewall rules for the instance.
 
-![Choose a network tag to determine the firewall rules for this instance.](../../.gitbook/assets/gce-network%20%282%29.png)
+![Choose a network tag to determine the firewall rules for this instance.](<../../../.gitbook/assets/gce-network (2).png>)
 
 ### 3. Use only [hardened images](https://github.com/broadinstitute/dsp-appsec-base-image-hardening) for your boot disk.
 
@@ -37,7 +37,7 @@ If a user needs access to a Compute Engine instance, add them to the subnet's IA
 
 ### 1. Make sure OS automatic updates are on.
 
-* Centos - [https://serversforhackers.com/c/automatic-security-updates-centos](https://serversforhackers.com/c/automatic-security-updates-centos) 
+* Centos - [https://serversforhackers.com/c/automatic-security-updates-centos](https://serversforhackers.com/c/automatic-security-updates-centos)&#x20;
 * Ubuntu - [https://help.ubuntu.com/lts/serverguide/automatic-updates.h](https://help.ubuntu.com/lts/serverguide/automatic-updates.html.en)
 
 ### 2. Set up logging on your VM.
@@ -51,4 +51,3 @@ VM logs should use StackDriver and SIEM. See [https://cloud.google.com/logging/d
 #### Additional Reading
 
 * [https://cloud.google.com/logging/docs/agent/configuration](https://cloud.google.com/logging/docs/agent/configuration)
-

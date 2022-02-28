@@ -6,15 +6,27 @@ description: >-
 
 # Google Cloud Platform
 
-{% page-ref page="gcp-basic-security-tasks.md" %}
+{% content-ref url="gcp-basic-security-tasks.md" %}
+[gcp-basic-security-tasks.md](gcp-basic-security-tasks.md)
+{% endcontent-ref %}
 
-{% page-ref page="secure-gce.md" %}
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
-{% page-ref page="gke/" %}
+{% content-ref url="secure-gce.md" %}
+[secure-gce.md](secure-gce.md)
+{% endcontent-ref %}
 
-{% page-ref page="securing-the-network.md" %}
+{% content-ref url="gke/" %}
+[gke](gke/)
+{% endcontent-ref %}
 
-{% page-ref page="setting-up-a-secure-cloudsql-instance.md" %}
+{% content-ref url="securing-the-network.md" %}
+[securing-the-network.md](securing-the-network.md)
+{% endcontent-ref %}
 
-
+{% content-ref url="setting-up-a-secure-cloudsql-instance.md" %}
+[setting-up-a-secure-cloudsql-instance.md](setting-up-a-secure-cloudsql-instance.md)
+{% endcontent-ref %}
 

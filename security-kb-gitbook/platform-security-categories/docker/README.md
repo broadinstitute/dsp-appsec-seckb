@@ -4,17 +4,29 @@ description: Securing the image pipeline from creation to delivery to deployment
 
 # Docker Security
 
-{% page-ref page="./" %}
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}
 
-{% page-ref page="threat-model.md" %}
+{% content-ref url="threat-model.md" %}
+[threat-model.md](threat-model.md)
+{% endcontent-ref %}
 
-{% page-ref page="security-guidelines.md" %}
+{% content-ref url="security-guidelines.md" %}
+[security-guidelines.md](security-guidelines.md)
+{% endcontent-ref %}
 
-{% page-ref page="securing-ci-cd.md" %}
+{% content-ref url="securing-ci-cd.md" %}
+[securing-ci-cd.md](securing-ci-cd.md)
+{% endcontent-ref %}
 
-{% page-ref page="tools.md" %}
+{% content-ref url="tools.md" %}
+[tools.md](tools.md)
+{% endcontent-ref %}
 
-
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 
 

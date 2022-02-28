@@ -20,7 +20,7 @@ Scans docker images for vulnerabilities in base images.
 
 Scans code for errors before allowing developers to merge with the master branch.
 
-**Semgrep** 
+**Semgrep**&#x20;
 
 An open-source static code analysis tool that scans repositories for insecure code. Semgrep tool is integrated via Github Actions.
 {% endtab %}
@@ -38,7 +38,7 @@ OWASP Zap is an open-source pentesting tool with similar applications to Burp. B
 {% tab title="Project Management" %}
 **Defect Dojo**
 
-Defect Dojo currently contains documentation on various DSP projects and teams, including the Security Champion of each project. Data from the New Security Requirements form is used to create new products. 
+Defect Dojo currently contains documentation on various DSP projects and teams, including the Security Champion of each project. Data from the New Security Requirements form is used to create new products.&#x20;
 
 **CodeDx**
 
@@ -46,9 +46,9 @@ CodeDx is our database of vulnerabilities found during pentesting. Scans from Bu
 
 **SDARQ**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org/). Once the form is submitted, a notification is sent to a Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request.   
-  
-Sdarq and CIS Scanner \(a different service integrated to SDARQ\) assess the security posture of GCP projects. Devs must provide GCP project id, and Sdarq returns to devs scanner results. 
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org). Once the form is submitted, a notification is sent to a Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request. \
+\
+Sdarq and CIS Scanner (a different service integrated to SDARQ) assess the security posture of GCP projects. Devs must provide GCP project id, and Sdarq returns to devs scanner results.&#x20;
 {% endtab %}
 
 {% tab title="Sensitive Data" %}
@@ -60,7 +60,7 @@ Prevents developers from accidentally committing secrets to Github. See installa
 
 **Trufflehog/Github Broad Secret Scanner**
 
-Scan commits for service account keys, access keys, and other secrets, and reports them to \#github-security-alerts on Slack. See this [link](https://dsp-security.broadinstitute.org/platform-security-categories/git/what-to-do-in-case-of-an-incident) for what to do when a secret is committed.
+Scan commits for service account keys, access keys, and other secrets, and reports them to #github-security-alerts on Slack. See this [link](https://dsp-security.broadinstitute.org/platform-security-categories/git/what-to-do-in-case-of-an-incident) for what to do when a secret is committed.
 
 **Vault**
 
@@ -71,4 +71,3 @@ Vault is used to securely store secrets and other sensitive data. See the [DSDE 
 To learn more about Secret Manager follow this [link](https://cloud.google.com/secret-manager).
 {% endtab %}
 {% endtabs %}
-
