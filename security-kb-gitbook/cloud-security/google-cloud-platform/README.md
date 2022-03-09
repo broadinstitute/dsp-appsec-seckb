@@ -10,10 +10,6 @@ description: >-
 [gcp-basic-security-tasks.md](gcp-basic-security-tasks.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 {% content-ref url="secure-gce.md" %}
 [secure-gce.md](secure-gce.md)
 {% endcontent-ref %}
