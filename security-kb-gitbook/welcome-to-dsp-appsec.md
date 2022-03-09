@@ -6,13 +6,6 @@ description: Main Page
 
 ## Do you need a security consultation?
 
-You can directly contact:
-
-Ana: [zbedo@broadinstitute.org](mailto:zbedo@broadinstitute.org)\
-Denis: [denis@broadinstitute.org](mailto:denis@broadinstitute.org)\
-Tom: [tconner@broadinstitute.org](mailto:tconner@broadinstitute.org)\
-Sarah: [sgibson@broadinstitute.org](mailto:sgibson@broadinstitute.org)
-
 
 
 Reach AppSec team via email **** [**appsec@broadinstitute.org**](mailto:appsec@broadinstitute.org)**,** or just drop a message in this Slack channel`dsp-infosec-champions`
