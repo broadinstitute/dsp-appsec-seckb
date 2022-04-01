@@ -54,7 +54,7 @@ Static analysis is useful aside from security. Tools flag code quality and cover
 
 _**SonarCloud Scan Configuration**_
 
-[SonarCloud](sonarcloud.io) must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. A badge is available for services' README.md.
+[SonarCloud](https://sonarcloud.io) must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. A badge is available for services' README.md.
 
 _**Codacy Scan Configuration**_
 
