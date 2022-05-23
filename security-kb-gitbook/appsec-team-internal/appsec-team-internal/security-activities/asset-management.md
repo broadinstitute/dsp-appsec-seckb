@@ -4,12 +4,11 @@
 {% tab title="Asset Management and Engagement Tracking" %}
 **Description:**
 
-Where is our catalog of applications and related assets (domains, databases, infrastructure, and more)? Where do we keep track of engagements?
+Where is our catalog of applications and related assets \(domains, databases, infrastructure, and more\)? Where do we keep track of engagements?
 
 **Tools:**
 
 * [DefectDojo](https://defect-dojo.dsp-appsec.broadinstitute.org/dashboard)
-* Sdarq
 {% endtab %}
 
 {% tab title="Vulnerability Management" %}
@@ -24,3 +23,4 @@ More often than not, we are going to discover more vulnerabilities that can be p
 * [CodeDx](https://codedx.dsp-appsec.broadinstitute.org/codedx/login)
 {% endtab %}
 {% endtabs %}
+

@@ -10,6 +10,6 @@ Static Code Analysis is an activity that is performed continuously and aims to i
 
 **Tools:**
 
-* Codacy - [https://app.codacy.com/](https://app.codacy.com)
+* Codacy&#x20;
+* SonarCloud
 * Semgrep
-
