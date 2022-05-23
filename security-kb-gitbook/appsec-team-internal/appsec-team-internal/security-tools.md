@@ -4,7 +4,7 @@
 {% tab title="Component Analysis" %}
 **Sourceclear**
 
-Sourceclear scans our Github repositories and finds vulnerabilities in third-party libraries and modules. AppSec team members work with developers to identify false positives and remediate any issues.
+Sourceclear scans our Github repositories and finds vulnerabilities in third-party libraries and modules.  AppSec team members work with developers to identify false positives and remediate any issues.
 
 **Github Security Alerts**
 
@@ -20,11 +20,9 @@ Scans docker images for vulnerabilities in base images.
 
 Scans code for errors before allowing developers to merge with the master branch.
 
-**Semgrep**
+**Semgrep**&#x20;
 
-An open-source static code analysis tool that scans repositories for insecure code. Semgrep tool is integrated via Github Actions.\
-\
-**SonarCloud**
+An open-source static code analysis tool that scans repositories for insecure code. Semgrep tool is integrated via Github Actions.
 {% endtab %}
 
 {% tab title="Pentesting" %}
@@ -40,7 +38,7 @@ OWASP Zap is an open-source pentesting tool with similar applications to Burp. B
 {% tab title="Project Management" %}
 **Defect Dojo**
 
-Defect Dojo currently contains documentation on various DSP projects and teams, including the Security Champion of each project. Data from the New Security Requirements form is used to create new products.
+Defect Dojo currently contains documentation on various DSP projects and teams, including the Security Champion of each project. Data from the New Security Requirements form is used to create new products.&#x20;
 
 **CodeDx**
 
@@ -48,9 +46,9 @@ CodeDx is our database of vulnerabilities found during pentesting. Scans from Bu
 
 **SDARQ**
 
-When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org). Once the form is submitted, a notification is sent to a Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request.\
+When creating a new service, developers should fill out the new service security requirements form, which can be found [here](https://sdarq.dsp-appsec.broadinstitute.org). Once the form is submitted, a notification is sent to a Slack and the answers are reviewed by the security team. The data is then used to create a new engagement in Defect Dojo, a Jira ticket in the team board with a security checklist, and a Jira ticket to the AppSec board for a threat model request. \
 \
-Sdarq and CIS Scanner (a different service integrated to SDARQ) assess the security posture of GCP projects. Devs must provide GCP project id, and Sdarq returns to devs scanner results.
+Sdarq and CIS Scanner (a different service integrated to SDARQ) assess the security posture of GCP projects. Devs must provide GCP project id, and Sdarq returns to devs scanner results.&#x20;
 {% endtab %}
 
 {% tab title="Sensitive Data" %}
