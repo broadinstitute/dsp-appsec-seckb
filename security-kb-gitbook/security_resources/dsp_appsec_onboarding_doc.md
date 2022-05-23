@@ -6,7 +6,7 @@ description: Security-related onboarding items for new DSP members
 
 {% tabs %}
 {% tab title="General Security Onboarding Items" %}
-### New Hire Security Checklist
+## New Hire Security Checklist
 
 * Make sure you have installed git-secrets. Instructions [here](https://dsp-security.broadinstitute.org/platform-security-categories/git/setup-git-secrets).
 * Make sure you have completed assigned Codebashing modules. These will be assigned by your team leader.
@@ -22,7 +22,7 @@ description: Security-related onboarding items for new DSP members
   * Github - see [Hello New Developer](https://broadinstitute.atlassian.net/wiki/spaces/GAWB/pages/68518231/Hello+new+developer)
   * Sourceclear
   * [Codacy](https://app.codacy.com)
-  * Burp Automator
+  * Burp Automator&#x20;
   * Jenkins: Ask #dsp-security (slack).
   * [CodeDX](https://codedx.dsp-appsec.broadinstitute.org)
 * Read this:
