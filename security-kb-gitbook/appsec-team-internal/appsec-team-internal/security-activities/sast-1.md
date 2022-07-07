@@ -18,9 +18,10 @@ DSP AppSec assists teams in setting up services' GitHub repos to be scanned via 
 
 
 1. AppSec activates and configures the repo in SonarCloud or Codacy. 
-2. Dev team or AppSec adds a reporting key to the repo's secret store.
+2. Dev team or AppSec adds a reporting key to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y_LmHQkLYyISYns).
 3. Dev team or AppSec makes simple edits to the build (for example, adding steps to GitHub Actions workflows or lines to existing build.gradle file).
-4. Dev team, with AppSec assistance as needed, analyzes and addresses initial findings the come out of the first scan.
+4. Dev team or AppSec adds a status badge to the repo's README. (Recommended)
+5. Dev team, with AppSec assistance as needed, analyzes and addresses initial findings the come out of the first scan.
 
 **Process Requirements**
 
@@ -28,7 +29,7 @@ SAST _must_ be enabled on push and merge to main. Findings _must_ display result
 
 Service READMEs _may_ display a badge as a live indicator of the status of SAST scan results of the codebase.
 
-Test code _should_ be excluded from scanning to reduce noise.
+Test code _should_ be excluded from scanning to reduce noise. For typical Terra Java services, only the `service` directory is scanned.
 
 **Resolving SAST Findings**
 
@@ -54,7 +55,36 @@ Static analysis is useful aside from security. Tools flag code quality and cover
 
 _**SonarCloud Scan Configuration**_
 
-[SonarCloud](https://sonarcloud.io) must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. A badge is available for services' README.md.
+[SonarCloud](https://sonarcloud.io) configuration checklist:
+1. Project added in SonarCloud
+   1. Quality Gate: Broad service way
+   2. New Code: 30 days
+   3. Analysis Method: Obtain token, build file templates, and project/org keys.
+2. Build runs the scan. It's okay to scan only in `service` but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud.  Here's a Gradle example:
+```gradle
+    sonarqube {
+      properties {
+        property "sonar.projectName", "terra-drs-hub"
+        property "sonar.projectKey", "DataBiosphere_terra-drs-hub"
+        property "sonar.organization", "broad-databiosphere"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.sources", "src/main/java,src/main/resources/templates"
+      }
+    }
+``` 
+3. GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`.
+
+
+```
+      - name: SonarQube scan
+        run: ./gradlew --build-cache :service:sonarqube
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. A badge is available for services' README.md.
+
+
 
 _**Codacy Scan Configuration**_
 
