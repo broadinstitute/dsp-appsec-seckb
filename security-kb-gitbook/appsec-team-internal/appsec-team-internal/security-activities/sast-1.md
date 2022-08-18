@@ -8,7 +8,7 @@ description: Static Application Security Testing
 
 Static Application Security Testing (SAST) uses static source code analysis to identify issues at a code level.
 
-Terra services must run SAST as part of their automated build process. Issues identified in a PR build can be addressed without waiting for later detection by a security team. 
+Terra services must run SAST as part of their automated build process. Issues identified in a PR build can be addressed without waiting for later detection by a security team.
 
 Even better, IDE plugins are available so that developers can find and address issues prior to even pushing them to a branch.
 
@@ -16,9 +16,8 @@ Even better, IDE plugins are available so that developers can find and address i
 
 DSP AppSec assists teams in setting up services' GitHub repos to be scanned via the appropriate SAST tool(s).
 
-
-1. AppSec activates and configures the repo in SonarCloud or Codacy. 
-2. Dev team or AppSec adds a reporting key to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y_LmHQkLYyISYns).
+1. AppSec activates and configures the repo in SonarCloud or Codacy.
+2. Dev team or AppSec adds a reporting key to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y\_LmHQkLYyISYns).
 3. Dev team or AppSec makes simple edits to the build (for example, adding steps to GitHub Actions workflows or lines to existing build.gradle file).
 4. Dev team or AppSec adds a status badge to the repo's README. (Recommended)
 5. Dev team, with AppSec assistance as needed, analyzes and addresses initial findings the come out of the first scan.
@@ -33,7 +32,7 @@ Test code _should_ be excluded from scanning to reduce noise. For typical Terra 
 
 **Resolving SAST Findings**
 
-Findings in a repo's main branch _must_ be resolved within standard time limits according to severity -- 30 days from discovery for High; 90 days from discovery for Moderate; 180 days from discovery for Low. 
+Findings in a repo's main branch _must_ be resolved within standard time limits according to severity -- 30 days from discovery for High; 90 days from discovery for Moderate; 180 days from discovery for Low.
 
 For erroneous findings (false positives or incorrect severities), developers can make adjustments with justification. AppSec can review these adjustments and make final decisions about severity and correctness of findings.
 
@@ -50,18 +49,21 @@ Static analysis is useful aside from security. Tools flag code quality and cover
 | JavaScript | SonarCloud or Codacy |
 | Python     | SonarCloud or Codacy |
 | TypeScript | SonarCloud           |
+| Go         | SonarCloud           |
 
 **SAST Configuration**
 
 _**SonarCloud Scan Configuration**_
 
 [SonarCloud](https://sonarcloud.io) configuration checklist:
+
 1. Project added in SonarCloud
    1. Quality Gate: Broad service way
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-2. Build runs the scan. It's okay to scan only in `service` but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud.  Here's a Gradle example:
-```gradle
+2. Build runs the scan. It's okay to scan only in `service` but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example:
+
+```
     sonarqube {
       properties {
         property "sonar.projectName", "terra-drs-hub"
@@ -71,9 +73,9 @@ _**SonarCloud Scan Configuration**_
         property "sonar.sources", "src/main/java,src/main/resources/templates"
       }
     }
-``` 
-3. GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`.
+```
 
+1. GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`.
 
 ```
       - name: SonarQube scan
@@ -82,13 +84,12 @@ _**SonarCloud Scan Configuration**_
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
 must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. A badge is available for services' README.md.
-
-
 
 _**Codacy Scan Configuration**_
 
-[Codacy](https://app.codacy.com) must be configured to "Run analysis on your build server," and the SpotBugs plugin with its find-sec-bugs plugin must be added to the Codacy scan. 
+[Codacy](https://app.codacy.com) must be configured to "Run analysis on your build server," and the SpotBugs plugin with its find-sec-bugs plugin must be added to the Codacy scan.
 
 Our Codacy license allows for a limited number of users, so we are unable to provide all developers with direct access to the Codacy portal.
 
@@ -96,6 +97,4 @@ Our Codacy license allows for a limited number of users, so we are unable to pro
 
 AppSec continuously improves the SAST tooling and configuration in reaction to industry trends, publicized vulnerabilities, and new capabilities that become available.
 
-Additional scans using spotbugs with find-sec-bugs, semgrep, and other source code tools are used by AppSec during manual code review in conjunction with penetration testing or threat modeling engagements. Over time, some of these tools will be required build steps. Teams *may* use the [DSP AppSec SAST action](https://github.com/broadinstitute/dsp-appsec-sast) to perform additional checks.
-
-
+Additional scans using spotbugs with find-sec-bugs, semgrep, and other source code tools are used by AppSec during manual code review in conjunction with penetration testing or threat modeling engagements. Over time, some of these tools will be required build steps. Teams _may_ use the [DSP AppSec SAST action](https://github.com/broadinstitute/dsp-appsec-sast) to perform additional checks.

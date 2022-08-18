@@ -8,9 +8,9 @@ Signing git commits because it helps ensure repository integrity. When someone h
 
 **Scenario 1 - legit commit**
 
-![Legitimate pull request](../../../.gitbook/assets/legit-commit.png)
+![Legitimate pull request](<../../../.gitbook/assets/legit-commit (1) (1) (1).png>)
 
-**Scenario 2 - spoofed commit from a user who has access to the repo** ![Spoofed commit from user with access](<../../../.gitbook/assets/fake-commit (3) (2).png>)
+**Scenario 2 - spoofed commit from a user who has access to the repo** ![Spoofed commit from user with access](<../../../.gitbook/assets/fake-commit (3) (1) (1).png>)
 
 **Scenario 3 - spoofed commit via PR as an outside collaborator**
 

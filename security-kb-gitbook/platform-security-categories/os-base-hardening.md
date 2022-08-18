@@ -6,7 +6,7 @@ description: Resources on how to harden a base OS such as Debian9, CentOS 8 etc.
 
 ## Compute Instances
 
-These images are for launching hardened compute instances. DSP is in the process of migrating away from Google Compute Engine and towards an orchestrated environment using Kubernetes, which will focus on container and Docker security. For blessed Docker images, please see  [https://github.com/broadinstitute/dsp-appsec-blessed-images](https://github.com/broadinstitute/dsp-appsec-blessed-images).&#x20;
+These images are for launching hardened compute instances. DSP is in the process of migrating away from Google Compute Engine and towards an orchestrated environment using Kubernetes, which will focus on container and Docker security. For blessed Docker images, please see [https://github.com/broadinstitute/dsp-appsec-blessed-images](https://github.com/broadinstitute/dsp-appsec-blessed-images).
 
 ## 1. Use a dsp-appsec custom image
 
@@ -28,7 +28,7 @@ gcloud compute instances create [INSTANCE_NAME] \
 
 #### B. Deployment Manager
 
-You can also use Google's deployment manager to manage the instance for you. Use the configuration file  `example.yaml` template below to specify the properties of your instance.
+You can also use Google's deployment manager to manage the instance for you. Use the configuration file `example.yaml` template below to specify the properties of your instance.
 
 N**ote**: You may need to change zone, network, or machine type properties for your project.
 
@@ -63,15 +63,15 @@ gcloud deployment-manager deployments create [DEPLOYMENT-NAME] --config example.
 
 You can click on the instance in the GCP console and click the "Create Instance" button at the top of the page.
 
-![Create an new instance](../../.gitbook/assets/screen-shot-2020-04-15-at-4.59.19-pm.png)
+![Create an new instance](../.gitbook/assets/screen-shot-2020-04-15-at-4.59.19-pm.png)
 
 Name your instance and set any other properties before scrolling down to Boot disk. Click the **Change** button.
 
-![](../../.gitbook/assets/screen-shot-2020-04-15-at-4.59.59-pm.png)
+![](../.gitbook/assets/screen-shot-2020-04-15-at-4.59.59-pm.png)
 
 You can then go to custom images and select `dsp-appsec` as your project before choosing an image.
 
-![](../../.gitbook/assets/screen-shot-2020-05-18-at-3.33.54-pm.png)
+![](../.gitbook/assets/screen-shot-2020-05-18-at-3.33.54-pm.png)
 
 dsp-appsec currently supportss the following OS families :
 
@@ -85,9 +85,9 @@ Images are hardened automatically when a new version is released. Please use the
 
 Please try running: `gcloud compute images list --project dsp-appsec-hardened-images --filter="name~'dsp-appsec'"`
 
-``
+\`\`
 
-``
+\`\`
 
 ## 2. Use dsp-appsec's ansible playbook for CIS hardening
 

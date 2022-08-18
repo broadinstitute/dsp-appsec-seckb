@@ -8,14 +8,12 @@ Generally, we prefer using internal workflows for Github Actions. If you want to
 
 ### 1. Go to the third party Action's repo.
 
-![Greeting Action on Github Marketplace](../../../.gitbook/assets/screen-shot-2020-02-06-at-4.43.34-pm.png)
+![Greeting Action on Github Marketplace](../../.gitbook/assets/screen-shot-2020-02-06-at-4.43.34-pm.png)
 
 ### 2. Verify that the source code is secure, and find the commit hash for that version.
 
-![Commit hash for Hello Action](../../../.gitbook/assets/screen-shot-2020-02-06-at-4.46.47-pm.png)
+![Commit hash for Hello Action](../../.gitbook/assets/screen-shot-2020-02-06-at-4.46.47-pm.png)
 
 ### 3. Use the commit hash to specify the third party action's version in your workflow.
 
-![Specify the third party Action's commit hash in your workflow.](../../../.gitbook/assets/screen-shot-2020-02-06-at-4.48.52-pm.png)
-
-&#x20;
+![Specify the third party Action's commit hash in your workflow.](../../.gitbook/assets/screen-shot-2020-02-06-at-4.48.52-pm.png)
