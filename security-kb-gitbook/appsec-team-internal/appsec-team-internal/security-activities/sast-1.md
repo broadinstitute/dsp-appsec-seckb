@@ -17,10 +17,11 @@ Even better, IDE plugins are available so that developers can find and address i
 DSP AppSec assists teams in setting up services' GitHub repos to be scanned via the appropriate SAST tool(s).
 
 1. AppSec activates and configures the repo in SonarCloud or Codacy.
-2. Dev team or AppSec adds a reporting key to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y\_LmHQkLYyISYns).
-3. Dev team or AppSec makes simple edits to the build (for example, adding steps to GitHub Actions workflows or lines to existing build.gradle file).
-4. Dev team or AppSec adds a status badge to the repo's README. (Recommended)
-5. Dev team, with AppSec assistance as needed, analyzes and addresses initial findings the come out of the first scan.
+2. Java only: set up CI-based analysis:
+   1. Dev team or AppSec adds a reporting key to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y\_LmHQkLYyISYns).
+   2. Dev team or AppSec makes simple edits to the build (adding steps to GitHub Actions workflows and/or modifying existing build.gradle file).
+3. Dev team or AppSec adds a status badge to the repo's README. (Recommended)
+4. Dev team, with AppSec assistance as needed, analyzes and addresses initial findings the come out of the first scan.
 
 **Process Requirements**
 
@@ -28,13 +29,15 @@ SAST _must_ be enabled on push and merge to main. Findings _must_ display result
 
 Service READMEs _may_ display a badge as a live indicator of the status of SAST scan results of the codebase.
 
-Test code _should_ be excluded from scanning to reduce noise. For typical Terra Java services, only the `service` directory is scanned.
+Test code _may_ be excluded from scanning to reduce noise. For typical Terra Java services, only the `service` and `client` directories should be scanned but `integration` may be excluded if it generates excessive findings. For Java this configuration can be done in build.gradle files.
 
 **Resolving SAST Findings**
 
-Findings in a repo's main branch _must_ be resolved within standard time limits according to severity -- 30 days from discovery for High; 90 days from discovery for Moderate; 180 days from discovery for Low.
+Findings in a repo's main branch _must_ be resolved within standard time limits according to severity -- 7 days from discovery for Critical; 30 days for High; 90 days for Moderate; 180 days for Low.
 
 For erroneous findings (false positives or incorrect severities), developers can make adjustments with justification. AppSec can review these adjustments and make final decisions about severity and correctness of findings.
+
+In SonarCloud and Codacy, authenticate with GitHub as a repo member in order to review and mark Issues and Security Hotspots. Findings are visible even without being logged in, but in order to mark something, you must log in. Security Hotspots should be reviewed right away even if the code will not be fixed immediately. Contact AppSec with any questions.&#x20;
 
 **Non-Security Findings and Adjacent Linters**
 
