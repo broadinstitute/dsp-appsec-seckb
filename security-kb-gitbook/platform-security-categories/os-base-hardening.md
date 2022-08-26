@@ -63,15 +63,15 @@ gcloud deployment-manager deployments create [DEPLOYMENT-NAME] --config example.
 
 You can click on the instance in the GCP console and click the "Create Instance" button at the top of the page.
 
-![Create an new instance](../.gitbook/assets/screen-shot-2020-04-15-at-4.59.19-pm.png)
+![Create an new instance](../../.gitbook/assets/screen-shot-2020-04-15-at-4.59.19-pm.png)
 
 Name your instance and set any other properties before scrolling down to Boot disk. Click the **Change** button.
 
-![](../.gitbook/assets/screen-shot-2020-04-15-at-4.59.59-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-04-15-at-4.59.59-pm.png)
 
 You can then go to custom images and select `dsp-appsec` as your project before choosing an image.
 
-![](../.gitbook/assets/screen-shot-2020-05-18-at-3.33.54-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-05-18-at-3.33.54-pm.png)
 
 dsp-appsec currently supportss the following OS families :
 

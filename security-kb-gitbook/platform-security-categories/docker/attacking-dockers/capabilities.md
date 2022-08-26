@@ -17,7 +17,7 @@ docker run --rm -it alpine sh
 ping 127.0.0.1 -c 2
 ```
 
-![](../../../.gitbook/assets/screen-shot-2019-11-24-at-2.35.45-pm.png)
+![](../../../../.gitbook/assets/screen-shot-2019-11-24-at-2.35.45-pm.png)
 
 Removing the capabilities ..
 
@@ -26,4 +26,4 @@ Removing the capabilities ..
 docker run --rm -it --cap-drop=NET_RAW alpine sh
 ```
 
-![](../../../.gitbook/assets/screen-shot-2019-11-24-at-2.36.00-pm.png)
+![](../../../../.gitbook/assets/screen-shot-2019-11-24-at-2.36.00-pm.png)

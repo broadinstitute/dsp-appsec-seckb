@@ -16,7 +16,7 @@ When launching
 
 Scroll to the bottom and click "Management, security, disks, networking, sole tenancy". Select the "Networking" tab. Use a Network tag to set the firewall rules for the instance.
 
-![Choose a network tag to determine the firewall rules for this instance.](<../../.gitbook/assets/gce-network (2).png>)
+![Choose a network tag to determine the firewall rules for this instance.](<../../../.gitbook/assets/gce-network (2).png>)
 
 ### 3. Use only [hardened images](https://github.com/broadinstitute/dsp-appsec-base-image-hardening) for your boot disk.
 

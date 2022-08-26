@@ -8,7 +8,7 @@ description: Secure your SQL databases on the cloud....
 
 Create a secure instance and then allow only SSH connections.
 
-![The Public IP option should be checked, but there should not be any authorized networks.](../../.gitbook/assets/screen-shot-2020-02-10-at-11.33.04-am.png)
+![The Public IP option should be checked, but there should not be any authorized networks.](../../../.gitbook/assets/screen-shot-2020-02-10-at-11.33.04-am.png)
 
 1. When creating a CloudSQL instance, in the **Instance Info** page under **Configuration Options**, check that the database is blocked to the outside world. This is the default option.
 2. After creating the instance, click the instance name to open its **Instance details** page.

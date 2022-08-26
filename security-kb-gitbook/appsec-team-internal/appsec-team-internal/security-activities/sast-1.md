@@ -37,7 +37,7 @@ Findings in a repo's main branch _must_ be resolved within standard time limits 
 
 For erroneous findings (false positives or incorrect severities), developers can make adjustments with justification. AppSec can review these adjustments and make final decisions about severity and correctness of findings.
 
-In SonarCloud and Codacy, authenticate with GitHub as a repo member in order to review and mark Issues and Security Hotspots. Findings are visible even without being logged in, but in order to mark something, you must log in. Security Hotspots should be reviewed right away even if the code will not be fixed immediately. Contact AppSec with any questions.&#x20;
+In SonarCloud and Codacy, authenticate with GitHub as a repo member in order to review and mark Issues and Security Hotspots. Findings are visible even without being logged in, but in order to mark something, you must log in. Security Hotspots should be reviewed right away even if the code will not be fixed immediately. Contact AppSec with any questions.
 
 **Non-Security Findings and Adjacent Linters**
 
@@ -64,14 +64,14 @@ _**SonarCloud Scan Configuration**_
    1. Quality Gate: Broad service way
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-2. For most languages other than Java, scanning is automatic with no build changes, but for Java please see **Java SonarQube CI Scan** below.&#x20;
-3. Add a badge to your README (recommended): \
+2. For most languages other than Java, scanning is automatic with no build changes, but for Java please see **Java SonarQube CI Scan** below.
+3. Add a badge to your README (recommended):\
    \
-   ```[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DataBiosphere_terra-landing-zone-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DataBiosphere_terra-landing-zone-service)```
+   `[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DataBiosphere_terra-landing-zone-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DataBiosphere_terra-landing-zone-service)`
 
 #### Java SonarQube CI Scan
 
-For Java, you must modify the CI build to run the scan. \
+For Java, you must modify the CI build to run the scan.\
 \
 It's okay to scan only in `service` and `client` (omitting test code) but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example. (Some projects put this in subdirectory `build.gradle` files and others use the root level.)
 
@@ -91,7 +91,7 @@ It's okay to scan only in `service` and `client` (omitting test code) but do ens
     }
 ```
 
-GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable.
+A GitHub action or other CI step must run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable. The `SONAR_TOKEN`secret must be added via Vault.
 
 ```
       - name: SonarQube scan
