@@ -64,9 +64,13 @@ _**SonarCloud Scan Configuration**_
    1. Quality Gate: Broad service way
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-2. Build runs the scan. It's okay to scan only in `service` but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example:
+2. Build runs the scan. It's okay to scan only in `service` and `client` (omitting test code) but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example. (Some projects put this in subdirectory `build.gradle` files and others use the root level.)
 
-```
+```clike
+    plugins {
+      id "org.sonarqube" version "3.4"
+    }
+
     sonarqube {
       properties {
         property "sonar.projectName", "terra-drs-hub"
@@ -78,7 +82,7 @@ _**SonarCloud Scan Configuration**_
     }
 ```
 
-1. GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`.
+1. GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable.
 
 ```
       - name: SonarQube scan
