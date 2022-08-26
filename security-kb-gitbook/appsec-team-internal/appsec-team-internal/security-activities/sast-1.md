@@ -60,11 +60,20 @@ _**SonarCloud Scan Configuration**_
 
 [SonarCloud](https://sonarcloud.io) configuration checklist:
 
-1. Project added in SonarCloud
+1. Project added in SonarCloud (this step done by AppSec).
    1. Quality Gate: Broad service way
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-2. Build runs the scan. It's okay to scan only in `service` and `client` (omitting test code) but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example. (Some projects put this in subdirectory `build.gradle` files and others use the root level.)
+2. For most languages other than Java, scanning is automatic with no build changes.&#x20;
+3. Add a badge to your README (recommended): \
+   \
+   sdfsfdfs
+
+#### Java SonarQube CI Scan
+
+For Java, you must modify the CI build to run the scan. \
+\
+It's okay to scan only in `service` and `client` (omitting test code) but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example. (Some projects put this in subdirectory `build.gradle` files and others use the root level.)
 
 ```clike
     plugins {
@@ -82,7 +91,7 @@ _**SonarCloud Scan Configuration**_
     }
 ```
 
-1. GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable.
+GitHub action or other CI step to run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable.
 
 ```
       - name: SonarQube scan
