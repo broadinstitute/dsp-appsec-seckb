@@ -64,10 +64,10 @@ _**SonarCloud Scan Configuration**_
    1. Quality Gate: Broad service way
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-2. For most languages other than Java, scanning is automatic with no build changes.&#x20;
+2. For most languages other than Java, scanning is automatic with no build changes, but for Java please see **Java SonarQube CI Scan** below.&#x20;
 3. Add a badge to your README (recommended): \
    \
-   sdfsfdfs
+   ```[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DataBiosphere_terra-landing-zone-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DataBiosphere_terra-landing-zone-service)```
 
 #### Java SonarQube CI Scan
 
