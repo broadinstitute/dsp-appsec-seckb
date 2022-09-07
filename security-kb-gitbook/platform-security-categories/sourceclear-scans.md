@@ -1,6 +1,6 @@
 # Sourceclear Scans
 
-Broad has a Github Action that scans your project's third-party components each week using the Sourceclear CLI agent. Results are uploaded to Broad's Sourceclear database before being verified by application security engineers, who will contact you with any high-risk vulnerabilities and required patches.
+Broad has a Github Action that scans your project's third-party components for known vulnerabilities each week using the Sourceclear CLI agent. Results are uploaded the SourceClear portal owned by Veracode, and then sent to our Defect Dojo instance. To view your current SourceClear results navigate to [https://defectdojo.dsp-appsec.broadinstitute.org](https://defectdojo.dsp-appsec.broadinstitute.org) while on the Broad network, and choose login with google.&#x20;
 
 The Github Action is located in the [dsp-appsec-sourceclear-github-actions](https://github.com/broadinstitute/dsp-appsec-sourceclear-github-actions) repo.
 
@@ -25,9 +25,11 @@ The Github Action is located in the [dsp-appsec-sourceclear-github-actions](http
 * The workspace should be one of `dsde` or `kdux`.
 * Make sure `project.json` is valid JSON.
 
-3\. Create a PR in this repository and someone from the AppsSec team will approve it.
+3\. In the  `generate-workflows/` directory run `python generate-workflows.py`. This will updte the workflows to include the project that you have added.
 
-4\. You can then merge your PR.
+4\. Create a PR in this repository and someone from the AppsSec team will approve it.
+
+5\. You can then merge your PR.
 
 ### To remove a repo from the weekly scans:
 
