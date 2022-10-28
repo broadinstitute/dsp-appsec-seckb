@@ -12,11 +12,12 @@ IDE plugins are also available so that developers can find and address issues pr
 
 ## **Onboarding**
 
-DSP AppSec can assist teams in setting up services' GitHub repos to be scanned via the appropriate SAST tool(s):
+DSP AppSec can work with teams in setting up services' GitHub repos to be scanned via the appropriate SAST tool(s). Dev teams can carry out many of the onboarding tasks, but some must be done by AppSec or a GitHub organization owner.
 
-1. Activate and configure the repo in [SonarCloud](sast-1.md#sonarcloud-configuration) or [Codacy](sast-1.md#codacy-scan-configuration).
-2. Java only: set up [CI-based analysis](sast-1.md#java-sonarqube-ci-scan).&#x20;
-3. Add a [badge](sast-1.md#badge) to your README.&#x20;
+1. Post on #dsp-infosec-champions that a repo requires SonarCloud.
+2. AppSec: Activate and configure the repo in [SonarCloud](sast-1.md#sonarcloud-configuration) or [Codacy](sast-1.md#codacy-scan-configuration) and provide keys to dev team.
+3. Dev Team: If required, set up [CI-based analysis](sast-1.md#java-sonarqube-ci-scan) and notify AppSec when complete.
+4. Dev Team: Add a [badge](sast-1.md#badge) to your repo's `README.md`.
 
 ## Scanning Repositories
 
@@ -59,14 +60,17 @@ To mark a SonarCloud finding, first log in to SonarCloud as a GitHub repo member
 
 ## **SonarCloud Configuration**
 
-1. Post on #dsp-infosec-champions that a repo requires SonarCloud. AppSec will help if needed.
-2. Log in to [SonarCloud](https://sonarcloud.io) as a GitHub user who is a repo owner.
-3. Add the repo to SonarCloud and configure as follows.
+AppSec typically performs these steps.
+
+1. Log in to [SonarCloud](https://sonarcloud.io).
+2. Add the repo to SonarCloud and configure as follows.
    1. Quality Gate: Broad service way or Broad&#x20;
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-4. For non-Java projects, you're all set with SonarCloud Automatic Analysis.
-5. For Java only, set up scanning in the build. See **Java SonarQube CI Scan** below. (For most languages other than Java, scanning is automatic with no build changes.)
+3. For most languages other than Java, no build changes are needed, and configuration is complete with SonarCloud Automatic Analysis.&#x20;
+4. Provide markdown badge code to the dev team from the SonarCloud repo Information page.
+5. For Java only, provide dev team with `sonarqube` Gradle sample code including name and keys, so they may set up scanning in the build according to [#java-sonarqube-ci-scan](sast-1.md#java-sonarqube-ci-scan "mention") below.&#x20;
+6. When scan setup is complete, return to SonarCloud, go to Administration, Analysis Method, and disable Automatic Analysis.
 
 ## Java SonarQube CI Scan
 
@@ -79,7 +83,7 @@ Assuming a GitHub actions gradle build, the task list is:
 1. Enable scanning the repo in SonarCloud. From the SonarCloud repo Information page, obtain project key and organization key.
 2. From the SonarCloud Administration, Analysis Method, obtain `SONAR_TOKEN` and add it to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y\_LmHQkLYyISYns).
 3. Scan from the build, typically from `build.gradle` and `build-and-test.yml`. The [Java template project](https://github.com/DataBiosphere/terra-java-project-template) is a good reference.
-4. Return to SonarCloud, go to Administration, Analysis Method, and **disable Automatic Analysis**.
+4. Notify AppSec this is complete.
 
 ### **More Java CI Scan Details**
 
