@@ -4,75 +4,85 @@ description: Static Application Security Testing
 
 # SAST
 
-**Description:**
-
 Static Application Security Testing (SAST) uses static source code analysis to identify issues at a code level.
 
-Terra services must run SAST as part of their automated build process. Issues identified in a PR build can be addressed without waiting for later detection by a security team.
+Terra services must [enable SAST](sast-1.md#onboarding-sast-tools) as part of their automated build process. Issues identified in a PR build can be [resolved](sast-1.md#resolving-findings) without waiting for later detection by a security team.
 
-Even better, IDE plugins are available so that developers can find and address issues prior to even pushing them to a branch.
+IDE plugins are also available so that developers can find and address issues prior to even pushing them to a branch.
 
-**Onboarding SAST Tools**
+## **Onboarding**
 
-DSP AppSec assists teams in setting up services' GitHub repos to be scanned via the appropriate SAST tool(s).
+DSP AppSec can assist teams in setting up services' GitHub repos to be scanned via the appropriate SAST tool(s):
 
-1. AppSec activates and configures the repo in SonarCloud or Codacy.
-2. Java only: set up CI-based analysis:
-   1. Dev team or AppSec adds a reporting key to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y\_LmHQkLYyISYns).
-   2. Dev team or AppSec makes simple edits to the build (adding steps to GitHub Actions workflows and/or modifying existing build.gradle file).
-3. Dev team or AppSec adds a status badge to the repo's README. (Recommended)
-4. Dev team, with AppSec assistance as needed, analyzes and addresses initial findings the come out of the first scan.
+1. Activate and configure the repo in [SonarCloud](sast-1.md#sonarcloud-configuration) or [Codacy](sast-1.md#codacy-scan-configuration).
+2. Java only: set up [CI-based analysis](sast-1.md#java-sonarqube-ci-scan).&#x20;
+3. Add a [badge](sast-1.md#badge) to your README.&#x20;
 
-**Process Requirements**
+## Scanning Repositories
 
-SAST _must_ be enabled on push and merge to main. Findings _must_ display results with the continuous integration build results (usually as GitHub Pull Request checks). Because it's easiest to fix things early and harder to fix code after deployment, dev teams _should_ resolve any issues flagged in pull requests prior to merging. Devs _should_ also use IDE plugins to detect and resolve issues as early as possible.
+### Automation
 
-Service READMEs _may_ display a badge as a live indicator of the status of SAST scan results of the codebase.
+SAST _must_ be enabled on push and on merge to main. Findings _must_ display results with the continuous integration build results (usually as GitHub Pull Request checks). Test code _may_ be excluded from scanning.
 
-Test code _may_ be excluded from scanning to reduce noise. For typical Terra Java services, only the `service` and `client` directories should be scanned but `integration` may be excluded if it generates excessive findings. For Java this configuration can be done in build.gradle files.
+### Badge
 
-**Resolving SAST Findings**
+Service READMEs _should_ display a badge as a live indicator of the status of SAST scan results of the codebase. You can obtain this from the SonarCloud repo Information page.
 
-Findings in a repo's main branch _must_ be resolved within standard time limits according to severity -- 7 days from discovery for Critical; 30 days for High; 90 days for Moderate; 180 days for Low.
+### **Tools**
 
-For erroneous findings (false positives or incorrect severities), developers can make adjustments with justification. AppSec can review these adjustments and make final decisions about severity and correctness of findings.
+| Language   | Required Tool                                                                                     |
+| ---------- | ------------------------------------------------------------------------------------------------- |
+| Java       | [SonarCloud](sast-1.md#sonarcloud-configuration) or [Codacy](sast-1.md#codacy-scan-configuration) |
+| Scala      | [Codacy](sast-1.md#codacy-scan-configuration)                                                     |
+| JavaScript | [SonarCloud](sast-1.md#sonarcloud-configuration) or [Codacy](sast-1.md#codacy-scan-configuration) |
+| Python     | [SonarCloud](sast-1.md#sonarcloud-configuration) or [Codacy](sast-1.md#codacy-scan-configuration) |
+| TypeScript | [SonarCloud](sast-1.md#sonarcloud-configuration)                                                  |
+| Go         | [SonarCloud](sast-1.md#sonarcloud-configuration)                                                  |
 
-In SonarCloud and Codacy, authenticate with GitHub as a repo member in order to review and mark Issues and Security Hotspots. Findings are visible even without being logged in, but in order to mark something, you must log in. Security Hotspots should be reviewed right away even if the code will not be fixed immediately. Contact AppSec with any questions.
+## **Resolving Findings**
 
-**Non-Security Findings and Adjacent Linters**
+Dev teams _should_ fix any real issues flagged in pull requests prior to merging. Devs can also use IDE plugins to detect and resolve issues as early as possible. SonarLint is available for this purpose.
 
-Static analysis is useful aside from security. Tools flag code quality and coverage issues. Teams are welcome to use these findings and other tools to manage that sort of issue, but AppSec and compliance do not impose requirements beyond addressing security issues. Many teams use other coverage or style checkers and they can use SAST tools to supplement, if desired.
+SonarCloud displays results in Pull Requests and provides links to details in SonarCloud.&#x20;
 
-**Automated Tools**
+Findings (i.e. vulnerability issues and security hotspots) in a repo's main branch _must_ be resolved within standard time limits by severity -- 7 days from discovery for Critical; 30 days for High; 90 days for Moderate; 180 days for Low.
 
-| Language   | Required Tool        |
-| ---------- | -------------------- |
-| Java       | SonarCloud or Codacy |
-| Scala      | Codacy               |
-| JavaScript | SonarCloud or Codacy |
-| Python     | SonarCloud or Codacy |
-| TypeScript | SonarCloud           |
-| Go         | SonarCloud           |
+Resolution options:
 
-**SAST Configuration**
+* fix the code (vulnerability is real and exploitable, or developer wants to fix it)
+* mark as False Positive (scanner was wrong)
+* mark as Won't Fix (not exploitable vulnerability or low-risk code quality issue, and developer does not want to fix)
 
-_**SonarCloud Scan Configuration**_
+Real vulnerabilities must be fixed in code, but when appropriate, developers can mark findings in SonarCloud as False Positive or Won't Fix and provide a brief justification. AppSec can review these adjustments and make final decisions about severity and correctness of findings.
 
-[SonarCloud](https://sonarcloud.io) configuration checklist:
+To mark a SonarCloud finding, first log in to SonarCloud as a GitHub repo member. Findings are visible even without being logged in, but in order to mark something, you must log in. Security Hotspots should be reviewed right away even if the code will not be fixed immediately. Contact AppSec with any questions.
 
-1. Project added in SonarCloud (this step done by AppSec).
-   1. Quality Gate: Broad service way
+## **SonarCloud Configuration**
+
+1. Post on #dsp-infosec-champions that a repo requires SonarCloud. AppSec will help if needed.
+2. Log in to [SonarCloud](https://sonarcloud.io) as a GitHub user who is a repo owner.
+3. Add the repo to SonarCloud and configure as follows.
+   1. Quality Gate: Broad service way or Broad&#x20;
    2. New Code: 30 days
    3. Analysis Method: Obtain token, build file templates, and project/org keys.
-2. For most languages other than Java, scanning is automatic with no build changes, but for Java please see **Java SonarQube CI Scan** below.
-3. Add a badge to your README (recommended):\
-   \
-   `[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DataBiosphere_terra-landing-zone-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DataBiosphere_terra-landing-zone-service)`
+4. For non-Java projects, you're all set with SonarCloud Automatic Analysis.
+5. For Java only, set up scanning in the build. See **Java SonarQube CI Scan** below. (For most languages other than Java, scanning is automatic with no build changes.)
 
-#### Java SonarQube CI Scan
+## Java SonarQube CI Scan
 
-For Java, you must modify the CI build to run the scan.\
-\
+For Java, you must modify the CI build to run the scan and disable Automatic Analysis.&#x20;
+
+### Checklist
+
+Assuming a GitHub actions gradle build, the task list is:
+
+1. Enable scanning the repo in SonarCloud. From the SonarCloud repo Information page, obtain project key and organization key.
+2. From the SonarCloud Administration, Analysis Method, obtain `SONAR_TOKEN` and add it to the repo via [Vault and Atlantis](https://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y\_LmHQkLYyISYns).
+3. Scan from the build, typically from `build.gradle` and `build-and-test.yml`. The [Java template project](https://github.com/DataBiosphere/terra-java-project-template) is a good reference.
+4. Return to SonarCloud, go to Administration, Analysis Method, and **disable Automatic Analysis**.
+
+### **More Java CI Scan Details**
+
 It's okay to scan only in `service` and `client` (omitting test code) but do ensure that `projectName` is specified. Also `projectKey` and `organization` must match SonarCloud. Here's a Gradle example. (Some projects put this in subdirectory `build.gradle` files and others use the root level.)
 
 ```clike
@@ -91,7 +101,7 @@ It's okay to scan only in `service` and `client` (omitting test code) but do ens
     }
 ```
 
-A GitHub action or other CI step must run the scan on push and PR. Many Java services have a `build-and-test.yaml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable. The `SONAR_TOKEN`secret must be added via Vault.
+A GitHub action or other CI step must run the scan on push and PR. Many Java services have a `build-and-test.yml` workflow that scans the `service` subproject on `push` and `pull_request`. Do scan `client` as well, if applicable, or scan the entire repo. The `SONAR_TOKEN`secret must be added via Vault.
 
 ```
       - name: SonarQube scan
@@ -101,15 +111,15 @@ A GitHub action or other CI step must run the scan on push and PR. Many Java ser
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. A badge is available for services' README.md.
+must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. **** Optionally, a more stringent gate can be used to prohibit all bug findings.
 
-_**Codacy Scan Configuration**_
+## **Codacy Scan Configuration**
 
 [Codacy](https://app.codacy.com) must be configured to "Run analysis on your build server," and the SpotBugs plugin with its find-sec-bugs plugin must be added to the Codacy scan.
 
-Our Codacy license allows for a limited number of users, so we are unable to provide all developers with direct access to the Codacy portal.
+Our Codacy license allows for a limited number of users, so we are unable to provide all developers with direct access to the Codacy portal, but talk to AppSec if you want access and do not already have it.
 
-**Ongoing Improvements**
+## **Ongoing Improvements**
 
 AppSec continuously improves the SAST tooling and configuration in reaction to industry trends, publicized vulnerabilities, and new capabilities that become available.
 
