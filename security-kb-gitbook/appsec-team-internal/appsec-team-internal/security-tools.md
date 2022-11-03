@@ -16,15 +16,14 @@ Scans docker images for vulnerabilities in base images.
 {% endtab %}
 
 {% tab title="Code Analysis" %}
-**Codacy**
+**Codacy and SonarCloud**
 
 Scans code for errors before allowing developers to merge with the master branch.
 
 **Semgrep**
 
 An open-source static code analysis tool that scans repositories for insecure code. Semgrep tool is integrated via Github Actions.\
-\
-**SonarCloud**
+
 {% endtab %}
 
 {% tab title="Pentesting" %}
