@@ -15,13 +15,16 @@ The Github Action is located in the [dsp-appsec-sourceclear-github-actions](http
     "branch": "branch-to-scan",
     "org": "github-repo-organization",
     "subdir": "/build-file-location",
-    "workspace": "workspace"
+    "environment" : "PYTHON3",
+    "workspace": "workspace",
+    "badyaml" : "false"
 }
 ```
 
 * The project name should also be the name of the repo.
 * Org should be one of `broadinstitute`, `humancellatlas`, or `databiosphere`.
 * Subdir should be the location of the build file (`requirements.txt`, `pom.xml`, etc.). The form should be `/[YOUR]/[DIRECTORY]`. Default is the root directory of the repo (leave `subdir` blank).
+* The environment value should be selected from the enum in `generate-workflows.py`.
 * The workspace should be one of `dsde` or `kdux`.
 * Make sure `project.json` is valid JSON.
 
@@ -43,7 +46,7 @@ The Github Action is located in the [dsp-appsec-sourceclear-github-actions](http
 	"org": "github-repo-organization",
 	"subdir": "build-file-location",
 	"workspace": "workspace",
-	"env": "build-env"
+	"environment": "build-env"
 },
 ```
 
