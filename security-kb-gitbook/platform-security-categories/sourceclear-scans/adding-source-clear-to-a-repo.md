@@ -1,4 +1,4 @@
-# Sourceclear Scans
+# Adding Source Clear to a repo
 
 Broad has a Github Action that scans your project's third-party components for known vulnerabilities each week using the Sourceclear CLI agent. Results are uploaded the SourceClear portal owned by Veracode, and then sent to our Defect Dojo instance. To view your current SourceClear results navigate to [https://defectdojo.dsp-appsec.broadinstitute.org](https://defectdojo.dsp-appsec.broadinstitute.org) while on the Broad network, and choose login with google.&#x20;
 

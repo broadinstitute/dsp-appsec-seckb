@@ -35,7 +35,10 @@
   * [Tools](platform-security-categories/docker/tools.md)
   * [Additional Resources for Docker Security](platform-security-categories/docker/additional-resources-for-docker-security.md)
 * [OS Base Hardening](platform-security-categories/os-base-hardening.md)
-* [Sourceclear Scans](platform-security-categories/sourceclear-scans.md)
+* [SourceClear Scans](platform-security-categories/sourceclear-scans/README.md)
+  * [What is SCA?](platform-security-categories/sourceclear-scans/what-is-sca.md)
+  * [Adding Source Clear to a repo](platform-security-categories/sourceclear-scans/adding-source-clear-to-a-repo.md)
+  * [Viewing SCA results](platform-security-categories/sourceclear-scans/viewing-sca-results.md)
 
 ## Appsec Team Internal
 
