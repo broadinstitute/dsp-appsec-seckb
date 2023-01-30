@@ -11,9 +11,11 @@ For DSP endpoints it is important to enforce a centrally managed and consistent 
 1. git-secrets will be automatically installed on your machine.
 2. New Hire Onboarding setup and will be made available by BITS through the Jamf endpoint management system.
 
-If the git secret is not added to the repository, run this command
+If the git secret is not added to the repository, run this command in your local repo.
 
-`git secrets --install`
+```
+git secrets --install
+```
 
 Here's a quick example of how to ensure a git repository is scanned for secrets on each commit:
 
