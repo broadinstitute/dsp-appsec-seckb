@@ -18,6 +18,13 @@ cd /path/to/my/repo
 git secrets --scan
 ```
 
+If there are no hooks in your local repositories, follow these steps:
+
+```
+git secrets --install ~/.git-templates/git-secrets
+git config --global init.templateDir ~/.git-templates/git-secrets
+```
+
 ### Ignoring False Positives
 
 Sometimes a regular expression might match false positives. For example, git commit SHAs look a lot like AWS access keys. You can specify many different regular expression patterns as false positives using the following command:
