@@ -18,12 +18,9 @@ cd /path/to/my/repo
 git secrets --scan
 ```
 
-If there are no hooks in your local repositories, follow these steps:
+If git secret is not added to the repository, run this command
 
-```
-git secrets --install ~/.git-templates/git-secrets
-git config --global init.templateDir ~/.git-templates/git-secrets
-```
+`git secrets --install`
 
 ### Ignoring False Positives
 
