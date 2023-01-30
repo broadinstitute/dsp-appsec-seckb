@@ -15,7 +15,7 @@ Here's a quick example of how to ensure a git repository is scanned for secrets 
 
 ```
 cd /path/to/my/repo
-git secrets --install
+git secrets --scan
 ```
 
 ### Ignoring False Positives
