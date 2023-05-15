@@ -6,7 +6,7 @@ description: Secure your SQL databases on the cloud....
 
 ## Create a Secure Instance
 
-Create a secure instance and then allow only SSH connections.
+Create a secure instance and then allow only SSL connections.
 
 ![The Public IP option should be checked, but there should not be any authorized networks.](../../../.gitbook/assets/screen-shot-2020-02-10-at-11.33.04-am.png)
 

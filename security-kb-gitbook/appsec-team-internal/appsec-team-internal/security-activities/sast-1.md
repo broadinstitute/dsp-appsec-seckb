@@ -115,7 +115,7 @@ A GitHub action or other CI step must run the scan on push and PR. Many Java ser
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. **** Optionally, a more stringent gate can be used to prohibit all bug findings.
+must be configured with Analysis Method as CI, not Automatic Analysis. Each service should use the "Broad service way" quality gate. Optionally, a more stringent gate can be used to prohibit all bug findings.
 
 ## **Codacy Scan Configuration**
 

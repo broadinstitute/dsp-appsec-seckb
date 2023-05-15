@@ -42,7 +42,7 @@ If a user needs access to a Compute Engine instance, add them to the subnet's IA
 
 ### 2. Set up logging on your VM.
 
-VM logs should use StackDriver and SIEM. See [https://cloud.google.com/logging/docs/agent/installation](https://cloud.google.com/logging/docs/agent/installation) for installation instructions.
+VM logs should use StackDriver and SIEM. See [https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/install-index](https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/install-index) for installation instructions.
 
 1. System logs are picked up by default.
 2. Application logs should write to a file that gets picked up by StackDriver.
@@ -50,4 +50,4 @@ VM logs should use StackDriver and SIEM. See [https://cloud.google.com/logging/d
 
 #### Additional Reading
 
-* [https://cloud.google.com/logging/docs/agent/configuration](https://cloud.google.com/logging/docs/agent/configuration)
+* [https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent](https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent#features)

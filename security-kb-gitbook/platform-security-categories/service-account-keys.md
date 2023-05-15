@@ -5,11 +5,11 @@ description: Do not download service account keys.
 # Service Account Keys
 
 \
-If an attacker can access your downloaded service account key, he can sign a JWT token and be granted an API access token.&#x20;
+If an attacker can access your downloaded service account key, he can sign a JWT token and be granted an API access token.
 
 There is a way to avoid this and instead of downloading the service account key, use
 
-#### &#x20;—impersonate-service-account flag
+#### —impersonate-service-account flag
 
 ```
 gcloud --impersonate-service-account=k8s@project.iam.gserviceaccount.com container clusters get-credentials my-cluster
@@ -17,7 +17,7 @@ gcloud --impersonate-service-account=k8s@project.iam.gserviceaccount.com contain
 
 It allows this command to use a service account without actually having the key, but by using service account impersonation.
 
-If you are running multiple commands with same SA, use these commands before:&#x20;
+If you are running multiple commands with same SA, use these commands before:
 
 ```
 gcloud config set auth/impersonate_service_account \
@@ -25,7 +25,6 @@ gcloud config set auth/impersonate_service_account \
 gcloud container clusters get-credentials my-cluster
 
 # Other gcloud commands :)
-
 ```
 
 If you are switching to a different SA, write a simple bash script to switch between different SA:
@@ -56,7 +55,7 @@ esac
 
 {% tabs %}
 {% tab title="Terraform" %}
-Google terraform provider supports directly passing an OAuth2 token as an environment variable. All you have to do is get this token and tell Terraform about it.  This token will live in the env for just one hour and will be useless after that.&#x20;
+Google terraform provider supports directly passing an OAuth2 token as an environment variable. All you have to do is get this token and tell Terraform about it. This token will live in the env for just one hour and will be useless after that.
 
 ```
 export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token)
@@ -65,7 +64,7 @@ terraform apply
 {% endtab %}
 
 {% tab title="Attribution and Logging" %}
-In Cloud Logging every API call executed by a SA that has been impersonated has the following structure.&#x20;
+In Cloud Logging every API call executed by a SA that has been impersonated has the following structure.
 
 ```
 {
